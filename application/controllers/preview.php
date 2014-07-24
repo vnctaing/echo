@@ -7,7 +7,7 @@ class Preview extends CI_controller
 
 public function index(){
   $this->load->helper('html');
-  $this->load->view('view_preview');
+  $this->load->view('/preview/preview');
 }
 
 public function email_validation(){
