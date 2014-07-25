@@ -26,11 +26,13 @@ class Echos extends CI_Controller
       en passant en parametre le tableau $data **/
       if($this->echo_model->add_echo($data)){
         // Si il réussit, la méthode add_echo retournera un booléen
-        $this->session->set_flashdata('add_success',
-          'Pour accéder à votre écho :
-          <a href="' .base_url(). 'echos/read/'.$key.'">'
-          .base_url().'echos/read/'.$key.
-          '</a>');
+        $this->load->helper('url');
+        /** Stock dans $echo_url :
+        <a href="http://site.com/echos/read/$key">http://site.com/echos/read/$key</a>"
+        **/
+        $echo_url = anchor(base_url("/echos/read/$key") , base_url("echos/read/$key"));
+        //Prépare la flash notice, qui apparait dans la vue new
+        $this->session->set_flashdata('add_success', $echo_url);
         redirect('echos/create');
       }
     }
