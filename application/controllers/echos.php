@@ -31,6 +31,7 @@ class Echos extends CI_Controller
           <a href="' .base_url(). 'echos/read/'.$key.'">'
           .base_url().'echos/read/'.$key.
           '</a>');
+        redirect('echos/create');
       }
     }
   }
