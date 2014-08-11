@@ -5,7 +5,7 @@ class Echo_model extends CI_Model{
   //The parameter is passed from the function echos/create containing
   public function add_echo($data){
     $query = $this->db->insert('echos', $data);
-    // Create a SQL request : INSERT TO `echos` (nom de la table)
+    // Génère une requête SQL : INSERT TO `echos` (nom de la table)
     return $query;
   }
 
@@ -19,6 +19,13 @@ class Echo_model extends CI_Model{
         ->result();
   }
 
-
+  public function update_lifetime($key){
+    $data = array(
+      'expires_at' => date('Y-m-d H:i:s', $expires_at + 15*60),
+    );
+    $this->db
+            ->where('gkey',$key)
+            ->update('echos', $data);
+  }
 
 }
