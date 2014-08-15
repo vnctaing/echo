@@ -54,7 +54,7 @@ class Echos extends CI_Controller
       $this->load->model('echo_model');
       //Pour simplifier, key est
       $key = $this->uri->segment(3);
-      if($data['echo'] = $this->echo_model->get_echo($key)){
+      if($data['echo'] = $this->echo_model->getEcho($key)){
       //Les informations retournees par le modele sont transmises a la vue
         $this->load->view('echos/show', $data);
       }else{
@@ -63,15 +63,21 @@ class Echos extends CI_Controller
     }
   }
 
-  private function update($key){
+  public function update($key){
     $this->load->model('echo_model');
-    $this->echo_model->update_lifetime($key);
+    $data['echo'] = $this->echo_model->getEcho($key);
+    $oldExpirationDate = strtotime($data['echo'][0]->expires_at);
+    $newExpirationDate = date('Y-m-d H:i:s', $oldExpirationDate + 15*60);
+    $data = array(
+      'expires_at' => $newExpirationDate,
+    );
+    if($this->echo_model->updateLifetime($key,$data)){
     $this->session->set_flashdata('echo_success', 'Durée de vie allongée de 15 min ! ');
-    redirect('echos');
+    redirect("echos/read/$key");
+    }else{
+      echo 'fail';
+    }
   }
 
-  private function delete(){
-
-  }
 }
 

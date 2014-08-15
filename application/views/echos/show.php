@@ -13,6 +13,8 @@
   <br>
   <br>
   <?php
+    echo $this->session->flashdata('echo_success');
+    echo '<br>';
     echo anchor(base_url('echos/index'), '<< Créer un écho');
     echo anchor(base_url("echos/update/".$echo[0]->gkey), 'Faire résonner');
   ?>

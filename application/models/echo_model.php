@@ -12,20 +12,25 @@ class Echo_model extends CI_Model{
   /**Cette méthode retourne dans un tableau,
   un objet echo avec une cle en parametre
   **/
-  public function get_echo($key){
+  public function getEcho($key){
     return $this->db
         ->where('gkey', $key)
         ->get('echos')
         ->result();
   }
 
-  public function update_lifetime($key){
-    $data = array(
-      'expires_at' => date('Y-m-d H:i:s', $expires_at + 15*60),
-    );
-    $this->db
-            ->where('gkey',$key)
-            ->update('echos', $data);
+  public function updateLifetime($key,$data){
+    return $this->db
+                ->where('gkey',$key)
+                ->set('expires_at', $data['expires_at'])
+                ->update('echos');
   }
 
+
+  public function getExpirationDate($key){
+    return $this->db->select('expires_at')
+    ->where('gkey',$key)
+    ->get('echos')
+    ->result();
+  }
 }
