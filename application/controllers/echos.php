@@ -43,7 +43,7 @@ class Echos extends CI_Controller
     }
   }
 
-
+  //METHODE POUR ACCEDER AU CONTENU D'UN ECHO
   public function read($key){
     // Si on ne rentre pas de troisieme segment avec la méthod read, on redirige vers new
     if( ! $this->uri->segment(3)){
@@ -63,10 +63,16 @@ class Echos extends CI_Controller
     }
   }
 
+
+  //METHODE POUR RESONNER UN ECHO
   public function update($key){
     $this->load->model('echo_model');
+    // Le modele retourne un tableau d'objets
     $data['echo'] = $this->echo_model->getEcho($key);
+    // On stock dans $oldExpirationDate , l'ancienne date d'expiration en time UNIX
+    // Car c'est plus facile a manipuler pour rajouter du temps
     $oldExpirationDate = strtotime($data['echo'][0]->expires_at);
+    // Rajoute 15 minutes a la durée de vie, convertit time UNIX => date
     $newExpirationDate = date('Y-m-d H:i:s', $oldExpirationDate + 15*60);
     $data = array(
       'expires_at' => $newExpirationDate,
