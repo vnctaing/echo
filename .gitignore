@@ -8,6 +8,3 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 
-application/config/config.php
-application/config/email.php
-application/config/database.php
