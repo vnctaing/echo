@@ -1,38 +1,48 @@
-<!DOCTYPE html>
-<html lag="en">
+<html>
 <head>
+  <title>Accueil</title>
+  <?=css('style.css')?>
   <meta charset="UTF-8">
-  <title> Echo </title>
-  <?=css('bootstrap.css')?>
 </head>
 <body>
-  <h1>Créer un écho</h1>
-  <?php
-    echo form_open('echos/create'); // Crée un formulaire qui appelle la méthode create du controlleur echos
-    echo $this->session->flashdata('add_success');
-    echo '<br>';
-    $attributes = array(
-      'placeholder' => 'Exprimez-vous :)',
-      'name' => 'content'
-      );
-    echo form_textarea($attributes);
-    echo '<br>';
+  <div id="navbar">
+    <?= img('echo-o-violet.png')?>
+    <div>
+      <h1>Les paroles s'envolent, les écrits aussi.</h1>
+      <hr>
+      <h2>Echo est un service qui vous permet de créer un contenu éphémère, et de le partager avec vos amis.</h2>
+    </div>
+    <ul>
+      <li><a href="#">Connexion</a></li>
+      <li><a href="#">Inscription</a></li>
+    </ul>
+  </div>
 
-    echo 'duree de vie';
-    $options = array(
-      1 => '1',
-      5 => '5',
-      10 => '10',
-      20 =>  '20',
-      30 =>  '30'
-      );
-    //Options passé
-    echo form_dropdown('expired_at', $options, '1');
+  <div id="content">
+        <?php
+          echo form_open('echos/create'); // Crée un formulaire qui appelle la méthode create du controlleur echos
+          echo $this->session->flashdata('add_success');
+          $attributes = array(
+            'placeholder' => 'Exprimez-vous :)',
+            'name' => 'content'
+            );
+          echo form_textarea($attributes);
+          echo 'duree de vie';
+          $options = array(
+            5 => '5',
+            10 => '10',
+            15 =>  '15',
+            30 =>  '30'
+            );
+          //Options passé
+          echo form_dropdown('expired_at', $options, '1');
+        ?>
+        <div class="droite">
+          <?php echo form_submit('mysubmit', 'OK');?>
+        </div>
+        <?php echo form_close();?>
 
-    $attributes = array('class' => 'btn btn-success');
-    echo form_submit($attributes, 'Créer un Echo');
-    echo form_close();
-   ?>
+  </div>
 
 </body>
 </html>

@@ -47,7 +47,7 @@ class Echos extends CI_Controller
   public function read($key){
     // Si on ne rentre pas de troisieme segment avec la méthod read, on redirige vers new
     if( ! $this->uri->segment(3)){
-      redirect('echos/new');
+      redirect('echos/create');
     }
     //Sinon, on retrouve un echo avec la cle passe en parametre.
     else{
@@ -84,6 +84,7 @@ class Echos extends CI_Controller
       echo 'fail';
     }
   }
+
 
 }
 

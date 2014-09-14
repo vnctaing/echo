@@ -33,4 +33,9 @@ class Echo_model extends CI_Model{
     ->get('echos')
     ->result();
   }
+
+  public function deleteExpiratedPosts(){
+    $this->db->where('expires_at >', now() );
+    $this->db->delete('echos');
+  }
 }

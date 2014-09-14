@@ -1,4 +1,4 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
 *
 */
@@ -7,7 +7,7 @@ class Preview extends CI_controller
 
 public function index(){
   $this->load->helper('html');
-  $this->load->view('/preview/preview');
+  $this->load->view('preview/preview');
 }
 
 public function email_validation(){
