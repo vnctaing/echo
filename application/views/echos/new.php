@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>Accueil</title>
-  <?=css('style.css')?>
+  <?=css('new.css')?>
   <meta charset="UTF-8">
 </head>
 <body>
@@ -19,6 +19,7 @@
   </div>
 
   <div id="content">
+    <div class="container">
         <?php
           echo form_open('echos/create'); // Crée un formulaire qui appelle la méthode create du controlleur echos
           echo $this->session->flashdata('add_success');
@@ -41,7 +42,7 @@
           <?php echo form_submit('mysubmit', 'OK');?>
         </div>
         <?php echo form_close();?>
-
+    </div>
   </div>
 
 </body>
