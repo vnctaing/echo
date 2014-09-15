@@ -41,9 +41,9 @@
         <div class="droite">
           <?php echo form_submit('mysubmit', 'OK');?>
         </div>
-        <?php echo form_close();?>
+        <?php echo form_close();
+        echo phpinfo()?>
     </div>
   </div>
-<?php echo phpinfo(); ?>
 </body>
 </html>
