@@ -44,6 +44,6 @@
         <?php echo form_close();?>
     </div>
   </div>
-
+<?php echo phpinfo(); ?>
 </body>
 </html>
