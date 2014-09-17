@@ -7,14 +7,14 @@
 <body>
   <div id="navbar">
     <?= img('echo-o-violet.png')?>
-    <div>
+    <div class="container">
       <h1>Les paroles s'envolent, les écrits aussi.</h1>
       <hr>
       <h2>Echo est un service qui vous permet de créer un contenu éphémère, et de le partager avec vos amis.</h2>
     </div>
     <ul>
-      <li><a href="#">Connexion</a></li>
-      <li><a href="#">Inscription</a></li>
+      <li><?php echo anchor('main/login', 'Connexion'); ?></li>
+      <li><?php echo anchor('main/signup', 'Inscription'); ?></li>
     </ul>
   </div>
 
@@ -41,8 +41,7 @@
         <div class="droite">
           <?php echo form_submit('mysubmit', 'OK');?>
         </div>
-        <?php echo form_close();
-        echo phpinfo()?>
+        <?php echo form_close();?>
     </div>
   </div>
 </body>
