@@ -1,0 +1,94 @@
+.container {
+  width: 763px;
+  margin: 0 auto; }
+
+h1, h2, p {
+  margin: 0;
+  font-weight: lighter; }
+
+body {
+  font-family: quicksand;
+  margin: 0;
+  background-image: url(../img/wpp-2.jpg);
+  background-size: 100%; }
+  body a {
+    text-decoration: none; }
+  body #navbar {
+    box-shadow: 0px 0px 20px 1px rgba(119, 119, 119, 0.8);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.8);
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.8);
+    height: 250px;
+    background-color: white; }
+    body #navbar img {
+      width: 130px;
+      padding: 60px 0 0 40px;
+      position: relative;
+      float: left; }
+    body #navbar div {
+      width: 800px;
+      margin: 0 auto; }
+      body #navbar div h1 {
+        text-align: center;
+        font-size: 40px;
+        padding: 30px 0;
+        font-weight: bold; }
+      body #navbar div hr {
+        width: 200px; }
+      body #navbar div h2 {
+        text-align: center;
+        margin: 30px 0; }
+    body #navbar ul {
+      text-decoration: none;
+      float: right;
+      margin: -180px 60px 0 0; }
+      body #navbar ul li {
+        text-decoration: none;
+        border: solid 2px #b68dc0;
+        border-radius: 10px;
+        padding: 10px 5px;
+        display: block;
+        margin: 30px 0;
+        transition: all 0.5s ease; }
+        body #navbar ul li a {
+          position: relative;
+          font-size: 20px;
+          transition: all 0.5s ease;
+          color: #b68dc0;
+          padding: 20px; }
+        body #navbar ul li a:hover {
+          color: white; }
+      body #navbar ul li:hover {
+        background: #b68dc0;
+        color: white; }
+  body #content {
+    width: 100%; }
+    body #content form textarea {
+      resize: none;
+      padding: 40px 80px 40px 80px;
+      border-radius: 15px;
+      margin: 60px 0 0 80px;
+      border: 2px white solid;
+      background: none;
+      opacity: 0.65;
+      font-size: 24px;
+      font-family: quicksand;
+      color: white;
+      line-height: 1.5; }
+    body #content form textarea:focus {
+      outline: 0; }
+    body #content form .droite {
+      display: inline-block; }
+      body #content form .droite input[type="submit"] {
+        color: white;
+        background: #ffce00;
+        padding: 15px 100px 10px 100px;
+        font-size: 24px;
+        border: none;
+        border-radius: 5px;
+        font-size: 35px;
+        font-family: quicksand;
+        font-weight: lighter;
+        display: block;
+        margin: 350px auto 0 auto; }
+
+/*# sourceMappingURL=new.css.map */
