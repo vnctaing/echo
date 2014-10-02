@@ -4,15 +4,15 @@ body {
   background-image: url(../img/bg-echo.jpg);
   background-size: 100%;
   color: white; }
-  body .join {
+  body .connect {
     width: 600px;
     display: inline-block;
     vertical-align: top; }
-    body .join h1 {
+    body .connect h1 {
       font-size: 80px;
       text-align: right;
       font-family: "Patua One", cursive; }
-    body .join img {
+    body .connect img {
       width: 300px;
       display: block;
       margin-top: -80px;
@@ -75,4 +75,4 @@ body {
     display: inline-block;
     margin-left: 100px; }
 
-/*# sourceMappingURL=signup.css.map */
+/*# sourceMappingURL=connect.css.map */
