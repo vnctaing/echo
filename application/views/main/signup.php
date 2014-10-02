@@ -3,9 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Signup</title>
+  <?=css('signup.css')?>
 </head>
 <body>
-  <h1>Inscription</h1>
+  <div>
+     <a href="../../../index.php"><img src="../../../assets/img/logo-echo-blanc.png"></a>
+  </div>
+      <ul>
+      <li><?php echo anchor('main/login', 'Connexion'); ?></li>
+    </ul>
+     <h1>Rejoins-nous !</h1>
   <script>
     // This is called with the results from from FB.getLoginStatus().
     function statusChangeCallback(response) {
@@ -106,7 +113,7 @@
   echo form_password('cpassword');
   echo '</p>';
   echo '<p>';
-  echo form_submit('signup_submit', 'Sign Up');
+  echo form_submit('signup_submit', 'OK');
   echo '</p>';
 
 
