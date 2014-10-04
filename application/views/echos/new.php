@@ -7,7 +7,7 @@
 </head>
 <body>
   <div id="navbar">
-    <?= img('echo-o-violet.png')?>
+    <a href="#"><?= img('echo-o-violet.png')?></a>
     <div class="container">
       <h1>Les paroles s'envolent, les écrits aussi.</h1>
       <hr>

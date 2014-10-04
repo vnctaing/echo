@@ -62,7 +62,6 @@ body {
   body .champecho {
     width: 860px;
     display: inline-block;
-    border: 2px red solid;
     vertical-align: top; }
     body .champecho form textarea {
       resize: none;
@@ -79,14 +78,22 @@ body {
       height: 340px; }
     body .champecho form textarea:focus {
       outline: 0; }
+    body .champecho form a {
+      color: white;
+      margin: 20px 0 0 80px;
+      display: inline-block;
+      max-width: 300px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      vertical-align: bottom; }
   body .droite {
     display: inline-block;
     vertical-align: top;
-    border: 2px green solid;
-    margin: 150px;
+    margin: 130px;
     color: white;
     text-align: center;
-    font-size: 24px;
+    font-size: 28px;
     font-family: "Patua One", cursive;
     font-weight: lighter; }
     body .droite select {

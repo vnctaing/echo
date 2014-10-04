@@ -23,11 +23,11 @@
       echo form_open('main/login_validation');
       echo $this->session->flashdata('feedback'); //Display the flashdata set in main/signup_validation
       echo validation_errors();
-      echo "<p>Email</br>";
+      echo "<p></br></br>Email</br>";
       echo form_input('email');
       echo "</p>";
-      echo "<p>Mot de passe</br>";
-      echo form_password('password');
+      echo "<p></br>Mot de passe</br>";
+      echo form_password('password</br>');
       echo "</p>";
       echo "<p>";
       echo form_submit('login_submit', 'Se connecter');
