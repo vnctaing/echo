@@ -27,7 +27,7 @@
       echo form_input('email');
       echo "</p>";
       echo "<p></br>Mot de passe</br>";
-      echo form_password('password</br>');
+      echo form_password('password');
       echo "</p>";
       echo "<p>";
       echo form_submit('login_submit', 'Se connecter');

@@ -89,6 +89,7 @@ class Main extends CI_Controller {
 	//Valide une connexion ( est appele dans la methode login_validation )
 	public function validate_credentials(){
 		$this->load->model('model_users');
+		$this->load->library('encrypt');
 		if($this->model_users->can_log_in()){
 			return true;
 		}
@@ -121,7 +122,7 @@ class Main extends CI_Controller {
 				//Les informations a inserer dans la bdd
 				$data = array(
 					'email' => $this->input->post('email'),
-					'password' => $this->encrypt->encode($this->input->post('password')),
+					'password' => $this->encrypt->sha1($this->input->post('password')),
 					'name' => $this->input->post('name'),
 					'keyhash' => $key,
 					'active_user' => 0
