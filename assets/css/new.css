@@ -1,18 +1,15 @@
-.container {
-  width: 763px;
-  margin: 0 auto; }
-
 h1, h2, p {
   margin: 0;
   font-weight: lighter; }
 
+a {
+  text-decoration: none; }
+
 body {
   font-family: quicksand;
   margin: 0;
-  background-image: url(../img/wpp-2.jpg);
+  background-image: url(../img/bg-echo.jpg);
   background-size: 100%; }
-  body a {
-    text-decoration: none; }
   body #navbar {
     box-shadow: 0px 0px 20px 1px rgba(119, 119, 119, 0.8);
     -moz-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.8);
@@ -21,26 +18,28 @@ body {
     background-color: white; }
     body #navbar img {
       width: 130px;
-      padding: 60px 0 0 40px;
-      position: relative;
-      float: left; }
-    body #navbar div {
+      padding: 60px 80px 60px 60px; }
+    body #navbar .container {
       width: 800px;
-      margin: 0 auto; }
-      body #navbar div h1 {
+      margin: 0 auto;
+      padding: 0 50px;
+      display: inline-block;
+      vertical-align: top; }
+      body #navbar .container h1 {
         text-align: center;
         font-size: 40px;
         padding: 30px 0;
-        font-weight: bold; }
-      body #navbar div hr {
+        font-weight: bold;
+        font-family: "Patua One", cursive; }
+      body #navbar .container hr {
         width: 200px; }
-      body #navbar div h2 {
+      body #navbar .container h2 {
         text-align: center;
         margin: 30px 0; }
     body #navbar ul {
       text-decoration: none;
-      float: right;
-      margin: -180px 60px 0 0; }
+      display: inline-block;
+      vertical-align: top; }
       body #navbar ul li {
         text-decoration: none;
         border: solid 2px #b68dc0;
@@ -60,9 +59,11 @@ body {
       body #navbar ul li:hover {
         background: #b68dc0;
         color: white; }
-  body #content {
-    width: 100%; }
-    body #content form textarea {
+  body .champecho {
+    width: 860px;
+    display: inline-block;
+    vertical-align: top; }
+    body .champecho form textarea {
       resize: none;
       padding: 40px 80px 40px 80px;
       border-radius: 15px;
@@ -73,22 +74,46 @@ body {
       font-size: 24px;
       font-family: quicksand;
       color: white;
-      line-height: 1.5; }
-    body #content form textarea:focus {
+      line-height: 1.5;
+      height: 340px; }
+    body .champecho form textarea:focus {
       outline: 0; }
-    body #content form .droite {
-      display: inline-block; }
-      body #content form .droite input[type="submit"] {
-        color: white;
-        background: #ffce00;
-        padding: 15px 100px 10px 100px;
-        font-size: 24px;
-        border: none;
-        border-radius: 5px;
-        font-size: 35px;
-        font-family: quicksand;
-        font-weight: lighter;
-        display: block;
-        margin: 350px auto 0 auto; }
+    body .champecho form a {
+      color: white;
+      margin: 20px 0 0 80px;
+      display: inline-block;
+      max-width: 300px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      vertical-align: bottom; }
+  body .droite {
+    display: inline-block;
+    vertical-align: top;
+    margin: 130px;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Patua One", cursive;
+    font-weight: lighter; }
+    body .droite select {
+      border: white 2px solid;
+      background: none;
+      font-size: 15px;
+      color: white;
+      width: 100px;
+      height: 30px; }
+    body .droite input[type="submit"] {
+      color: white;
+      background: #ffce00;
+      padding: 15px 100px 10px 100px;
+      font-size: 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 35px;
+      font-family: quicksand;
+      font-weight: lighter;
+      display: block;
+      margin: 100px auto 0 auto; }
 
 /*# sourceMappingURL=new.css.map */
