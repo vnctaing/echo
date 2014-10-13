@@ -5,15 +5,7 @@
   <title>Member section</title>
 </head>
 <body>
-  <h1>Member Page</h1>
-
-  <?php
-    echo form_open('echos/create');
-    echo form_input('echo', 'Echo');
-    echo form_submit('echos_confirmation', 'Ok');
-    echo form_close();
-   ?>
-
+  <h1>Connexion / Inscription Reussi !</h1>
   <a href='<?php echo base_url()."main/logout";?>'>Logout</a>
 </body>
 </html>
