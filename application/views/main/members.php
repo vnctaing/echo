@@ -5,7 +5,7 @@
   <title>Member section</title>
 </head>
 <body>
-  <h1>Connexion / Inscription Reussi !</h1>
+  <h1>Connexion / Inscription Réussie !</h1>
   <a href='<?php echo base_url()."main/logout";?>'>Logout</a>
 </body>
 </html>

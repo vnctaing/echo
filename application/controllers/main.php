@@ -41,10 +41,10 @@ class Main extends CI_Controller {
 | -------------------------------------------------------------------
 */
 
-	//Method
+	//L'email
 	public function register_user($key){
 		$this->load->model('model_users');
-		//Verify the validiy of the key before validating the user
+		//Si la clef rentrer dans l'url est valide alors, il peut se connecter
 		if($this->model_users->is_key_valid($key)){
 			if($this->model_users->activate_user($key)){
 				$data = array(
@@ -67,7 +67,7 @@ class Main extends CI_Controller {
 | Validations
 | -------------------------------------------------------------------
 |
-|	 Toutes les validations de connexion/inscriptions
+|	 Toutes les validations de connexion/inscription
 */
 	public function login_validation(){
 		$this->load->library('form_validation');
@@ -106,7 +106,7 @@ class Main extends CI_Controller {
 		$this->form_validation->set_rules('password', 'Mot de passe', 'trim|required|min_length[5]|xss_clean');
 		$this->form_validation->set_rules('cpassword', 'Mot de passe', 'trim|required|matches[password]');
 		$this->form_validation->set_message('is_unique', "Cette adresse e-mail est déjà utilisée.");
-		// When all set_rules methods below return true, then the run method return true
+		// Quand set_rules retournent des booleens true, alors run() retourne true 
 		if($this->form_validation->run()){
 			$key = md5(uniqid());
 			//Contenu du mail
