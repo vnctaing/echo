@@ -38,4 +38,25 @@ class Echo_model extends CI_Model{
     $this->db->where('expires_at >', now() );
     $this->db->delete('echos');
   }
+
+  public function isEncrypted($key){
+    $query = $this->db
+        ->where('gkey', $key)
+        ->where('encryptOpt',1)
+        ->get('echos')
+        ->result();
+    if($query){return true;}
+    else{return false;}
+  }
+
+  public function isSecretKeyValid($key,$inputkey){
+    $query = $this->db
+      ->where('gkey', $key)
+      ->where('secretkey', $inputkey)
+      ->get('echos')
+      ->result();
+      if($query){return true;}
+      else{return false;}
+
+  }
 }

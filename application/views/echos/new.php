@@ -1,13 +1,11 @@
 <html>
 <head>
   <title>Accueil</title>
-  <?=css('new.css')?>
-  <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
   <meta charset="UTF-8">
 </head>
 <body>
   <div id="navbar">
-    <a href="#"><?= img('echo-o-violet.png')?></a>
+    <a href="#"></a>
     <div class="container">
       <h1>Les paroles s'envolent, les écrits aussi.</h1>
       <hr>
@@ -46,10 +44,16 @@
         );
       //Options passé
       echo form_dropdown('expired_at', $options, '1');
+      echo form_checkbox('encrypt', 1);
+      echo form_input('secretkey');
     ?>
   
-    <?php echo form_submit('mysubmit', 'OK');?>
+    <?php echo form_submit('mysubmit', 'OK');
+    ?>
    </div>
     <?php echo form_close();?>
+
+
+
 </body>
 </html>

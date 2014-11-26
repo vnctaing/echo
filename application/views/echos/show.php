@@ -26,6 +26,13 @@
     <br>
     <br>
     <?php
+      $key = $this->uri->segment(3);
+      if($this->echo_model->isEncrypted($key)){
+        echo form_open("echos/decrypt/$key");
+        echo form_input('secretkey');
+        echo form_submit('mysubmit', 'Ok');
+        echo form_close();
+      }
       echo $this->session->flashdata('echo_success');
     ?>
     <div class="resonne">

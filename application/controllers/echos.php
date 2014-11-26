@@ -14,25 +14,33 @@ class Echos extends CI_Controller
     $this->load->view('echos/new');
     $this->load->library(array('form_validation', 'encrypt'));
     $this->form_validation->set_rules('content', 'Contenu', 'trim|required|xss_clean');
+    
+
     if($this->form_validation->run()){
-      // Charge le modèle /model/echo_model.php
+      // Charge /model/echo_model.php
       $this->load->model('echo_model');
-      // On génere un id qui est hashé à l'écho
+      // Génere un unique id hashé à l'écho
       $key = md5(uniqid());
+      $content = $this->input->post('content');
+      $secretkey = $this->input->post('secretkey');
       $data = array(
-        'content' => $this->input->post('content'), // L'input qui vient de la vue
+        'content' => $this->input->post('content'), //$_POST['content']
         'gkey' => $key,
         'expires_at' => date('Y-m-d H:i:s', time() + $this->input->post('expired_at') * 60)
         );
+      if($this->input->post('encrypt') ){
+        $this->load->library('encrypt');
+        $data['encryptOpt'] = $this->input->post('encrypt');
+        $data['content'] = $this->encrypt->encode($content);
+        $data['secretkey'] = $this->input->post('secretkey');
+      }
       /** Appelle la méthode add_echo de Echo_model
       en passant en paramètre le tableau $data **/
-      if($this->echo_model->add_echo($data)){
+      if( $this->echo_model->add_echo($data) ) {
         // Si il réussit, la méthode add_echo retournera un booléen
         $this->load->helper('url');
-        /** anchor() permet de generer une balise HTML <a href></a>, elle prends deux paramètres :
-        Le premier est l'adresse vers lequel il dirige
-        Le deuxieme est ce qu'il y a entre <a></a>
-        base_url() retourne la base de l'url : www.localhost.com/echos/read/$key
+        /** anchor(foo,bar) <=> <a href="foo">bar</a>, 
+        base_url("/echos/read/$key") <=> www.localhost.com/echos/read/$key
         **/
         $echo_url = anchor(base_url("/echos/read/$key") , base_url("echos/read/$key"));
         //$echo_url = <a href="http://site.com/echos/read/$key">http://site.com/echos/read/$key</a>"
@@ -52,13 +60,43 @@ class Echos extends CI_Controller
     //Sinon, on retrouve un echo avec la cle passe en parametre.
     else{
       $this->load->model('echo_model');
+      $this->load->library('encrypt');
       //Pour simplifier, key est
       $key = $this->uri->segment(3);
+      //Si le model retrouve un echo avec la meme clef
       if($data['echo'] = $this->echo_model->getEcho($key)){
-      //Les informations retournees par le modele sont transmises a la vue
+        //On affiche l'echo dans show
+        /**if($this->echo_model->isEncrypted($key)){
+          $inputkey = $this->input->post('secretkey');
+          if($this->echo_model->isSecretKeyValid($key,$inputkey)){
+            $data['echo'][0]->content = $this->encrypt->decode($data['echo'][0]->content);
+          }else{
+            echo "Bien essayé mais la clé n'est pas valide";
+          }
+        }*/
+        //$this->decrypt($key, $data);
+
+
+        $this->load->view('echos/show', $data);
+      }
+      else{
+        echo 'Echo inexistant';
+      }
+    }
+  }
+
+
+  public function decrypt($key){
+    $this->load->model('echo_model');
+    $data['echo'] = $this->echo_model->getEcho($key);
+    if($this->echo_model->isEncrypted($key)){
+      $inputkey = $this->input->post('secretkey');
+      if( $this->echo_model->isSecretKeyValid($key,$inputkey) ){
+        $this->load->library('encrypt');
+        $data['echo'][0]->content = $this->encrypt->decode($data['echo'][0]->content);
         $this->load->view('echos/show', $data);
       }else{
-        echo 'Echo inexistant';
+        echo "Bien essayé mais la clé n'est pas valide";
       }
     }
   }
