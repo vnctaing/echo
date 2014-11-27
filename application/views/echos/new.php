@@ -44,7 +44,9 @@
         );
       //Options passé
       echo form_dropdown('expired_at', $options, '1');
+      echo 'Option Chiffrement: ';
       echo form_checkbox('encrypt', 1);
+      echo 'Entrez une clef secrete :';
       echo form_input('secretkey');
     ?>
   
