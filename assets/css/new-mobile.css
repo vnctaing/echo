@@ -13,9 +13,7 @@ body {
       font-size: 20px;
       font-weight: normal; }
   body #leftcontent, body #rightcontent {
-    display: inline-block;
-    position: center;
-    vertical-align: top;
+    display: block;
     margin: 0 auto; }
     body #leftcontent h2, body #rightcontent h2 {
       font-family: "Arvo", serif;
@@ -29,9 +27,8 @@ body {
       margin-left: 0; }
   body #leftcontent {
     border: 2px solid red;
-    width: 530px; }
+    width: 80%; }
     body #leftcontent .help {
-      width: 470px;
       text-align: justify; }
   body #rightcontent {
     background-color: white;
@@ -49,20 +46,5 @@ body {
       height: 200px;
       width: 470px;
       padding: 20px; }
-    body #rightcontent form input[type="submit"] {
-      color: white;
-      background: #F4B532;
-      padding: 5px 100px;
-      font-size: 30px;
-      border: none;
-      font-weight: lighter;
-      font-family: gotham;
-      display: block; }
-    body #rightcontent form select {
-      border: 2px solid yellow;
-      font-family: gotham;
-      font-size: 16px;
-      font-weight: lighter;
-      padding: 50px auto; }
 
-/*# sourceMappingURL=new.css.map */
+/*# sourceMappingURL=new-mobile.css.map */
