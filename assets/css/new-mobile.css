@@ -6,15 +6,19 @@ body {
   body #navbar {
     background: #482F5D;
     font-family: "Arvo", serif;
-    color: white; }
-    body #navbar a {
-      text-decoration: none;
-      color: #F0F0F0;
-      font-size: 20px;
-      font-weight: normal; }
+    color: white;
+    vertical-align: top;
+    height: 70px; }
+    body #navbar img {
+      float: left;
+      padding: 28px;
+      display: inline-block; }
+    body #navbar a, body #navbar .hidden, body #navbar li {
+      display: none; }
   body #leftcontent, body #rightcontent {
-    display: block;
-    margin: 0 auto; }
+    position: relative;
+    vertical-align: top;
+    margin: auto; }
     body #leftcontent h2, body #rightcontent h2 {
       font-family: "Arvo", serif;
       color: #482F5D;
@@ -26,15 +30,21 @@ body {
       width: 470px;
       margin-left: 0; }
   body #leftcontent {
+    display: none;
     border: 2px solid red;
-    width: 80%; }
+    width: 530px;
+    vertical-align: top; }
+    body #leftcontent h1 {
+      padding: 0 auto; }
     body #leftcontent .help {
+      width: 470px;
       text-align: justify; }
   body #rightcontent {
     background-color: white;
     border: 2px solid green;
-    width: 530px;
-    padding: 0 auto; }
+    width: 90%;
+    padding: 0 auto;
+    vertical-align: top; }
     body #rightcontent form textarea {
       resize: none;
       background: #F0F0F0;
@@ -46,5 +56,20 @@ body {
       height: 200px;
       width: 470px;
       padding: 20px; }
+    body #rightcontent form input[type="submit"] {
+      color: white;
+      background: #F4B532;
+      padding: 5px 100px;
+      font-size: 30px;
+      border: none;
+      font-weight: lighter;
+      font-family: gotham;
+      display: block; }
+    body #rightcontent form select {
+      border: 2px solid yellow;
+      font-family: gotham;
+      font-size: 16px;
+      font-weight: lighter;
+      padding: 50px auto; }
 
 /*# sourceMappingURL=new-mobile.css.map */

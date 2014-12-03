@@ -1,5 +1,5 @@
 $violetclair: #b68dc0
-$jaune : #ffce00
+$jaune : #F4B532
 $gris : #F0F0F0
 $violet : #482F5D
 //492863
@@ -9,21 +9,26 @@ body
 	margin: 0 
 	font-family: gotham
 
-
 	#navbar
 		background : $violet
 		font-family: 'Arvo', serif
 		color: white
+		vertical-align: top
+		height: 70px
 
-		a
-			text-decoration: none
-			color: $gris
-			font-size: 20px
-			font-weight: normal
+		img 
+			float: left
+			padding: 28px
+			display: inline-block
+		a, .hidden, li
+			display: none
+
+		
 
 	#leftcontent, #rightcontent
-		display: block
-		margin: 0 auto
+		position: relative
+		vertical-align: top
+		margin: auto
 
 		h2 
 			font-family: 'Arvo', serif
@@ -38,18 +43,24 @@ body
 			margin-left: 0
 	
 	#leftcontent
+		display: none
 		border: 2px solid red
-		width: 80%
-		//margin-left: 40px
+		width: 530px
+		vertical-align: top
+
+		h1 
+			padding: 0 auto
 
 		.help
+			width: 470px
 			text-align: justify
 
 	#rightcontent
 		background-color: white
 		border: 2px solid green
-		width: 530px
+		width: 90%
 		padding: 0 auto
+		vertical-align: top
 
 
 		form
@@ -64,5 +75,29 @@ body
 				height: 200px
 				width: 470px
 				padding: 20px
+
+			input[type="submit"]
+				color: white
+				background: $jaune
+				padding: 5px 100px
+				font-size: 30px
+				border: none
+				font-weight: lighter
+				font-family: gotham
+				display: block
+
+			select
+				border: 2px solid yellow
+				font-family: gotham
+				font-size: 16px
+				font-weight: lighter
+				padding: 50px auto
+
+
+
+
+
+
+
 
 

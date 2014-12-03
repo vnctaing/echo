@@ -3,20 +3,25 @@
   <title>Accueil</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="../../assets/css/new.css"> <!-- Pour tous -->
-  <link rel="stylesheet" media="screen and (max-width: 640px)" href="../../assets/css/new-mobile.css" /> <!-- Pour mobiles (640px) -->
+  <link rel="stylesheet" media="screen and (max-width: 750px)" href="../../assets/css/new-mobile.css" /> <!-- Pour mobiles (640px) -->
 
 
 
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
+
+
   <div id="navbar">
+    <img src="../../assets/img/menu.png">
     <a href="#"></a>
-    <ul>
+    <ul class="hidden">
       <li><?php echo anchor('main/login', 'Connexion'); ?></li>
       <li><?php echo anchor('main/signup', 'Inscription'); ?></li>
     </ul>
   </div>
+  <div id="allcontent">
   <div id="leftcontent">
     <h1> Les paroles s'envolent, les écrits aussi.</h1>
 
@@ -43,6 +48,13 @@
       echo form_textarea($attributes);
     ?>
     <br>
+    <?php
+      echo 'Chiffrement : ';
+      echo form_checkbox('encrypt', 1);
+      echo ' Entrez une clé secrète : ';
+      echo form_input('secretkey');
+    ?>
+    <br>
     <br>
     <h2> Choisissez votre durée de vie</h2>
     <hr>
@@ -60,18 +72,18 @@
         120 =>  '2h'
         );
       //Options passé
+
       echo form_dropdown('expired_at', $options, '1');
-      echo 'Option Chiffrement: ';
-      echo form_checkbox('encrypt', 1);
-      echo 'Entrez une clé secrète :';
-      echo form_input('secretkey');
-    ?>
+
+      ?>
+    
+      
   
     <?php echo form_submit('mysubmit', 'OK');
-    ?>
+    ?><br><br><br>
    </div>
+  </div>
     <?php echo form_close();?>
-
 
 
 </body>

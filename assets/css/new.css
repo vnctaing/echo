@@ -6,17 +6,31 @@ body {
   body #navbar {
     background: #482F5D;
     font-family: "Arvo", serif;
-    color: white; }
+    color: white;
+    vertical-align: top;
+    height: 70px;
+    padding-right: 13%; }
+    body #navbar img {
+      float: left;
+      padding: 28px;
+      display: none; }
     body #navbar a {
       text-decoration: none;
       color: #F0F0F0;
       font-size: 20px;
       font-weight: normal; }
+    body #navbar ul li {
+      display: inline-block;
+      text-decoration: none;
+      padding: 20px 40px;
+      float: right; }
+  body #allcontent {
+    display: block;
+    border: pink 3px solid; }
   body #leftcontent, body #rightcontent {
     display: inline-block;
-    position: center;
     vertical-align: top;
-    margin: 0 auto; }
+    margin: 30px auto; }
     body #leftcontent h2, body #rightcontent h2 {
       font-family: "Arvo", serif;
       color: #482F5D;
@@ -29,15 +43,23 @@ body {
       margin-left: 0; }
   body #leftcontent {
     border: 2px solid red;
-    width: 530px; }
+    width: 500px;
+    vertical-align: top;
+    margin-right: 2%;
+    padding-left: 20px; }
+    body #leftcontent h1 {
+      padding: 0 auto; }
     body #leftcontent .help {
       width: 470px;
       text-align: justify; }
   body #rightcontent {
     background-color: white;
-    border: 2px solid green;
-    width: 530px;
-    padding: 0 auto; }
+    width: 505px;
+    vertical-align: top;
+    padding-left: 30px;
+    box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1); }
     body #rightcontent form textarea {
       resize: none;
       background: #F0F0F0;
@@ -57,12 +79,19 @@ body {
       border: none;
       font-weight: lighter;
       font-family: gotham;
-      display: block; }
+      display: inline-block;
+      vertical-align: top; }
     body #rightcontent form select {
-      border: 2px solid yellow;
+      border-radius: 0;
+      width: 200px;
+      padding: 5px 45px;
+      line-height: 1;
+      border: 0;
+      height: 45px;
+      -webkit-appearance: none;
       font-family: gotham;
-      font-size: 16px;
-      font-weight: lighter;
-      padding: 50px auto; }
+      font-size: 20px;
+      margin-right: 22px;
+      background: url(../../assets/img/fleche-select.png) no-repeat right #ddd; }
 
 /*# sourceMappingURL=new.css.map */
