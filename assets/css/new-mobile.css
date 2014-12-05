@@ -40,9 +40,11 @@ body {
     vertical-align: top; }
     body #leftcontent h1 {
       padding: 0 auto; }
-    body #leftcontent .help {
+    body #leftcontent ul {
       width: 470px;
-      text-align: justify; }
+      text-align: justify;
+      padding-left: 0;
+      margin: 0; }
   body #rightcontent {
     display: block;
     padding-top: 15px;

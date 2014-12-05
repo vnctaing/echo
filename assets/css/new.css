@@ -25,12 +25,22 @@ body {
       text-decoration: none;
       color: #F0F0F0;
       font-size: 20px;
-      font-weight: normal; }
+      font-weight: normal;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
     body #navbar ul li {
       display: inline-block;
       text-decoration: none;
       padding: 20px 40px;
       float: right; }
+    body #navbar a:hover {
+      color: #F4B532;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
   body #leftcontent, body #rightcontent {
     display: inline-block;
     vertical-align: top;
@@ -46,14 +56,23 @@ body {
       width: 470px;
       margin-left: 0; }
   body #leftcontent {
-    border: 2px solid red;
     width: 500px;
     vertical-align: top;
     margin-right: 2%;
     padding-left: 20px;
     margin-left: 11%; }
     body #leftcontent h1 {
-      padding: 0 auto; }
+      font-size: 40px;
+      padding: 0 auto;
+      text-align: center; }
+      body #leftcontent h1 img {
+        position: absolute;
+        width: 55px; }
+      body #leftcontent h1 img:first-child {
+        margin-left: -80px;
+        margin-top: -20px; }
+      body #leftcontent h1 img:last-child {
+        margin-left: 30px; }
     body #leftcontent .help {
       width: 470px;
       text-align: justify; }

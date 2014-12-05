@@ -23,16 +23,16 @@
   </div>
   <div id="allcontent">
   <div id="leftcontent">
-    <h1> Les paroles s'envolent, les écrits aussi.</h1>
-
+    <h1><img src="../../assets/img/quotes1.png"> Les paroles <br>s'envolent, les <br>écrits aussi. <img src="../../assets/img/quotes2.png"></h1>
+    
     <h2> Comment ça marche ?</h2>
     <hr />
     <br>
-    <p class="help">1. Créez votre contenu, votre echo, écrivez ce que vous voulez.
-    <br>2. Choisissez la durée de vie que vous voulez attribuer à ce contenu, 10 minutes ? 1h30 ?
-    <br>3. Générez le lien de votre echo, et partagez-le où vous le souhaitez.
-    <br>4. La durée de vie de votre echo augmentera si les visiteurs aiment le contenu et le font raisonner.
-    <br>5. À la fin de sa durée de vie, votre echo disparaîtra.</p>
+    <p class="help"><b>1.</b> Créez votre contenu, votre echo, écrivez ce que vous voulez.
+    <br><br><b>2.</b> Choisissez la durée de vie que vous voulez attribuer à ce contenu, 10 minutes ? 1h30 ?
+    <br><br><b>3.</b> Générez le lien de votre echo, et partagez-le où vous le souhaitez.
+    <br><br><b>4.</b> La durée de vie de votre echo augmentera si les visiteurs aiment le contenu et le font raisonner.
+    <br><br><b>5.</b> À la fin de sa durée de vie, votre echo disparaîtra.</p>
   </div>
   <div id="rightcontent">
     <h2> Créez votre contenu</h2>
