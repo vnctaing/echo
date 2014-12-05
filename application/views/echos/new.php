@@ -20,6 +20,8 @@
       <li><?php echo anchor('main/login', 'Connexion'); ?></li>
       <li><?php echo anchor('main/signup', 'Inscription'); ?></li>
     </ul>
+    <img class="help" src="../../assets/img/help.png">
+    <img class="help2" src="../../assets/img/helpy.png">
   </div>
   <div id="allcontent">
   <div id="leftcontent">
