@@ -23,22 +23,21 @@ body
 			margin-left: 20px
 			width: 25px
 
-		.help, .help2
+
+		.aide
 			display: block
-			width: 45px
-			margin-top: 12px
-			position: absolute
-			margin-right: -200px
 
+			li
+				font-family: 'Arvo',serif
+				font-size: 25px
+				border: 2px white solid
+				border-radius: 100px
+				padding: 4px 14px
+				margin-top: 13px
 
-
-		.help:hover
-
-			-webkit-transition: all 0.3s ease
-			-moz-transition: all 0.3s ease
-			-o-transition: all 0.3s ease
-			transition: all 0.3s ease
-			display: none
+			li:hover
+				color: $jaune
+				border: 2px $jaune solid
 
 
 		.hidden, li
@@ -62,14 +61,14 @@ body
 			font-family: 'Arvo', serif
 			color: $violet
 			font-weight: normal
-			font-size : 33px
+			font-size : 25px
 			margin: 20px 0
 
 		hr
 			border: solid 2px $violet
 			width: 90%
 			margin-left: 0
-	
+
 	#leftcontent
 		display: none
 		
@@ -83,6 +82,10 @@ body
 		width: 80%
 		margin: 30px auto
 		vertical-align: top
+		padding-bottom: 1px
+
+		h2:last-child
+			padding-top: 20px
 		
 	
 
@@ -115,7 +118,8 @@ body
 			select
 				float: left
 				padding: 5px 8%
-				width: 40%
+				width: 39%
+				font-size: 18px
 
 
 

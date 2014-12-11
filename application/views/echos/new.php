@@ -20,8 +20,9 @@
       <li><?php echo anchor('main/login', 'Connexion'); ?></li>
       <li><?php echo anchor('main/signup', 'Inscription'); ?></li>
     </ul>
-    <img class="help" src="../../assets/img/help.png">
-    <img class="help2" src="../../assets/img/helpy.png">
+    <ul class="aide">
+      <li>?</li>
+    </ul>
   </div>
   <div id="allcontent">
   <div id="leftcontent">
@@ -30,16 +31,16 @@
     <h2> Comment ça marche ?</h2>
     <hr />
     <br>
-    <p class="help"><b>1.</b> Créez votre contenu, votre echo, écrivez ce que vous voulez.
-    <br><br><b>2.</b> Choisissez la durée de vie que vous voulez attribuer à ce contenu, 10 minutes ? 1h30 ?
-    <br><br><b>3.</b> Générez le lien de votre echo, et partagez-le où vous le souhaitez.
-    <br><br><b>4.</b> La durée de vie de votre echo augmentera si les visiteurs aiment le contenu et le font raisonner.
-    <br><br><b>5.</b> À la fin de sa durée de vie, votre echo disparaîtra.</p>
+    <ul class="help"><li><b>1.</b> Créez votre contenu, votre echo, écrivez ce que vous voulez.</li>
+      <li><b>2.</b> Choisissez la durée de vie que vous voulez attribuer à ce contenu, 10 minutes ? 1h30 ?</li>
+      <li><b>3.</b> Générez le lien de votre echo, et partagez-le où vous le souhaitez.</li>
+      <li><b>4.</b> La durée de vie de votre echo augmentera si les visiteurs aiment le contenu et le font raisonner.</li>
+      <li><b>5.</b> À la fin de sa durée de vie, votre echo disparaîtra.</li>
+    </ul>
   </div>
   <div id="rightcontent">
     <h2> Créez votre contenu</h2>
     <hr>
-    <br>
     <?php
       echo form_open('echos/create'); // Crée un formulaire qui appelle la méthode create du controlleur echos
       echo $this->session->flashdata('add_success');
@@ -49,18 +50,21 @@
         );
       echo form_textarea($attributes);
     ?>
-    <br>
-    <?php
-      echo 'Chiffrement : ';
-      echo form_checkbox('encrypt', 1);
-      echo ' Entrez une clé secrète : ';
-      echo form_input('secretkey');
-    ?>
-    <br>
-    <br>
+    <div class="chiffrement">
+      <p>Chiffrement :</p>
+      <?php
+        echo form_checkbox('encrypt', 1);
+      ?>
+      <p>Entrez une clé secrète :</p>
+      <?php
+        echo form_input('secretkey');
+      ?>
+    </div>
+
     <h2> Choisissez votre durée de vie</h2>
     <hr>
-    <br>
+
+    
     <?php
       
       $options = array(

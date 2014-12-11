@@ -21,7 +21,7 @@ body {
       float: left;
       width: 160px;
       margin: 7px 12%; }
-    body #navbar .help, body #navbar .help2 {
+    body #navbar .aide {
       display: none; }
     body #navbar a {
       text-decoration: none;
@@ -56,7 +56,8 @@ body {
     body #leftcontent hr, body #rightcontent hr {
       border: solid 2px #482F5D;
       width: 470px;
-      margin-left: 0; }
+      margin-left: 0;
+      margin-bottom: 30px; }
   body #leftcontent {
     width: 500px;
     vertical-align: top;
@@ -76,7 +77,12 @@ body {
         margin-left: 30px; }
     body #leftcontent .help {
       width: 470px;
-      text-align: justify; }
+      text-align: justify;
+      padding-left: 0;
+      margin-top: 0; }
+      body #leftcontent .help li {
+        list-style-type: none;
+        margin-bottom: 17px; }
   body #rightcontent {
     background-color: white;
     width: 505px;
@@ -86,6 +92,8 @@ body {
     box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
     -moz-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
     -webkit-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1); }
+    body #rightcontent .chiffrement {
+      display: none; }
     body #rightcontent form textarea {
       resize: none;
       background: #F0F0F0;
@@ -96,7 +104,8 @@ body {
       line-height: 1.5;
       height: 200px;
       width: 470px;
-      padding: 20px; }
+      padding: 20px;
+      margin-bottom: 40px; }
     body #rightcontent form input[type="submit"] {
       color: white;
       background: #F4B532;
