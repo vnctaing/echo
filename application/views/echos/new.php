@@ -14,7 +14,7 @@
 
 
   <div id="navbar">
-    <img class="menu" src="../../assets/img/menu.png">
+    <a href="#"><img class="menu" src="../../assets/img/menu.png"></a>
     <a href="#"><img src="../../assets/img/echo.png"></a>
     <ul class="hidden">
       <li><?php echo anchor('main/login', 'Connexion'); ?></li>
