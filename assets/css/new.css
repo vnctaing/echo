@@ -2,10 +2,7 @@ body {
   background: #F0F0F0;
   font-weight: lighter;
   margin: 0;
-  font-family: gotham;
-  /*#allcontent
-   * display: block
-   * border: pink 3px solid */ }
+  font-family: gotham; }
   body #navbar {
     background: #482F5D;
     font-family: "Arvo", serif;
@@ -43,6 +40,10 @@ body {
       -moz-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease; }
+  body #allcontent {
+    display: block;
+    width: 77%;
+    margin: 0 auto; }
   body #leftcontent, body #rightcontent {
     display: inline-block;
     vertical-align: top;
@@ -55,14 +56,13 @@ body {
       margin: 20px 0; }
     body #leftcontent hr, body #rightcontent hr {
       border: solid 2px #482F5D;
-      width: 470px;
+      width: 93.5%;
       margin-left: 0;
       margin-bottom: 30px; }
   body #leftcontent {
-    width: 500px;
+    width: 45%;
     vertical-align: top;
-    padding-left: 20px;
-    margin-left: 11%; }
+    float: left; }
     body #leftcontent h1 {
       font-size: 40px;
       padding: 0 auto;
@@ -76,7 +76,7 @@ body {
       body #leftcontent h1 img:last-child {
         margin-left: 30px; }
     body #leftcontent .help {
-      width: 470px;
+      width: 94%;
       text-align: justify;
       padding-left: 0;
       margin-top: 0; }
@@ -85,13 +85,16 @@ body {
         margin-bottom: 17px; }
   body #rightcontent {
     background-color: white;
-    width: 505px;
+    float: right;
+    width: 45%;
     vertical-align: top;
-    margin-left: 3%;
+    margin-left: 5%;
     padding-left: 30px;
     box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
     -moz-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
     -webkit-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1); }
+    body #rightcontent h2 {
+      padding-right: 31px; }
     body #rightcontent .chiffrement {
       display: none; }
     body #rightcontent form textarea {
@@ -103,30 +106,31 @@ body {
       color: #482F5D;
       line-height: 1.5;
       height: 200px;
-      width: 470px;
+      width: 94%;
       padding: 20px;
       margin-bottom: 40px; }
     body #rightcontent form input[type="submit"] {
       color: white;
       background: #F4B532;
-      padding: 5px 100px;
+      padding: 5px 17%;
       font-size: 30px;
       border: none;
       font-weight: lighter;
       font-family: gotham;
       display: inline-block;
-      vertical-align: top; }
+      vertical-align: top;
+      margin-right: 6%;
+      float: right; }
     body #rightcontent form select {
       border-radius: 0;
-      width: 200px;
-      padding: 5px 45px;
+      width: 40%;
+      padding: 5px 10%;
       line-height: 1;
       border: 0;
       height: 45px;
       -webkit-appearance: none;
       font-family: gotham;
       font-size: 20px;
-      margin-right: 22px;
       background: url(../../assets/img/fleche-select.png) no-repeat right #ddd; }
 
 /*# sourceMappingURL=new.css.map */

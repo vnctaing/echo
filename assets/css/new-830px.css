@@ -22,10 +22,6 @@ body #navbar a img {
   margin: 8px 35%;
   display: block;
   position: absolute; }
-body #allcontent {
-  display: block;
-  width: 95%;
-  margin: 0 auto; }
 body #leftcontent h2, body #rightcontent h2 {
   font-family: "Arvo", serif;
   color: #482F5D;
@@ -34,7 +30,7 @@ body #leftcontent h2, body #rightcontent h2 {
   margin: 15px 0; }
 body #leftcontent hr, body #rightcontent hr {
   border: solid 2px #482F5D;
-  width: 90%;
+  width: 91%;
   margin-left: 0; }
 body #leftcontent {
   display: none; }
@@ -44,7 +40,7 @@ body #rightcontent {
   padding-left: 5%;
   float: none;
   width: 94%;
-  margin: 15px auto;
+  margin: 30px auto;
   vertical-align: top;
   padding-bottom: 1px; }
   body #rightcontent h2:last-child {
@@ -57,7 +53,7 @@ body #rightcontent {
     border: none;
     color: #482F5D;
     line-height: 1.5;
-    height: 250px;
+    height: 200px;
     width: 91%;
     padding: 20px; }
   body #rightcontent form input[type="submit"] {
@@ -69,7 +65,7 @@ body #rightcontent {
     font-weight: lighter;
     font-family: gotham;
     display: inline-block;
-    margin-right: 9%;
+    margin-right: 8.5%;
     float: right; }
   body #rightcontent form select {
     float: left;
@@ -77,4 +73,4 @@ body #rightcontent {
     width: 39%;
     font-size: 18px; }
 
-/*# sourceMappingURL=new-mobile.css.map */
+/*# sourceMappingURL=new-830px.css.map */

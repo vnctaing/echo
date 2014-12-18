@@ -55,9 +55,11 @@ body
 			-o-transition: all 0.3s ease
 			transition: all 0.3s ease
 
-	/*#allcontent
+	#allcontent
 		display: block
-		border: pink 3px solid*/
+		//border: pink 3px solid
+		width: 77%
+		margin: 0 auto
 
 	#leftcontent, #rightcontent
 		display: inline-block
@@ -73,16 +75,15 @@ body
 
 		hr
 			border: solid 2px $violet
-			width: 470px
+			width: 93.5%
 			margin-left: 0
 			margin-bottom: 30px
 	
 	#leftcontent
 		//border: 2px solid red
-		width: 500px
+		width: 45%
 		vertical-align: top
-		padding-left: 20px
-		margin-left: 11% 
+		float: left
 
 		h1 
 			font-size: 40px
@@ -103,7 +104,7 @@ body
 				//margin-top: -20px
 
 		.help
-			width: 470px
+			width: 94%
 			text-align: justify
 			padding-left: 0
 			margin-top: 0
@@ -114,15 +115,19 @@ body
 
 	#rightcontent
 		background-color: white
+		float: right
 		// border: 2px solid green
-		width: 505px
+		width: 45%
 		vertical-align: top
-		margin-left: 3%
+		margin-left: 5%
 		padding-left: 30px
 		box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1)
 		-moz-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1)
 		-webkit-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1)
 		
+		h2
+			padding-right: 31px
+
 		.chiffrement
 			display: none
 		
@@ -137,32 +142,33 @@ body
 				color: $violet
 				line-height: 1.5
 				height: 200px
-				width: 470px
+				width: 94%
 				padding: 20px
 				margin-bottom: 40px
 
 			input[type="submit"]
 				color: white
 				background: $jaune
-				padding: 5px 100px
+				padding: 5px 17%
 				font-size: 30px
 				border: none
 				font-weight: lighter
 				font-family: gotham
 				display: inline-block
 				vertical-align: top
+				margin-right: 6%
+				float: right
 
 			select
 				border-radius: 0
-				width: 200px
-				padding: 5px 45px
+				width: 40%
+				padding: 5px 10%
 				line-height: 1
 				border: 0
 				height: 45px
 				-webkit-appearance: none
 				font-family: gotham
 				font-size: 20px
-				margin-right: 22px
 				background: url(../../assets/img/fleche-select.png) no-repeat right #ddd
 
 

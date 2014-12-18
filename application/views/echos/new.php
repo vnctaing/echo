@@ -3,7 +3,10 @@
   <title>Accueil</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="../../assets/css/new.css"> <!-- Pour tous -->
-  <link rel="stylesheet" media="screen and (max-width: 750px)" href="../../assets/css/new-mobile.css" /> <!-- Pour mobiles (640px) -->
+  <link rel="stylesheet" media="screen and (max-width: 830px)" href="../../assets/css/new-830px.css" /> <!-- Pour mobiles (830px) -->
+  <link rel="stylesheet" media="screen and (max-width: 1100px)" href="../../assets/css/new-1100px.css" /> <!-- Pour les ecrans (1100px) -->
+  <link rel="stylesheet" media="screen and (max-width: 500px)" href="../../assets/css/new-mobile.css" /> <!-- Pour les ecrans (500px) -->
+
 
 
 
