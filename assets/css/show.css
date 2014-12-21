@@ -1,107 +1,114 @@
-body {
-  font-family: quicksand;
-  margin: 0;
-  background-image: url(../img/bg-echo.jpg);
-  background-size: 100%;
-  color: white;
-  /*form
-   * font-size: 20px
-   * font-weight: lighter
-   * width: 540px
-   *
-   *
-   * input
-   * 	background: none
-   * 	font-family: quicksand
-   * 	color: white
-   * 	font-size: 20px
-   * 	padding: 15px 
-   * 	width: 500px
-   * 	border-radius: 18px
-   * 	border: 2px white solid
-   *
-   * input[type=submit]
-   * 	color: white
-   * 	background: $jaune
-   * 	padding: 15px 0 10px 0
-   * 	width: 350px
-   * 	font-size: 24px
-   * 	border: none
-   * 	border-radius: 15px
-   * 	font-size: 35px
-   * 	font-family: quicksand
-   * 	font-weight: lighter
-   * 	margin: 50px auto
-   * 	display: block */ }
-  body .echo {
-    width: 500px;
-    margin: 30px auto;
-    position: relative;
-    display: block; }
-  body #nav {
-    text-align: center;
-    float: right;
-    vertical-align: top;
-    display: inline;
-    margin-top: -200px;
-    margin-right: 53px; }
-    body #nav .fleche {
-      width: 80px;
-      margin-top: 90px;
-      display: inline-block; }
-    body #nav ul {
-      padding: 0;
-      width: 210px;
-      display: inline-block;
-      vertical-align: top; }
-      body #nav ul li {
-        border: solid 2px white;
-        border-radius: 10px;
-        padding: 10px 5px;
-        display: block;
-        width: 190px;
-        margin: 30px 0;
-        transition: all 0.5s ease; }
-        body #nav ul li a {
-          text-decoration: none;
-          position: relative;
-          font-size: 20px;
-          transition: all 0.5s ease;
-          color: white;
-          padding: 20px; }
-        body #nav ul li a:hover {
-          color: #2E2736;
-          font-weight: bold; }
-      body #nav ul li:hover {
-        background: white; }
-  body h2 {
-    font-family: "Patua One", cursive;
-    margin: 0;
-    text-align: center;
-    font-size: 55px; }
-  body hr {
-    width: 200px; }
-  body .contenu {
-    text-align: center; }
-    body .contenu .resonne {
-      margin: 0 auto;
-      vertical-align: top;
-      width: 180px;
-      height: 180px;
-      border: 2px green solid;
-      -webkit-border-radius: 100px;
-      -moz-border-radius: 100px;
-      -o-border-radius: 100px;
-      border-radius: 100px; }
-      body .contenu .resonne a {
-        border: 2px white solid;
-        text-decoration: none;
-        color: white;
-        padding: 60px 10px;
-        border-radius: 200px; }
-  body .formulaire {
-    width: 700px;
-    display: inline-block;
-    margin-left: 100px; }
+/*
+Error: Undefined variable: "$violetfonce".
+        on line 60 of assets/sass/show.sass
 
-/*# sourceMappingURL=show.css.map */
+55: 					transition: all 0.5s ease
+56: 					color: white
+57: 					padding: 20px
+58: 
+59: 				a:hover
+60: 					color: $violetfonce
+61: 					font-weight: bold
+62: 
+63: 			li:hover
+64: 				background: white
+65: 
+
+Backtrace:
+assets/sass/show.sass:60
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:329:in `block in watch'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$violetfonce\".\A         on line 60 of assets/sass/show.sass\A \A 55: 					transition: all 0.5s ease\A 56: 					color: white\A 57: 					padding: 20px\A 58: \A 59: 				a:hover\A 60: 					color: $violetfonce\A 61: 					font-weight: bold\A 62: \A 63: 			li:hover\A 64: 				background: white\A 65: "; }

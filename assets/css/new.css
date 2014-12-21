@@ -132,5 +132,15 @@ body {
       font-family: gotham;
       font-size: 20px;
       background: url(../../assets/img/fleche-select.png) no-repeat right #ddd; }
+    body #rightcontent form a {
+      color: #482F5D;
+      text-decoration: none;
+      width: 90%;
+      display: block;
+      background: #F0F0F0;
+      padding: 10px;
+      margin-bottom: 10px; }
+    body #rightcontent form input:focus {
+      outline: none; }
 
 /*# sourceMappingURL=new.css.map */

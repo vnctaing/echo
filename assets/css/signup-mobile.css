@@ -1,45 +1,23 @@
 body {
-  background: #F0F0F0;
-  font-weight: lighter;
-  margin: -16px auto;
-  font-family: gotham; }
+  margin: -7px auto; }
   body #navbar {
-    background: #482F5D;
-    font-family: "Arvo", serif;
-    color: white;
-    vertical-align: top;
-    height: 70px;
-    padding-right: 10%; }
+    padding-right: 0px; }
     body #navbar img {
-      float: left;
       width: 160px;
-      margin: 7px 12%; }
-    body #navbar a {
-      text-decoration: none;
-      color: #F0F0F0;
-      font-size: 20px;
-      font-weight: normal;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
-    body #navbar ul li {
-      display: inline-block;
-      text-decoration: none;
-      padding: 20px 40px;
-      float: right; }
-    body #navbar a:hover {
-      color: #F4B532;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
+      display: block;
+      float: none;
+      margin: 7px auto;
+      padding-top: 7px; }
+      body #navbar img a {
+        display: none; }
+    body #navbar .hidden, body #navbar li {
+      display: none; }
   body #cadre {
     background: white;
     box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
     -moz-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
     -webkit-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
-    width: 54%;
+    width: 80%;
     margin: 30px auto;
     padding: 20px; }
     body #cadre h1 {
@@ -52,7 +30,7 @@ body {
       border: solid 2px #482F5D;
       width: 60%; }
     body #cadre .formulaire {
-      margin: 0 auto;
+      margin: 30px auto;
       width: 60%; }
       body #cadre .formulaire p {
         color: #482F5D; }
@@ -68,12 +46,12 @@ body {
       body #cadre .formulaire input[type="submit"] {
         color: white;
         background: #F4B532;
-        padding: 5px 23%;
+        padding: 5px 19%;
         font-size: 30px;
         border: none;
         font-weight: lighter;
         font-family: gotham;
         display: block;
-        margin: 70px auto; }
+        margin: 30px auto; }
 
-/*# sourceMappingURL=connect.css.map */
+/*# sourceMappingURL=signup-mobile.css.map */

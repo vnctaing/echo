@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Echo</title>
+  <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 830px)" href="../../assets/css/show.css">
 </head>
 <body>
-  <a href="../../../index.php"><img class="echo" src="../../../assets/img/logo-echo-blanc.png"></a>
-  <div id="nav"> 
-    <ul>
+  <div id="navbar">
+    <a href="../../../index.php"><img src="../../assets/img/echo.png"></a>
+    <ul class="hidden">
       <li><?php echo anchor('main/login', 'Connexion'); ?></li>
-      <li><?php echo anchor('echos/index', 'Crée ton echo'); ?></li>
-   </ul>
+      <li><?php echo anchor('/', 'Accueil'); ?></li>
+    </ul>
   </div>
   <hr>
   <h2>Contenu</h2>
