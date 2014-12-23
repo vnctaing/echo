@@ -1,0 +1,109 @@
+$violetclair: #b68dc0
+$jaune : #F4B532
+$gris : #F0F0F0
+$violet : #482F5D
+//492863
+body
+
+	#navbar
+		.menu
+			float: left
+			padding: 21px
+			display: inline-block
+			margin-left: 20px
+			width: 25px
+
+
+		.aide
+			display: block
+
+			li
+				font-family: 'Arvo',serif
+				font-size: 25px
+				border: 2px white solid
+				border-radius: 100px
+				padding: 4px 13px
+				margin-top: 13px
+
+			li:hover
+				color: $jaune
+				border: 2px $jaune solid
+
+
+		.hidden, li
+			display: none
+
+		a img
+			margin: 8px 35%
+			display: block
+			position: absolute
+
+	#allcontent
+		display: block
+		//border: pink 3px solid
+		width: 95%
+		margin: 0 auto
+
+	#leftcontent, #rightcontent
+
+		h2
+			font-family: 'Arvo', serif
+			color: $violet
+			font-weight: normal
+			font-size : 25px
+			margin: 15px 0
+
+		hr
+			border: solid 2px $violet
+			width: 90%
+			margin-left: 0
+
+	#leftcontent
+		display: none
+
+	#rightcontent
+		display: block
+		padding-top: 15px
+		padding-left: 5%
+		float: none
+		//border: 2px solid green
+		width: 94%
+		margin: 15px auto
+		vertical-align: top
+		padding-bottom: 1px
+
+		h2:last-child
+			padding-top: 20px
+
+		form
+			textarea
+				resize: none
+				background: $gris
+				font-size: 20px
+				font-family: gotham
+				border: none
+				color: $violet
+				line-height: 1.5
+				height: 250px
+				width: 91%
+				padding: 20px
+
+			input[type="submit"]
+				color: white
+				background: $jaune
+				padding: 5px 15%
+				font-size: 30px
+				border: none
+				font-weight: lighter
+				font-family: gotham
+				display: inline-block
+				margin-right: 9%
+				float: right
+
+
+			select
+				float: left
+				padding: 5px 8%
+				width: 39%
+				font-size: 18px
+
