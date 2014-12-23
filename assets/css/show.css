@@ -59,17 +59,17 @@ body {
       font-size: 20px;
       text-align: center;
       vertical-align: center; }
-    body .contenu .resonne {
-      margin: 0 auto;
-      width: 60%; }
-      body .contenu .resonne a {
-        text-decoration: none;
-        color: white;
-        background: #F4B532;
-        padding: 5px 30px;
-        font-size: 25px;
-        border: none;
-        font-weight: lighter;
-        font-family: gotham; }
+  body .resonne {
+    margin: 0 auto;
+    width: 60%; }
+    body .resonne a {
+      text-decoration: none;
+      color: white;
+      background: #F4B532;
+      padding: 5px 30px;
+      font-size: 25px;
+      border: none;
+      font-weight: lighter;
+      font-family: gotham; }
 
 /*# sourceMappingURL=show.css.map */

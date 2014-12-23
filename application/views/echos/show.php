@@ -28,12 +28,12 @@
         echo form_close();
       }
       echo $this->session->flashdata('echo_success');
+    ?>  
+  </div>
+  <div class="resonne">
+    <?php
+      echo anchor(base_url("echos/update/".$echo[0]->gkey), 'Faire résonner');
     ?>
-    <div class="resonne">
-      <?php
-        echo anchor(base_url("echos/update/".$echo[0]->gkey), 'Faire résonner');
-      ?>
-    </div>
   </div>
 </body>
 </html>
