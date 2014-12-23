@@ -128,6 +128,7 @@
             this.settings.directives[passed
               .scenario[1]].call(this, passed.el, passed.scenario[0], function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if (arguments[0] instanceof Array) {
                   var args = arguments[0];
                 } else {
@@ -136,6 +137,11 @@
                   var args = arguments[0];
                 } else { 
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+                if (arguments[0] instanceof Array) { 
+                  var args = arguments[0];
+                } else { 
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
                   var args = Array.prototype.slice.call(arguments, 0);
                 }
 
@@ -270,10 +276,14 @@
         var cached_split = scenario[0].split(/,\s*$/),
         path             = cached_split[0],
 <<<<<<< HEAD
+<<<<<<< HEAD
         directive        = '';
 =======
         directive        = '';               
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+        directive        = '';               
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
       }
 
       return [this.trim(path), this.convert_directive(directive), this.trim(media_query)];
@@ -282,10 +292,14 @@
     object : function(el) {
       var raw_arr = this.parse_data_attr(el),
 <<<<<<< HEAD
+<<<<<<< HEAD
           scenarios = [],
 =======
           scenarios = [], 
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+          scenarios = [], 
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
           i = raw_arr.length;
 
       if (i > 0) {
@@ -341,10 +355,14 @@
     parse_data_attr : function (el) {
       var raw = el.attr(this.attr_name()).split(/\[(.*?)\]/),
 <<<<<<< HEAD
+<<<<<<< HEAD
           i = raw.length,
 =======
           i = raw.length, 
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+          i = raw.length, 
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
           output = [];
 
       while (i--) {

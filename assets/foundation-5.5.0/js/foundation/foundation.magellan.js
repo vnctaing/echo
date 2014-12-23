@@ -14,10 +14,14 @@
       fixed_top: 0, // top distance in pixels assigend to the fixed element on scroll
       offset_by_height: true,  // whether to offset the destination by the expedition height. Usually you want this to be true, unless your expedition is on the side.
 <<<<<<< HEAD
+<<<<<<< HEAD
       duration: 700, // animation duration time
 =======
       duration: 700, // animation duration time 
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+      duration: 700, // animation duration time 
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
       easing: 'swing' // animation easing
     },
 

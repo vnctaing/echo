@@ -50,10 +50,14 @@
         .on('click.fndtn.reveal', '[' + this.add_namespace('data-reveal-id') + ']:not([disabled])', function (e) {
           e.preventDefault();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+        
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
           if (!self.locked) {
             var element = S(this),
                 ajax = element.data(self.data_attr('reveal-ajax'));
@@ -247,10 +251,14 @@
       var settings = el.data(this.attr_name(true) + '-init') || this.settings,
             bg_root_element = settings.bg_root_element; // Adding option to specify the background root element fixes scrolling issue
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+      
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
       if (this.S('.' + this.settings.bg_class).length === 0) {
         this.settings.bg = $('<div />', {'class': this.settings.bg_class})
           .appendTo(bg_root_element).hide();

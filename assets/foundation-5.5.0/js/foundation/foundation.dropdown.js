@@ -70,10 +70,14 @@
           if ($this.data(self.data_attr())) {
               settings = $this.data(self.data_attr(true) + '-init') || self.settings;
 <<<<<<< HEAD
+<<<<<<< HEAD
           }
 =======
           } 
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+          } 
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
           else {
               var target   = S('[' + self.attr_name() + '="' + S(this).attr('id') + '"]'),
                   settings = target.data(self.attr_name(true) + '-init') || self.settings;
@@ -245,20 +249,28 @@
         p.top -= o.top;
         p.left -= o.left;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+        
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
         //set some flags on the p object to pass along
         p.missRight = false;
         p.missTop = false;
         p.missLeft = false;
         p.leftRightFlag = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+    
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
         //lets see if the panel will be off the screen
         //get the actual width of the page and store it
         var actualBodyWidth;
@@ -271,10 +283,14 @@
         var actualMarginWidth = (window.outerWidth - actualBodyWidth) / 2;
         var actualBoundary = actualBodyWidth;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+    
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
         if (!this.hasClass('mega')) {
           //miss top
           if (t.offset().top <= this.outerHeight()) {
@@ -283,20 +299,28 @@
             p.leftRightFlag = true;
           }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+          
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
           //miss right
           if (t.offset().left + this.outerWidth() > t.offset().left + actualMarginWidth && t.offset().left - actualMarginWidth > this.outerWidth()) {
             p.missRight = true;
             p.missLeft = false;
           }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+          
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
           //miss left
           if (t.offset().left - this.outerWidth() <= 0) {
             p.missLeft = true;
@@ -313,19 +337,27 @@
 
         this.addClass('drop-top');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+        
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
         if (p.missTop == true) {
           p.top = p.top + t.outerHeight() + this.outerHeight();
           this.removeClass('drop-top');
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+    
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
         if (p.missRight == true) {
           p.left = p.left - this.outerWidth() + t.outerWidth();
         }
@@ -366,10 +398,14 @@
 
         this.addClass('drop-left');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+        
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
         if (p.missLeft == true) {
           p.left =  p.left + this.outerWidth();
           p.top = p.top + t.outerHeight();
@@ -384,10 +420,14 @@
 
         this.addClass('drop-right');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+        
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
         if (p.missRight == true) {
           p.left = p.left - this.outerWidth();
           p.top = p.top + t.outerHeight();
@@ -396,10 +436,14 @@
           p.triggeredRight = true;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+    
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
         var self = Foundation.libs.dropdown;
 
         if (t.outerWidth() < this.outerWidth() || self.small() || this.hasClass(s.mega_menu)) {
@@ -430,10 +474,14 @@
           css_before = 'left: ' + pip_offset_base + 'px;',
           css_after  = 'left: ' + (pip_offset_base - 1) + 'px;';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+        
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
       if (position.missRight == true) {
         pip_offset_base = dropdown.outerWidth() - 23;
         sel_before = '.f-dropdown.open:before',
@@ -442,10 +490,14 @@
         css_after  = 'left: ' + (pip_offset_base - 1) + 'px;';
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+    
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
       //just a case where right is fired, but its not missing right
       if (position.triggeredRight == true) {
         sel_before = '.f-dropdown.open:before',

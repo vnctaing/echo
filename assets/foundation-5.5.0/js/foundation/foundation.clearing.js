@@ -17,10 +17,14 @@
       // comma delimited list of selectors that, on click, will close clearing,
       // add 'div.clearing-blackout, div.visible-img' to close on background click
 <<<<<<< HEAD
+<<<<<<< HEAD
       close_selectors : '.clearing-close, div.clearing-blackout',
 =======
       close_selectors : '.clearing-close, div.clearing-blackout', 
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+      close_selectors : '.clearing-close, div.clearing-blackout', 
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
 
       // Default to the entire li element.
       open_selectors : '',
@@ -165,10 +169,14 @@
         return;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+      
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
       $el.after('<div id="foundationClearingHolder"></div>');
 
       var grid = $el.detach(),
@@ -180,10 +188,14 @@
         grid_outerHTML = grid[0].outerHTML;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+      
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
       var holder = this.S('#foundationClearingHolder'),
           settings = $el.data(this.attr_name(true) + '-init'),
           data = {
@@ -285,10 +297,14 @@
         container.removeClass('clearing-container');
         visible_image.hide();
 <<<<<<< HEAD
+<<<<<<< HEAD
         visible_image.trigger('closed.fndtn.clearing');
 =======
         visible_image.trigger('closed.fndtn.clearing');        
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+        visible_image.trigger('closed.fndtn.clearing');        
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
       }
 
       // Event to re-enable scrolling on touch devices
@@ -453,10 +469,14 @@
       }
       return this;
 <<<<<<< HEAD
+<<<<<<< HEAD
     },
 =======
     }, 
 >>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
+=======
+    }, 
+>>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
 
     // directional methods
 
