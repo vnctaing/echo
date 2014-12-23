@@ -29,9 +29,9 @@ class Echo_model extends CI_Model{
 
   public function getExpirationDate($key){
     return $this->db->select('expires_at')
-    ->where('gkey',$key)
-    ->get('echos')
-    ->result();
+      ->where('gkey',$key)
+      ->get('echos')
+      ->result();
   }
 
   public function deleteExpiratedPosts(){

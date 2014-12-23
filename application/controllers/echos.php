@@ -46,7 +46,7 @@ class Echos extends CI_Controller
         //$echo_url = <a href="http://site.com/echos/read/$key">http://site.com/echos/read/$key</a>"
         //Prépare la flash notice, qui apparait dans la vue echos/new
         $this->session->set_flashdata('add_success', $echo_url);
-        redirect('echos/create');
+        redirect("echos/read/$key");
       }
     }
   }
