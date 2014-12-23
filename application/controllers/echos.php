@@ -116,7 +116,7 @@ class Echos extends CI_Controller
       'expires_at' => $newExpirationDate,
     );
     if($this->echo_model->updateLifetime($key,$data)){
-    $this->session->set_flashdata('echo_success', 'Durée de vie allongée de 15 min ! ');
+    $this->session->set_flashdata('echo_success', '+ 15 min');
     redirect("echos/read/$key");
     }else{
       echo 'fail';

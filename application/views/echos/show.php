@@ -5,7 +5,8 @@
   <title>Echo</title>
   <?=css('show.css')?>
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" media="screen and (max-width: 830px)" href="../../assets/css/show.css">
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="../../assets/css/show-mobile.css">
+  
 </head>
 <body>
   <div id="navbar">
@@ -27,13 +28,16 @@
         echo form_submit('mysubmit', 'Ok');
         echo form_close();
       }
-      echo $this->session->flashdata('echo_success');
+      
     ?>  
   </div>
   <div class="resonne">
     <?php
       echo anchor(base_url("echos/update/".$echo[0]->gkey), 'Faire résonner');
     ?>
+  </div>
+  <div class="ajout">
+    <?php echo $this->session->flashdata('echo_success'); ?>
   </div>
 </body>
 </html>
