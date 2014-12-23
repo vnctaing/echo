@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Signup</title>
+  <title>Inscription</title>
   <?=css('signup.css')?>
-  <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" media="screen and (max-width: 830px)" href="../../assets/css/signup-mobile.css">
 </head>
 <body>

@@ -4,9 +4,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Signup</title>
+  <title>Connexion</title>
   <?=css('connect.css')?>
-  <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" media="screen and (max-width: 830px)" href="../../assets/css/connect-mobile.css">
 </head>
 <body>
