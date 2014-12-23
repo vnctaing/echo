@@ -38,7 +38,7 @@
 |
 */
 $route['default_controller'] = "echos";
-$route['404_override'] = '';
+$route['404_override'] = 'welcome/expired';
 
 
 /* End of file routes.php */
