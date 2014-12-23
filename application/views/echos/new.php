@@ -7,9 +7,6 @@
   <link rel="stylesheet" media="screen and (max-width: 1100px)" href="../../assets/css/new-1100px.css" /> <!-- Pour les ecrans (1100px) -->
   <link rel="stylesheet" media="screen and (max-width: 500px)" href="../../assets/css/new-mobile.css" /> <!-- Pour les ecrans (500px) -->
 
-
-
-
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 </head>
 <body>

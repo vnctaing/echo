@@ -1,7 +1,5 @@
 <!doctype html>
-<html lang="en">
-<!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <title>Connexion</title>
