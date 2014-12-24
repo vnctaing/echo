@@ -10,10 +10,6 @@ body {
     vertical-align: top;
     height: 70px;
     padding-right: 10%; }
-    body #navbar .menu {
-      float: left;
-      padding: 28px;
-      display: none; }
     body #navbar img {
       float: left;
       width: 160px;
@@ -38,64 +34,29 @@ body {
       -moz-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease; }
-  body h2 {
+  body h1 {
     font-family: "Arvo", serif;
-    margin: 40px auto;
-    font-size: 41px;
-    width: 403px;
     color: #482F5D;
-    text-align: center; }
-  body .contenu {
-    width: 40%;
+    font-size: 40px;
+    width: 451px;
+    margin: 30px auto; }
+  body .deconnexion {
     margin: 0 auto;
-    background: white;
-    box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
-    -moz-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
-    -webkit-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
-    padding: 40px 10%;
-    min-height: 150px; }
-    body .contenu p {
-      margin: 0 auto;
-      font-size: 20px;
-      text-align: center;
-      vertical-align: center;
-      line-height: 30px; }
-  body .resonne {
-    margin: 0 auto;
-    width: 40%;
-    padding: 10px 10%;
-    background: #F4B532;
+    padding: 10px;
     text-align: center;
     margin-bottom: 40px;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-    body .resonne a {
+    body .deconnexion a {
       text-decoration: none;
       color: white;
-      margin: 0 auto;
-      font-size: 25px;
-      border: none;
+      background: #482F5D;
+      font-size: 17px;
       font-weight: lighter;
       font-family: gotham;
       text-align: center;
-      padding: 10px 21%; }
-  body .resonne:hover {
-    background: #482F5D;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-  body .ajout {
-    color: #482F5D;
-    font-family: "Arvo", serif;
-    font-weight: bold;
-    width: 90px;
-    font-size: 26px;
-    letter-spacing: -3px;
-    text-align: center;
-    margin: -20px auto;
-    padding-bottom: 40px; }
+      padding: 10px 30px; }
 
-/*# sourceMappingURL=show.css.map */
+/*# sourceMappingURL=member.css.map */
