@@ -39,7 +39,6 @@
 */
 $route['default_controller'] = "echos";
 $route['404_override'] = 'welcome/expired';
-
-
+$route['echos/read'] = "echos/create";
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

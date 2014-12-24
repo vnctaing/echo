@@ -23,7 +23,15 @@ class Welcome extends CI_Controller {
 	}
 
 	public function expired(){
-		$this->load->view('welcome/404_error');
+		$this->load->model('echo_model');
+		$key = $this->uri->segment(1);
+		if ( $data['echo'] = $this->echo_model->getEcho($key)){
+			$this->load->view('echos/show', $data);
+		}
+
+		else{
+			$this->load->view('welcome/404_error');
+		}
 	}
 }
 

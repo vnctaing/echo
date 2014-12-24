@@ -20,7 +20,7 @@ class Echos extends CI_Controller
       // Charge /model/echo_model.php
       $this->load->model('echo_model');
       // Génere un unique id hashé à l'écho
-      $key = md5(uniqid());
+      $key = substr( md5(uniqid()), 0, 7) ;
       $content = $this->input->post('content');
       $secretkey = $this->input->post('secretkey');
       $data = array(
@@ -42,7 +42,7 @@ class Echos extends CI_Controller
         /** anchor(foo,bar) <=> <a href="foo">bar</a>, 
         base_url("/echos/read/$key") <=> www.localhost.com/echos/read/$key
         **/
-        $echo_url = anchor(base_url("/echos/read/$key") , base_url("echos/read/$key"));
+        $echo_url = anchor(base_url("/$key") , base_url("/$key"));
         //$echo_url = <a href="http://site.com/echos/read/$key">http://site.com/echos/read/$key</a>"
         //Prépare la flash notice, qui apparait dans la vue echos/new
         $this->session->set_flashdata('add_success', $echo_url);
@@ -64,24 +64,22 @@ class Echos extends CI_Controller
       //Pour simplifier, key est
       $key = $this->uri->segment(3);
       //Si le model retrouve un echo avec la meme clef
-      if($data['echo'] = $this->echo_model->getEcho($key)){
-        //On affiche l'echo dans show
-        /**if($this->echo_model->isEncrypted($key)){
-          $inputkey = $this->input->post('secretkey');
-          if($this->echo_model->isSecretKeyValid($key,$inputkey)){
-            $data['echo'][0]->content = $this->encrypt->decode($data['echo'][0]->content);
-          }else{
-            echo "Bien essayé mais la clé n'est pas valide";
-          }
-        }*/
-        //$this->decrypt($key, $data);
-
-
-        $this->load->view('echos/show', $data);
-      }
-      else{
-        echo 'Echo inexistant';
-      }
+        if($data['echo'] = $this->echo_model->getEcho($key)){
+          //On affiche l'echo dans show
+          /**if($this->echo_model->isEncrypted($key)){
+            $inputkey = $this->input->post('secretkey');
+            if($this->echo_model->isSecretKeyValid($key,$inputkey)){
+              $data['echo'][0]->content = $this->encrypt->decode($data['echo'][0]->content);
+            }else{
+              echo "Bien essayé mais la clé n'est pas valide";
+            }
+          }*/
+          //$this->decrypt($key, $data);
+          redirect("/$key", $data);
+        }
+        else{
+          echo 'Echo inexistant';
+        }
     }
   }
 
