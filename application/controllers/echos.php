@@ -22,7 +22,7 @@ class Echos extends CI_Controller
       // Génere un unique id hashé à l'écho
       $key = substr( md5(uniqid()), 0, 7) ;
       $content = $this->input->post('content');
-      $secretkey = $this->input->post('secretkey');
+      $secretkey = md5($this->input->post('secretkey'));
       $data = array(
         'content' => $this->input->post('content'), //$_POST['content']
         'gkey' => $key,
@@ -32,7 +32,7 @@ class Echos extends CI_Controller
         $this->load->library('encrypt');
         $data['encryptOpt'] = $this->input->post('encrypt');
         $data['content'] = $this->encrypt->encode($content);
-        $data['secretkey'] = $this->input->post('secretkey');
+        $data['secretkey'] = $secretkey;
       }
       /** Appelle la méthode add_echo de Echo_model
       en passant en paramètre le tableau $data **/
@@ -46,7 +46,7 @@ class Echos extends CI_Controller
         //$echo_url = <a href="http://site.com/echos/read/$key">http://site.com/echos/read/$key</a>"
         //Prépare la flash notice, qui apparait dans la vue echos/new
         $this->session->set_flashdata('add_success', $echo_url);
-        redirect("echos/read/$key");
+        redirect("/$key");
       }
     }
   }
@@ -57,50 +57,39 @@ class Echos extends CI_Controller
     if( ! $this->uri->segment(3)){
       redirect('echos/create');
     }
-    //Sinon, on retrouve un echo avec la cle passe en parametre.
     else{
       $this->load->model('echo_model');
       $this->load->library('encrypt');
-      //Pour simplifier, key est
-      $key = $this->uri->segment(3);
-      //Si le model retrouve un echo avec la meme clef
-        if($data['echo'] = $this->echo_model->getEcho($key)){
-          //On affiche l'echo dans show
-          /**if($this->echo_model->isEncrypted($key)){
-            $inputkey = $this->input->post('secretkey');
-            if($this->echo_model->isSecretKeyValid($key,$inputkey)){
-              $data['echo'][0]->content = $this->encrypt->decode($data['echo'][0]->content);
-            }else{
-              echo "Bien essayé mais la clé n'est pas valide";
-            }
-          }*/
-          //$this->decrypt($key, $data);
-          redirect("/$key", $data);
+        //Stocke dans un tableau, l'echo retrouvé.
+        if($data['echo'] = $this->echo_model->getEcho($key)){        
+            redirect("/$key", $data);
         }
         else{
           echo 'Echo inexistant';
+
         }
     }
   }
 
-
+//METHODE POUR DECHIFFRER UN ECHO
   public function decrypt($key){
     $this->load->model('echo_model');
     $data['echo'] = $this->echo_model->getEcho($key);
-    if($this->echo_model->isEncrypted($key)){
-      $inputkey = $this->input->post('secretkey');
-      if( $this->echo_model->isSecretKeyValid($key,$inputkey) ){
-        $this->load->library('encrypt');
-        $data['echo'][0]->content = $this->encrypt->decode($data['echo'][0]->content);
-        $this->load->view('echos/show', $data);
-      }else{
-        echo "Bien essayé mais la clé n'est pas valide";
-      }
+    $inputkey = md5($this->input->post('secretkey'));
+    if($this->echo_model->isSecretKeyValid($key, $inputkey)){
+      $this->load->library('encrypt');
+      $data['echo'][0]->content = $this->encrypt->decode($data['echo'][0]->content);
+      $this->load->view('echos/show', $data);
+    }
+    else{
+      $flash_message =  "Bien essayé mais la clé n'est pas valide";
+      $this->session->set_flashdata('invalid_key', $flash_message);
+      redirect ("/$key");
     }
   }
 
 
-  //METHODE POUR RESONNER UN ECHO
+//METHODE POUR RESONNER UN ECHO
   public function update($key){
     $this->load->model('echo_model');
     // Le modele retourne un tableau d'objets

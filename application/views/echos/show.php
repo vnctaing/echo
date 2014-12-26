@@ -17,7 +17,17 @@
   <div class="contenu">
     <p><?php echo $echo[0]->content;?></p>
     <?php
-      $key = $this->uri->segment(3);
+
+
+      if( $this->uri->segment(3) )
+      {
+          $key = $this->uri->segment(3);
+        } 
+        else if ( $this->uri->segment(1))
+        {
+          $key = $this->uri->segment(1);
+        }
+
       if($this->echo_model->isEncrypted($key)){
         echo form_open("echos/decrypt/$key");
         echo form_input('secretkey');
@@ -28,6 +38,7 @@
     ?>
     <div class="resonne">
     <?php
+      echo $this->session->flashdata('invalid_key');
       echo anchor(base_url("echos/update/".$echo[0]->gkey), 'Faire résonner');
     ?>
 

@@ -28,7 +28,6 @@ class Welcome extends CI_Controller {
 		if ( $data['echo'] = $this->echo_model->getEcho($key)){
 			$this->load->view('echos/show', $data);
 		}
-
 		else{
 			$this->load->view('welcome/404_error');
 		}

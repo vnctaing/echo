@@ -51,8 +51,8 @@ class Echo_model extends CI_Model{
 
   public function isSecretKeyValid($key,$inputkey){
     $query = $this->db
-      ->where('gkey', $key)
       ->where('secretkey', $inputkey)
+      ->where('gkey', $key)
       ->get('echos')
       ->result();
       if($query){return true;}
