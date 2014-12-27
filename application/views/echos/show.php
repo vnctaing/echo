@@ -35,7 +35,7 @@
 
       if($this->echo_model->isEncrypted($key)){
         echo form_open("echos/decrypt/$key");
-        echo form_input('secretkey');
+        echo form_password('secretkey');
         echo form_submit('mysubmit', 'Ok');
         echo form_close();
       }
@@ -70,6 +70,10 @@
       var seconds = Math.floor(lifetime - hour * 3600 - minutes * 60)
       var life = document.getElementById("life");
       life.innerHTML =  + hour + ":" + minutes + ":" + seconds;
+      if(lifetime < 0 ){
+        window.location.replace('<?php echo base_url() ?>');
+      }
+
       }, 1000);
     </script>
 </body>

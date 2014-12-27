@@ -47,7 +47,7 @@
       echo 'Option Chiffrement: ';
       echo form_checkbox('encrypt', 1);
       echo 'Entrez une clef secrete :';
-      echo form_input('secretkey');
+      echo form_password('secretkey');
     ?>
   
     <?php echo form_submit('mysubmit', 'OK');
