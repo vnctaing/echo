@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Echo</title>
+
 </head>
 <body>
   <a href="../../../index.php"><img class="echo" src="../../../assets/img/logo-echo-blanc.png"></a>
@@ -16,6 +17,10 @@
   <h2>Contenu</h2>
   <div class="contenu">
     <p><?php echo $echo[0]->content;?></p>
+    <h3>Durée de vie : </h3>
+    <div id="life"></div>
+
+
     <?php
 
 
@@ -53,6 +58,20 @@
     </script>
     </div>
   </div>
+
+
+    <script>
+      setInterval(function(){
+      var expDate = "<?php echo strtotime($echo[0]->expires_at);?>" ; 
+      var today= new Date().getTime() / 1000; // UNIX en seconde
+      var lifetime = expDate - today; // duree de vie en seconde 
+      var hour = Math.floor(lifetime / 3600);
+      var minutes = Math.floor(lifetime / 60 - hour * 60);
+      var seconds = Math.floor(lifetime - hour * 3600 - minutes * 60)
+      var life = document.getElementById("life");
+      life.innerHTML =  + hour + ":" + minutes + ":" + seconds;
+      }, 1000);
+    </script>
 </body>
 </html>
 
