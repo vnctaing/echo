@@ -5,7 +5,7 @@ body {
   font-family: gotham;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position-y: -130px; }
+  background-position-y: 29%; }
   body #content {
     width: 600px;
     margin: 0 auto; }
@@ -47,7 +47,6 @@ body {
       transition: all 0.3s ease; }
     body #content #plane {
       margin-right: 20px;
-      width: 100px;
-      margin-top: 5px; }
+      width: 100px; }
 
 /*# sourceMappingURL=404.css.map */
