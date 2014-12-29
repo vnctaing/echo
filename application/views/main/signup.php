@@ -10,7 +10,7 @@
 <body>
 
  <div id="navbar">
-    <a href="../../../index.php"><img src="../../assets/img/echo.png"></a>
+    <?php echo anchor(base_url(), '<img src="../../assets/img/echo.png">'); ?>
     <ul class="hidden">
       <li><?php echo anchor('main/login', 'Connexion'); ?></li>
       <li><?php echo anchor('/', 'Accueil'); ?></li>
