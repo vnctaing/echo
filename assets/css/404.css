@@ -1,11 +1,9 @@
 body {
-  background-image: url(../img/bg-404.png);
+  background: url(../img/bg-404.png) no-repeat fixed;
+  background-size: cover;
   font-weight: lighter;
   margin: 0 auto;
-  font-family: gotham;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position-y: 29%; }
+  font-family: gotham; }
   body #content {
     width: 600px;
     margin: 0 auto; }

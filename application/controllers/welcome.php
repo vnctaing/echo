@@ -25,7 +25,7 @@ class Welcome extends CI_Controller {
 	public function expired(){
 		$this->load->view('welcome/404_error');
 	}
-
+}
 
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */
