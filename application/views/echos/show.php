@@ -17,6 +17,15 @@
     </ul>
   </div>
   <h2>Félicitation ! <br>Votre echo est créé</h2>
+
+  <div id="share">
+    <a class="twitter-share-button"
+      href="https://twitter.com/share"
+      data-via="social_EchoFR">
+    Tweet
+    </a>
+  </div>
+
   <div class="contenu">
     <p><?php echo $echo[0]->content;?></p>
     <h3>Durée de vie : </h3>
@@ -41,19 +50,17 @@
         echo form_submit('mysubmit', 'Ok');
         echo form_close();
       }
+
+        echo $this->session->flashdata('invalid_key');
       
     ?>  
+
   </div>
   <div class="resonne">
     <?php
-      echo $this->session->flashdata('invalid_key');
       echo anchor(base_url("echos/update/".$echo[0]->gkey), 'Faire résonner');
     ?>
-    <a class="twitter-share-button"
-      href="https://twitter.com/share"
-      data-via="social_EchoFR">
-    Tweet
-    </a>
+
     <script type="text/javascript">
     window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
     </script>

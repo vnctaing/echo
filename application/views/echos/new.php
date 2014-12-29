@@ -48,6 +48,7 @@
         'placeholder' => 'Exprimez-vous !',
         'name' => 'content'
         );
+
       echo form_textarea($attributes);
     ?>
     <div class="chiffrement">
@@ -82,7 +83,7 @@
       echo form_dropdown('expired_at', $options, '1');
       echo 'Option Chiffrement: ';
       echo form_checkbox('encrypt', 1);
-      echo 'Entrez une clef secrete :';
+      echo 'Entrez une clé secrète :';
       echo form_password('secretkey');
     ?>
 

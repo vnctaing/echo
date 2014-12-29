@@ -45,6 +45,10 @@ body {
     width: 403px;
     color: #482F5D;
     text-align: center; }
+  body #share {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 20px; }
   body .contenu {
     width: 40%;
     margin: 0 auto;
@@ -59,7 +63,9 @@ body {
       font-size: 20px;
       text-align: center;
       vertical-align: center;
-      line-height: 30px; }
+      line-height: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis; }
   body .resonne {
     margin: 0 auto;
     width: 40%;
