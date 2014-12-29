@@ -1,11 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Member section</title>
+  <title>Nouveau membre</title>
+  <?=css('member.css')?>
+  <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="../../assets/css/member-mobile.css">
 </head>
 <body>
-  <h1>Connexion / Inscription Réussie !</h1>
-  <a href='<?php echo base_url()."main/logout";?>'>Logout</a>
+	<div id="navbar">
+    <a href="../../../index.php"><img src="../../assets/img/echo.png"></a>
+    <ul class="hidden">
+      <li><?php echo anchor('/', 'Accueil'); ?></li>
+    </ul>
+  	</div>
+  	<h1>Bienvenue chez vous !</h1>
+  	<div class="deconnexion">
+  		<a href='<?php echo base_url()."main/logout";?>'>Déconnexion</a>
+	</div>
+
 </body>
 </html>

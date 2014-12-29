@@ -1,98 +1,105 @@
 $violetclair: #b68dc0
-$jaune : #ffce00
-$violetfonce : #2E2736
+$jaune : #F4B532
+$gris : #F0F0F0
+$violet : #482F5D
 
 body
-  font-family : quicksand
-  margin: 0
-  background: url(../img/bg-echo.jpg) no-repeat
-  background-size: cover
-  color: white
+  background: $gris
+  font-weight: lighter
+  margin: -16px auto 
+  font-family: gotham
 
-  .join
-    width: 600px
-    //border: 2px green solid
-    display: inline-block
+  #navbar
+    background : $violet
+    font-family: 'Arvo', serif
+    color: white
     vertical-align: top
-
-    h1
-      font-size: 80px
-      text-align: right
-      font-family: 'Patua One', cursive
+    height: 70px
+    padding-right: 10%
 
     img
-      width: 300px
-      display: block
-      margin-top: -80px
-      padding-left: 320px
+      float: left
+      width: 160px
+      margin: 7px 12%
 
 
-  img
-    width: 500px
-    margin: 30px auto
-    position: relative
-    display: block
 
-  ul
-    float: right
-    position:relative
-    margin: -180px 60px 0 0
-
-    li
-      border: solid 2px white
-      border-radius: 10px
-      padding: 10px 5px
-      display: block
-      margin: 30px 0
-      transition: all 0.5s ease
-
-      a
-        text-decoration: none
-        position: relative
-        font-size: 20px
-        transition: all 0.5s ease
-        color: white
-        padding: 20px
-
-      a:hover
-        color: $violetfonce
-        font-weight: bold
-
-    li:hover
-      background: white
-
-  form
-    font-size: 20px
-    font-weight: lighter
-    width: 540px
-    input
-      background: none
-      font-family: quicksand
-      color: white
+    a
+      text-decoration: none
+      color: $gris
       font-size: 20px
-      padding: 15px
-      width: 500px
-      border-radius: 10px
-      border: 2px white solid
-    input[type=submit]
-      color: white
-      background: $jaune
-      padding: 15px 0 10px 0
-      width: 350px
-      font-size: 24px
-      border: none
-      border-radius: 2px
-      font-size: 35px
-      font-family: quicksand
+      font-weight: normal
+      -webkit-transition: all 0.3s ease
+      -moz-transition: all 0.3s ease
+      -o-transition: all 0.3s ease
+      transition: all 0.3s ease
+
+    ul
+
+      li
+        display: inline-block
+        text-decoration: none
+        padding: 20px 40px
+        float: right
+
+    a:hover
+      color: $jaune
+      -webkit-transition: all 0.3s ease
+      -moz-transition: all 0.3s ease
+      -o-transition: all 0.3s ease
+      transition: all 0.3s ease
+
+  #cadre
+    background: white
+    box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1)
+    -moz-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1)
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1)
+    width: 54% 
+    margin: 30px auto
+    padding: 20px
+
+    h1 
+      font-size: 40px
+      text-align: center
+      font-family: 'Arvo', serif
+      color: $violet
       font-weight: lighter
-      margin: 0 auto
-      display: block
-    input:focus // Pour enlever la case bleu quand on clique sur lformulaire
-      outline: none
+
+    hr
+      border: solid 2px $violet
+      width: 60%
+
+    .formulaire
+      margin: 30px auto
+      width: 60%
 
 
-  .formulaire
-    //border: 2px red solid
-    width: 700px
-    display: inline-block
-    margin-left: 100px
+      p
+        color: $violet
+
+      input[type="text"], input[type="password"]
+        background: $gris
+        border: none
+        padding: 10px
+        width: 96%
+        font-family: gotham
+        color: grey
+        font-size: 14px
+        margin-top: 5px
+
+      input[type="submit"]
+        color: white
+        background: $jaune
+        padding: 5px 19%
+        font-size: 30px
+        border: none
+        font-weight: lighter
+        font-family: gotham
+        display: block
+        margin: 30px auto
+
+
+
+
+
+

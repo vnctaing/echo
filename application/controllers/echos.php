@@ -61,13 +61,12 @@ class Echos extends CI_Controller
       $this->load->model('echo_model');
       $this->load->library('encrypt');
         //Stocke dans un tableau, l'echo retrouvé.
-        if($data['echo'] = $this->echo_model->getEcho($key)){        
-            redirect("/$key", $data);
-        }
-        else{
-          echo 'Echo inexistant';
-
-        }
+      if($data['echo'] = $this->echo_model->getEcho($key)){        
+        redirect("/$key", $data);
+      }
+      else{
+        redirect('views/welcome/404_error');
+      }
     }
   }
 
@@ -103,7 +102,7 @@ class Echos extends CI_Controller
       'expires_at' => $newExpirationDate,
     );
     if($this->echo_model->updateLifetime($key,$data)){
-    $this->session->set_flashdata('echo_success', 'Durée de vie allongée de 15 min ! ');
+    $this->session->set_flashdata('echo_success', '+ 15 min');
     redirect("echos/read/$key");
     }else{
       echo 'fail';

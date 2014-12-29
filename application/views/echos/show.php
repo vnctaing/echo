@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <title>Echo</title>
-
+  <?=css('show.css')?>
+  <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="../../assets/css/show-mobile.css">
 </head>
 <body>
-  <a href="../../../index.php"><img class="echo" src="../../../assets/img/logo-echo-blanc.png"></a>
-  <div id="nav"> 
-    <ul>
+  <div id="navbar">
+    <a href="../../../index.php"><img src="../../assets/img/echo.png"></a>
+    <ul class="hidden">
+      <li><?php echo anchor('main/signup', 'Inscription'); ?></li>
       <li><?php echo anchor('main/login', 'Connexion'); ?></li>
-      <li><?php echo anchor('echos/index', 'Crée ton echo'); ?></li>
-   </ul>
+      <li><?php echo anchor('/', 'Accueil'); ?></li>
+    </ul>
   </div>
-  <hr>
-  <h2>Contenu</h2>
+  <h2>Félicitation ! <br>Votre echo est créé</h2>
   <div class="contenu">
     <p><?php echo $echo[0]->content;?></p>
     <h3>Durée de vie : </h3>
@@ -39,15 +41,14 @@
         echo form_submit('mysubmit', 'Ok');
         echo form_close();
       }
-      echo $this->session->flashdata('echo_success');
-    ?>
-    <div class="resonne">
+      
+    ?>  
+  </div>
+  <div class="resonne">
     <?php
       echo $this->session->flashdata('invalid_key');
       echo anchor(base_url("echos/update/".$echo[0]->gkey), 'Faire résonner');
     ?>
-
-
     <a class="twitter-share-button"
       href="https://twitter.com/share"
       data-via="social_EchoFR">
@@ -57,6 +58,9 @@
     window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
     </script>
     </div>
+  </div>
+  <div class="ajout">
+    <?php echo $this->session->flashdata('echo_success'); ?>
   </div>
 
 

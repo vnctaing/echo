@@ -1,139 +1,125 @@
 $violetclair: #b68dc0
-$jaune : #ffce00
-$violetfonce : #2E2736
+$jaune : #F4B532
+$gris : #F0F0F0
+$violet : #482F5D
 
 body
-	font-family : quicksand
-	margin: 0
-	background-image: url(../img/bg-echo.jpg)
-	background-size: 100%
-	color: white
-	
-	.echo
-		width: 500px
-		margin: 30px auto
-		position: relative
-		//border: 2px solid green
-		display: block
+	background : $gris
+	font-weight : lighter
+	margin: -16px auto 
+	font-family: gotham
 
-
-	#nav 
-		text-align: center
-		float: right
+	#navbar
+		background : $violet
+		font-family: 'Arvo', serif
+		color: white
 		vertical-align: top
-		display: inline
-		margin-top: -200px
-		margin-right: 53px
-	
+		height: 70px
+		padding-right: 10%
 
-		.fleche
-			width: 80px
-			//border: 2px red solid
-			margin-top: 90px
-			display: inline-block
+		.menu 
+			float: left
+			padding: 28px
+			display: none
+
+		img
+			float: left
+			width: 160px
+			margin: 7px 12%
+
+		a
+			text-decoration: none
+			color: $gris
+			font-size: 20px
+			font-weight: normal
+			-webkit-transition: all 0.3s ease
+			-moz-transition: all 0.3s ease
+			-o-transition: all 0.3s ease
+			transition: all 0.3s ease
 
 		ul
-			//border: 2px yellow solid
-			padding: 0
-			width: 210px
-			display: inline-block
-			vertical-align: top
 
 			li
-				border: solid 2px white
-				border-radius: 10px
-				padding: 10px 5px
-				display: block
-				width: 190px
-				margin: 30px 0
-				transition: all 0.5s ease
+				display: inline-block
+				text-decoration: none
+				padding: 20px 40px
+				float: right
 
-				a
-					text-decoration: none
-					position: relative
-					font-size: 20px
-					transition: all 0.5s ease
-					color: white
-					padding: 20px
+		a:hover
+			color: $jaune
+			-webkit-transition: all 0.3s ease
+			-moz-transition: all 0.3s ease
+			-o-transition: all 0.3s ease
+			transition: all 0.3s ease
 
-				a:hover
-					color: $violetfonce
-					font-weight: bold
-
-			li:hover
-				background: white
 
 	h2
-		font-family: 'Patua One', cursive
-		margin: 0
+		font-family: 'Arvo', serif
+		margin: 40px auto
+		font-size: 41px
+		width: 403px
+		color: $violet
 		text-align: center
-		font-size: 55px
-
-	hr
-		width: 200px
 
 	.contenu
-		text-align: center
-	
-		.resonne
+		width: 40%
+		margin: 0 auto
+		background: white
+		box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1)
+		-moz-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1)
+		-webkit-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1)
+		padding: 40px 10%
+		min-height: 150px
+
+		p
 			margin: 0 auto
-			vertical-align: top
-			width: 180px
-			height: 180px
-			border: 2px green solid
-			-webkit-border-radius: 100px
-			-moz-border-radius: 100px
-			-o-border-radius: 100px
-			border-radius: 100px
-
-			a
-				border: 2px white solid
-				text-decoration: none
-				color: white
-				padding: 60px 10px
-				border-radius: 200px
-
-			a:hover
-			
-
-
-
-	/*form
-		font-size: 20px
-		font-weight: lighter
-		width: 540px
-
-
-		input
-			background: none
-			font-family: quicksand
-			color: white
 			font-size: 20px
-			padding: 15px 
-			width: 500px
-			border-radius: 18px
-			border: 2px white solid
-	
-		input[type=submit]
+			text-align: center
+			vertical-align: center
+			line-height: 30px
+
+	.resonne
+		margin: 0 auto
+		width: 40%
+		padding: 10px 10%
+		background: $jaune
+		text-align: center
+		margin-bottom: 40px
+		-webkit-transition: all 0.3s ease
+		-moz-transition: all 0.3s ease
+		-o-transition: all 0.3s ease
+		transition: all 0.3s ease
+
+
+		a
+			text-decoration: none
 			color: white
-			background: $jaune
-			padding: 15px 0 10px 0
-			width: 350px
-			font-size: 24px
+			margin: 0 auto
+			font-size: 25px
 			border: none
-			border-radius: 15px
-			font-size: 35px
-			font-family: quicksand
 			font-weight: lighter
-			margin: 50px auto
-			display: block
+			font-family: gotham
+			text-align: center
+			padding: 10px 21%
 
-	.formulaire
-		//border: 2px red solid
-		width: 700px
-		display: inline-block
-		margin-left: 100px
 
+	.resonne:hover
+		background: $violet
+		-webkit-transition: all 0.3s ease
+		-moz-transition: all 0.3s ease
+		-o-transition: all 0.3s ease
+		transition: all 0.3s ease
+
+	.ajout
+		color: $violet
+		font-family: 'Arvo', serif
+		font-weight: bold
+		width: 90px
+		font-size: 26px
+		letter-spacing: -3px
+		text-align: center
+		margin: -20px auto
+		padding-bottom: 40px
 
 
 
