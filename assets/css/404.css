@@ -1,0 +1,52 @@
+body {
+  background-image: url(../img/bg-404.png);
+  font-weight: lighter;
+  margin: 0 auto;
+  font-family: gotham;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: 29%; }
+  body #content {
+    width: 600px;
+    margin: 0 auto; }
+    body #content .ksk {
+      width: 330px;
+      position: relative;
+      margin: 0 auto; }
+    body #content p {
+      color: white;
+      font-family: "Arvo", serif;
+      font-size: 150px;
+      margin-bottom: -80px; }
+    body #content img {
+      width: 140px; }
+    body #content h1, body #content h2 {
+      color: white;
+      font-family: "Arvo", serif;
+      text-align: center; }
+    body #content h2 {
+      font-family: gotham;
+      font-size: 15px;
+      font-weight: lighter; }
+    body #content a {
+      text-decoration: none;
+      color: white; }
+    body #content .back {
+      font-size: 20px;
+      width: 370px;
+      margin: 100px auto;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    body #content .back:hover {
+      color: #F4B532;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    body #content #plane {
+      margin-right: 20px;
+      width: 100px; }
+
+/*# sourceMappingURL=404.css.map */

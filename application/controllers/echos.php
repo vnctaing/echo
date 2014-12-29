@@ -80,7 +80,7 @@ class Echos extends CI_Controller
         $this->load->view('echos/show', $data);
       }
       else{
-        echo 'Echo inexistant';
+        redirect('views/welcome/404_error');
       }
     }
   }
