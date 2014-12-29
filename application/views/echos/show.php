@@ -16,7 +16,7 @@
       <li><?php echo anchor('/', 'Accueil'); ?></li>
     </ul>
   </div>
-  <h2>Félicitation ! <br>Votre echo est créé</h2>
+  <?php echo $this->session->flashdata('add_success'); ?>
   <div class="contenu">
     <p><?php echo $echo[0]->content;?></p>
     <h3>Durée de vie : </h3>
@@ -72,6 +72,7 @@
       var hour = Math.floor(lifetime / 3600);
       var minutes = Math.floor(lifetime / 60 - hour * 60);
       var seconds = Math.floor(lifetime - hour * 3600 - minutes * 60)
+      if (hour.length = 1){hour = "0" + hour;}
       var life = document.getElementById("life");
       life.innerHTML =  + hour + ":" + minutes + ":" + seconds;
       if(lifetime < 0 ){

@@ -43,7 +43,6 @@
     <hr>
     <?php
       echo form_open('echos/create'); // Crée un formulaire qui appelle la méthode create du controlleur echos
-      echo $this->session->flashdata('add_success');
       $attributes = array(
         'placeholder' => 'Exprimez-vous !',
         'name' => 'content'
