@@ -92,22 +92,35 @@ class Echos extends CI_Controller
 
 //METHODE POUR RESONNER UN ECHO
   public function update($key){
-    $this->load->model('echo_model');
-    // Le modele retourne un tableau d'objets
-    $data['echo'] = $this->echo_model->getEcho($key);
-    // On stock dans $oldExpirationDate , l'ancienne date d'expiration en time UNIX
-    // Car c'est plus facile a manipuler pour rajouter du temps
-    $oldExpirationDate = strtotime($data['echo'][0]->expires_at);
-    // Rajoute 15 minutes a la durée de vie, convertit time UNIX => date
-    $newExpirationDate = date('Y-m-d H:i:s', $oldExpirationDate + 15*60);
-    $data = array(
-      'expires_at' => $newExpirationDate,
-    );
-    if($this->echo_model->updateLifetime($key,$data)){
-      $this->session->set_flashdata('echo_success', '+ 15 min');
-    redirect("/$key");
-    }else{
-      echo 'fail';
+    if($this->session->userdata('hasVotedFor') == $key)
+    {
+      $message = "Il semblerait que vous ayiez déjà résonné cet echo";
+      $this->session->set_flashdata('errorDoubleRez', $message);
+      redirect("/$key");
+    }
+    else
+    {
+      $this->load->model('echo_model');
+      // Le modele retourne un tableau d'objets
+      $data['echo'] = $this->echo_model->getEcho($key);
+      // On stock dans $oldExpirationDate , l'ancienne date d'expiration en time UNIX
+      // Car c'est plus facile a manipuler pour rajouter du temps
+      $oldExpirationDate = strtotime($data['echo'][0]->expires_at);
+      // Rajoute 15 minutes a la durée de vie, convertit time UNIX => date
+      $newExpirationDate = date('Y-m-d H:i:s', $oldExpirationDate + 15*60);
+      $data = array(
+        'expires_at' => $newExpirationDate,
+      );
+      if($this->echo_model->updateLifetime($key,$data)){
+        $cookieData = array(
+          'hasVotedFor' => $key , 
+        );
+        $this->session->set_userdata($cookieData);
+        $this->session->set_flashdata('echo_success', '+ 15 min');
+        redirect("/$key");
+      }else{
+        echo 'Impossible de résonner';
+      }
     }
   }
 
