@@ -16,10 +16,10 @@
   <div id="navbar">
     <a href="#"><img class="menu" src="../../assets/img/menu.png"></a>
     <a href="#"><img src="../../assets/img/echo.png"></a>
-    <ul class="hidden">
+    <!--<ul class="hidden">
       <li><?php echo anchor('main/login', 'Connexion'); ?></li>
       <li><?php echo anchor('main/signup', 'Inscription'); ?></li>
-    </ul>
+    </ul>-->
     <ul class="aide">
       <li>?</li>
     </ul>
@@ -92,7 +92,14 @@
    </div>
   </div>
     <?php echo form_close();?>
-
+  
+  <footer>
+    <ul>
+      <li><p>En utilisant ce service, vous acceptez les <a href="welcome/CGU.html">Conditions Générales d'Utilisation</a>.</p></li>
+      <li><a href="https://www.facebook.com/pages/Echo/662945737093488"><img src="../../assets/img/fb.png"></a></li>
+      <li><a href="https://twitter.com/LeProjetEcho"><img src="../../assets/img/twitter.png"></a></li>
+    </ul>
+  </footer>
 
 </body>
 </html>

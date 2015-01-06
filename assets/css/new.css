@@ -142,5 +142,34 @@ body {
       margin-bottom: 10px; }
     body #rightcontent form input:focus {
       outline: none; }
+  body footer {
+    background: #191919;
+    background-repeat: repeat-x;
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0px;
+    position: relative;
+    bottom: 0px;
+    margin-top: 650px; }
+    body footer ul {
+      display: inline-block;
+      color: white;
+      margin-bottom: -10px;
+      margin-top: 0; }
+      body footer ul li {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 13px; }
+        body footer ul li img {
+          width: 50px;
+          margin: 15px 20px -22px 20px;
+          display: block; }
+        body footer ul li a {
+          color: #F0F0F0; }
+        body footer ul li p {
+          margin-top: -10px;
+          display: block;
+          margin-right: 60px; }
 
 /*# sourceMappingURL=new.css.map */
