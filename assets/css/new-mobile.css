@@ -1,7 +1,4 @@
 body #navbar .menu {
-  float: left;
-  padding: 21px;
-  display: inline-block;
   margin-left: 20px;
   width: 25px; }
 body #navbar .aide {
@@ -76,5 +73,9 @@ body #rightcontent {
     padding: 5px 8%;
     width: 39%;
     font-size: 18px; }
+body footer {
+  height: 130px; }
+  body footer ul li p {
+    margin: 20px 80px 0 80px; }
 
 /*# sourceMappingURL=new-mobile.css.map */

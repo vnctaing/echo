@@ -14,12 +14,12 @@
 
 
   <div id="navbar">
-    <a href="#"><img class="menu" src="../../assets/img/menu.png"></a>
+    <a href="#"><img class="menu" src="../../assets/img/home.png"></a>
     <a href="#"><img src="../../assets/img/echo.png"></a>
-    <!--<ul class="hidden">
-      <li><?php echo anchor('main/login', 'Connexion'); ?></li>
-      <li><?php echo anchor('main/signup', 'Inscription'); ?></li>
-    </ul>-->
+    <ul class="hidden">
+      <!--<li><?php echo anchor('main/login', 'Connexion'); ?></li>
+      <li><?php echo anchor('main/signup', 'Inscription'); ?></li>-->
+    </ul>
     <ul class="aide">
       <li>?</li>
     </ul>
@@ -50,7 +50,7 @@
 
       echo form_textarea($attributes);
     ?>
-    <div class="chiffrement">
+    <!--<div class="chiffrement">
       <p>Chiffrement :</p>
       <?php
         echo form_checkbox('encrypt', 1);
@@ -59,7 +59,7 @@
       <?php
         echo form_input('secretkey');
       ?>
-    </div>
+    </div>-->
 
     <h2> Choisissez votre durée de vie</h2>
     <hr>
@@ -80,10 +80,10 @@
       //Options passé
 
       echo form_dropdown('expired_at', $options, '1');
-      echo 'Option Chiffrement: ';
-      echo form_checkbox('encrypt', 1);
-      echo 'Entrez une clé secrète :';
-      echo form_password('secretkey');
+      //echo 'Option Chiffrement: ';
+      //echo form_checkbox('encrypt', 1);
+      //echo 'Entrez une clé secrète :';
+      //echo form_password('secretkey');
     ?>
 
   
@@ -95,9 +95,9 @@
   
   <footer>
     <ul>
-      <li><p>En utilisant ce service, vous acceptez les <a href="welcome/CGU.html">Conditions Générales d'Utilisation</a>.</p></li>
-      <li><a href="https://www.facebook.com/pages/Echo/662945737093488"><img src="../../assets/img/fb.png"></a></li>
-      <li><a href="https://twitter.com/LeProjetEcho"><img src="../../assets/img/twitter.png"></a></li>
+      <li><p>En utilisant ce service, vous acceptez les <a href="welcome/CGU.html" target="blank">Conditions Générales d'Utilisation</a>.</p></li>
+      <li><a href="https://www.facebook.com/pages/Echo/662945737093488" target="blank"><img src="../../assets/img/fb.png"></a></li>
+      <li><a href="https://twitter.com/LeProjetEcho" target="blank"><img src="../../assets/img/twitter.png" ></a></li>
     </ul>
   </footer>
 
