@@ -32,6 +32,10 @@ class Welcome extends CI_Controller {
 			$this->load->view('welcome/404_error');
 		}
 	}
+
+	public function cgu(){
+		$this->load->view('welcome/CGU');
+	}
 }
 
 /* End of file welcome.php */
