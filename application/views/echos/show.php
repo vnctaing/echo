@@ -9,10 +9,12 @@
 </head>
 <body>
   <div id="navbar">
+  <?php echo anchor(base_url(), '<img src="../../assets/img/home.png" class="menu">'); ?>
   <?php echo anchor(base_url(), '<img src="../../assets/img/echo.png">'); ?>
     <ul class="hidden">
-      <li><?php echo anchor('main/signup', 'Inscription'); ?></li>
-      <li><?php echo anchor('main/login', 'Connexion'); ?></li>
+
+      <!--<li><?php echo anchor('main/signup', 'Inscription'); ?></li>
+      <li><?php echo anchor('main/login', 'Connexion'); ?></li>-->
       <li><?php echo anchor('/', 'Accueil'); ?></li>
     </ul>
   </div>
@@ -25,7 +27,6 @@
 
 
     <?php
-
 
       if( $this->uri->segment(3) )
       {
@@ -52,6 +53,9 @@
     <script type="text/javascript">
      window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
     </script>
+    <div class="ajout">
+    <?php echo $this->session->flashdata('echo_success'); ?>
+    </div>
   </div>
   <div id="share">
     <a class="twitter-share-button"
@@ -85,6 +89,15 @@
 
       }, 1000);
     </script>
+    
+
+  <footer>
+    <ul>
+      <li><p>En utilisant ce service, vous acceptez les <a href="welcome/CGU.html" target="blank">Conditions Générales d'Utilisation</a>.</p></li>
+      <li><a href="https://www.facebook.com/pages/Echo/662945737093488" target="blank"><img src="../../assets/img/fb.png"></a></li>
+      <li><a href="https://twitter.com/LeProjetEcho" target="blank"><img src="../../assets/img/twitter.png"></a></li>
+    </ul>
+  </footer>
 </body>
 </html>
 

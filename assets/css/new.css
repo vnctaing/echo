@@ -13,7 +13,8 @@ body {
     body #navbar .menu {
       float: left;
       padding: 28px;
-      display: none; }
+      display: none;
+      width: 200px; }
     body #navbar img {
       float: left;
       width: 160px;
@@ -43,7 +44,8 @@ body {
   body #allcontent {
     display: block;
     width: 77%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    max-height: 800px; }
   body #leftcontent, body #rightcontent {
     display: inline-block;
     vertical-align: top;
@@ -62,7 +64,8 @@ body {
   body #leftcontent {
     width: 45%;
     vertical-align: top;
-    float: left; }
+    float: left;
+    margin-bottom: 0; }
     body #leftcontent h1 {
       font-size: 40px;
       padding: 0 auto;
@@ -88,6 +91,7 @@ body {
     float: right;
     width: 45%;
     vertical-align: top;
+    margin-bottom: 0;
     margin-left: 5%;
     padding-left: 30px;
     box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
@@ -142,5 +146,33 @@ body {
       margin-bottom: 10px; }
     body #rightcontent form input:focus {
       outline: none; }
+  body footer {
+    background: #191919;
+    background-repeat: repeat-x;
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0px;
+    position: absolute;
+    bottom: 0px; }
+    body footer ul {
+      display: inline-block;
+      color: white;
+      margin-bottom: -10px;
+      margin-top: 0; }
+      body footer ul li {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 13px; }
+        body footer ul li img {
+          width: 50px;
+          margin: 15px 20px -22px 20px;
+          display: block; }
+        body footer ul li a {
+          color: #F0F0F0; }
+        body footer ul li p {
+          margin-top: -10px;
+          display: block;
+          margin-right: 60px; }
 
 /*# sourceMappingURL=new.css.map */
