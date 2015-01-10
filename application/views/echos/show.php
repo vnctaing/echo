@@ -15,7 +15,6 @@
 
       <!--<li><?php echo anchor('main/signup', 'Inscription'); ?></li>
       <li><?php echo anchor('main/login', 'Connexion'); ?></li>-->
-      <li><?php echo anchor('/', 'Accueil'); ?></li>
     </ul>
   </div>
   <?php echo $this->session->flashdata('add_success'); ?>
