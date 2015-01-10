@@ -44,7 +44,6 @@
       }
 
         echo $this->session->flashdata('invalid_key');
-      
     ?>  
 
   </div>
@@ -63,7 +62,9 @@
   </div>
 
   <div class="ajout">
-    <?php echo $this->session->flashdata('echo_success'); ?>
+    <?php echo $this->session->flashdata('echo_success'); 
+      echo $this->session->flashdata('errorDoubleRez');
+    ?>
   </div>
 
 
