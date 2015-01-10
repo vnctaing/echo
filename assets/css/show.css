@@ -113,11 +113,9 @@ body {
     font-weight: bold;
     font-size: 26px;
     letter-spacing: -3px;
+    display: block;
     text-align: center;
-    margin: -27px auto;
-    padding-bottom: 90px;
-    position: absolute;
-    left: 60%; }
+    margin-bottom: 30px; }
   body footer {
     background: #191919;
     background-repeat: repeat-x;
