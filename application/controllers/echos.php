@@ -22,7 +22,7 @@ class Echos extends CI_Controller
       // Génere un unique id hashé à l'écho
       $key = substr( md5(uniqid()), 0, 7) ;
       $content = $this->input->post('content');
-      $secretkey = hash ( "sha256", $this->input->post('secretkey') );
+      //$secretkey = hash ( "sha256", $this->input->post('secretkey') );
       $data = array(
         'content' => $this->input->post('content'), //$_POST['content']
         'gkey' => $key,
