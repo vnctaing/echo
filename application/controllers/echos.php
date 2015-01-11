@@ -96,7 +96,7 @@ class Echos extends CI_Controller
 
 //METHODE POUR RESONNER UN ECHO
   public function update($key){
-    if($this->session->userdata('hasVotedFor') == $key)
+    if($this->session->userdata($key) == 1)
     {
       $message = "Il semblerait que vous ayiez déjà résonné cet echo";
       $this->session->set_flashdata('errorDoubleRez', $message);
@@ -117,7 +117,7 @@ class Echos extends CI_Controller
       );
       if($this->echo_model->updateLifetime($key,$data)){
         $cookieData = array(
-          'hasVotedFor' => $key, 
+          $key => 1, 
         );
         $this->session->set_userdata($cookieData);
 
