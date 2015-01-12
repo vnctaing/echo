@@ -3,7 +3,7 @@
 class Echo_model extends CI_Model{
 
   //The parameter is passed from the function echos/create containing
-  public function add_echo($data){
+public function add_echo($gkey, $content, $expires_at){
     $data = array(
         'key' => $gkey,
         'content' => $content,
@@ -16,7 +16,7 @@ class Echo_model extends CI_Model{
     }  
 
     return FALSE;
-  }
+}
 
   /**Cette méthode retourne dans un tableau,
   un objet echo avec une cle en parametre
