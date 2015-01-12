@@ -90,6 +90,10 @@
         }(document, 'script', 'facebook-jssdk'));</script>
     <div class="fb-share-button" data-layout="button_count"></div>
 
+
+  <form>
+    <input onFocus="this.select()" name="share-url" value="<?php echo base_url($echo[0]->gkey); ?>">
+  </form>
   </div>
   
 
