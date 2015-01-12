@@ -36,12 +36,9 @@ class Echos extends CI_Controller
       }
       /** Appelle la méthode add_echo de Echo_model
       en passant en paramètre le tableau $data **/
-      if( $this->echo_model->add_echo() ) {
+      if( $this->echo_model->add_echo($data) ) {
         // Si il réussit, la méthode add_echo retournera un booléen
         $this->load->helper('url');
-        $cookieData = array(
-          'hasVotedFor' => array("key"), 
-        );
         $this->session->set_userdata($cookieData);
         /** anchor(foo,bar) <=> <a href="foo">bar</a>, 
         base_url("/echos/read/$key") <=> www.localhost.com/echos/read/$key
