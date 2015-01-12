@@ -20,9 +20,12 @@
       <!--<li><?php echo anchor('main/login', 'Connexion'); ?></li>
       <li><?php echo anchor('main/signup', 'Inscription'); ?></li>-->
     </ul>
-    <ul class="aide">
+
+
+    <a href="#"><ul class="aide">
       <li>?</li>
-    </ul>
+    </ul></a>
+    
   </div>
   <div id="allcontent">
   <div id="leftcontent">

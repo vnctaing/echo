@@ -6,6 +6,9 @@
   <?=css('show.css')?>
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="../../assets/css/show-mobile.css">
+  
+  <script language=javascript> var url= document.URL; </script> 
+
 </head>
 <body>
   <div id="navbar">
@@ -58,15 +61,42 @@
     <?php echo $this->session->flashdata('echo_success'); ?>
     </div>
   </div>
+
   <div id="share">
     <a class="twitter-share-button"
       href="https://twitter.com/share"
-      data-via="social_EchoFR">
+      data-via="LeProjetEcho">
     Tweet
     </a>
   </div>
-
   
+
+
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  
+  <div class="fb-share-button" data-layout="button_count"></div>
+
+
+
+ 
+
+
+  <!--script language="javascript">
+    function fbshareCurrentPage(){
+      window.open("https://www.facebook.com/sharer/sharer.php?u="+escape(window.location.href)+"&t="+document.title, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false; 
+    }
+</script>
+
+
+  <a href="javascript:fbshareCurrentPage()" target="_blank" alt="Share on Facebook">Facebook</a-->
+
 
 
     <script>
