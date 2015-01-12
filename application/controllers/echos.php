@@ -43,6 +43,9 @@ class Echos extends CI_Controller
         /** anchor(foo,bar) <=> <a href="foo">bar</a>, 
         base_url("/echos/read/$key") <=> www.localhost.com/echos/read/$key
         **/
+        $cookieData = array(
+          $key => 1, 
+        );
         $echo_url = anchor(base_url("/$key") , base_url("/$key"));
         $message = '<h2>Félicitation ! <br>Votre echo est créé</h2>';
         //$echo_url = <a href="http://site.com/echos/read/$key">http://site.com/echos/read/$key</a>"
