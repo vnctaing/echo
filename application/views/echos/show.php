@@ -63,7 +63,7 @@
       echo $this->session->flashdata('errorDoubleRez');
     ?>
   </div>
->>>>>>> FETCH_HEAD
+
 
   <div id="share">
     <a class="twitter-share-button"
@@ -102,8 +102,6 @@
   <a href="javascript:fbshareCurrentPage()" target="_blank" alt="Share on Facebook">Facebook</a-->
 
 
-=======
->>>>>>> FETCH_HEAD
 
     <script>
       setInterval(function(){
