@@ -4,9 +4,7 @@ class Echo_model extends CI_Model{
 
   //The parameter is passed from the function echos/create containing
   public function add_echo($data){
-    $query = $this->db->insert('echos', $data);
-    // Génère une requête SQL : INSERT TO `echos` (nom de la table)
-    return $query;
+      return $this->db->insert('echos', $data);
   }
 
   /**Cette méthode retourne dans un tableau,
