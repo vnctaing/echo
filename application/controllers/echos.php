@@ -23,7 +23,7 @@ class Echos extends CI_Controller
       $key = substr( md5(uniqid()), 0, 7) ;
       $content = $this->input->post('content'); //$_POST['content']
       $gkey = $key;
-      $expires_at = date('Y-m-d H:i:s', time() + $this->input->post('expired_at') * 60)
+      $expires_at = date('Y-m-d H:i:s', time() + $this->input->post('expired_at') * 60);
       if($this->input->post('encrypt') ){
         $this->load->library('encrypt');
         $data['encryptOpt'] = $this->input->post('encrypt');
