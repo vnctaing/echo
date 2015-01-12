@@ -37,7 +37,7 @@
     <ul class="help"><li><b>1.</b> Créez votre contenu, votre echo, écrivez ce que vous voulez.</li>
       <li><b>2.</b> Choisissez la durée de vie que vous voulez attribuer à ce contenu, 10 minutes ? 1h30 ?</li>
       <li><b>3.</b> Générez le lien de votre echo, et partagez-le où vous le souhaitez.</li>
-      <li><b>4.</b> La durée de vie de votre echo augmentera si les visiteurs aiment le contenu et le font raisonner.</li>
+      <li><b>4.</b> La durée de vie de votre echo augmentera si les visiteurs aiment le contenu et le font résonner.</li>
       <li><b>5.</b> À la fin de sa durée de vie, votre echo disparaîtra.</li>
     </ul>
   </div>
@@ -98,7 +98,7 @@
   
   <footer>
     <ul>
-      <li><p>En utilisant ce service, vous acceptez les <a href="welcome/CGU.html" target="blank">Conditions Générales d'Utilisation</a>.</p></li>
+      <li><p>En utilisant ce service, vous acceptez <?php echo anchor('welcome/cgu', 'les Conditions Générales d\'Utilisation'); ?></p></li>
       <li><a href="https://www.facebook.com/pages/Echo/662945737093488" target="blank"><img src="../../assets/img/fb.png"></a></li>
       <li><a href="https://twitter.com/LeProjetEcho" target="blank"><img src="../../assets/img/twitter.png" ></a></li>
     </ul>

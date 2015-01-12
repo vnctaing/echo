@@ -18,7 +18,6 @@
 
       <!--<li><?php echo anchor('main/signup', 'Inscription'); ?></li>
       <li><?php echo anchor('main/login', 'Connexion'); ?></li>-->
-      <li><?php echo anchor('/', 'Accueil'); ?></li>
     </ul>
   </div>
   <?php echo $this->session->flashdata('add_success'); ?>
@@ -48,7 +47,6 @@
       }
 
         echo $this->session->flashdata('invalid_key');
-      
     ?>  
 
   </div>
@@ -57,10 +55,15 @@
     <script type="text/javascript">
      window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
     </script>
-    <div class="ajout">
-    <?php echo $this->session->flashdata('echo_success'); ?>
-    </div>
   </div>
+
+
+  <div class="ajout">
+    <?php echo $this->session->flashdata('echo_success'); 
+      echo $this->session->flashdata('errorDoubleRez');
+    ?>
+  </div>
+>>>>>>> FETCH_HEAD
 
   <div id="share">
     <a class="twitter-share-button"
@@ -70,6 +73,7 @@
     </a>
   </div>
   
+
 
 
   <div id="fb-root"></div>
@@ -98,6 +102,8 @@
   <a href="javascript:fbshareCurrentPage()" target="_blank" alt="Share on Facebook">Facebook</a-->
 
 
+=======
+>>>>>>> FETCH_HEAD
 
     <script>
       setInterval(function(){
@@ -120,7 +126,7 @@
 
   <footer>
     <ul>
-      <li><p>En utilisant ce service, vous acceptez les <a href="welcome/CGU.html" target="blank">Conditions Générales d'Utilisation</a>.</p></li>
+      <li><p>En utilisant ce service, vous acceptez <?php anchor('welcome/cgu', 'les Conditions Générales d\'Utilisation'); ?></p></li>
       <li><a href="https://www.facebook.com/pages/Echo/662945737093488" target="blank"><img src="../../assets/img/fb.png"></a></li>
       <li><a href="https://twitter.com/LeProjetEcho" target="blank"><img src="../../assets/img/twitter.png"></a></li>
     </ul>

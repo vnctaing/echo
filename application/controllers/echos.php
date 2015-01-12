@@ -22,7 +22,7 @@ class Echos extends CI_Controller
       // Génere un unique id hashé à l'écho
       $key = substr( md5(uniqid()), 0, 7) ;
       $content = $this->input->post('content');
-      $secretkey = md5($this->input->post('secretkey'));
+      $secretkey = hash ( "sha256", $this->input->post('secretkey') );
       $data = array(
         'content' => $this->input->post('content'), //$_POST['content']
         'gkey' => $key,
@@ -39,6 +39,10 @@ class Echos extends CI_Controller
       if( $this->echo_model->add_echo($data) ) {
         // Si il réussit, la méthode add_echo retournera un booléen
         $this->load->helper('url');
+        $cookieData = array(
+          'hasVotedFor' => array("key"), 
+        );
+        $this->session->set_userdata($cookieData);
         /** anchor(foo,bar) <=> <a href="foo">bar</a>, 
         base_url("/echos/read/$key") <=> www.localhost.com/echos/read/$key
         **/
@@ -76,7 +80,7 @@ class Echos extends CI_Controller
   public function decrypt($key){
     $this->load->model('echo_model');
     $data['echo'] = $this->echo_model->getEcho($key);
-    $inputkey = md5($this->input->post('secretkey'));
+    $inputkey = hash ( "sha256", $this->input->post('secretkey') );
     if($this->echo_model->isSecretKeyValid($key, $inputkey)){
       $this->load->library('encrypt');
       $data['echo'][0]->content = $this->encrypt->decode($data['echo'][0]->content);
@@ -92,7 +96,7 @@ class Echos extends CI_Controller
 
 //METHODE POUR RESONNER UN ECHO
   public function update($key){
-    if($this->session->userdata('hasVotedFor') == $key)
+    if($this->session->userdata($key) == 1)
     {
       $message = "Il semblerait que vous ayiez déjà résonné cet echo";
       $this->session->set_flashdata('errorDoubleRez', $message);
@@ -113,13 +117,18 @@ class Echos extends CI_Controller
       );
       if($this->echo_model->updateLifetime($key,$data)){
         $cookieData = array(
-          'hasVotedFor' => $key , 
+          $key => 1, 
         );
         $this->session->set_userdata($cookieData);
+
+        /*
+        array_push($cookieData['keyList'], $key);
+        $this->session->set_userdata($cookieData);
+        */
         $this->session->set_flashdata('echo_success', '+ 15 min');
         redirect("/$key");
       }else{
-        echo 'Impossible de résonner';
+        
       }
     }
   }
