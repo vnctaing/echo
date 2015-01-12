@@ -1,0 +1,38 @@
+body {
+  background: #F0F0F0;
+  margin: 0; }
+  body a {
+    font-family: gotham;
+    text-decoration: none;
+    color: #482F5D;
+    font-size: 16px;
+    font-weight: normal;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    text-align: right;
+    display: block;
+    font-weight: bolder; }
+  body a:hover {
+    color: #F4B532;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  body h1 {
+    font-family: "Arvo", sans serif;
+    color: #F0F0F0;
+    background: #482F5D;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0; }
+  body h2, body p {
+    font-family: gotham;
+    width: 70%;
+    text-align: justify;
+    margin: 0 auto; }
+  body h2 {
+    margin-top: 30px; }
+
+/*# sourceMappingURL=cgu.css.map */
