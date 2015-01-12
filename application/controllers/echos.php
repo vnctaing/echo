@@ -21,13 +21,9 @@ class Echos extends CI_Controller
       $this->load->model('echo_model');
       // Génere un unique id hashé à l'écho
       $key = substr( md5(uniqid()), 0, 7) ;
-      $content = $this->input->post('content');
-      //$secretkey = hash ( "sha256", $this->input->post('secretkey') );
-      $data = array(
-        'content' => $this->input->post('content'), //$_POST['content']
-        'gkey' => $key,
-        'expires_at' => date('Y-m-d H:i:s', time() + $this->input->post('expired_at') * 60)
-        );
+      $content = $this->input->post('content'); //$_POST['content']
+      $gkey = $key;
+      $expires_at = date('Y-m-d H:i:s', time() + $this->input->post('expired_at') * 60)
       if($this->input->post('encrypt') ){
         $this->load->library('encrypt');
         $data['encryptOpt'] = $this->input->post('encrypt');
@@ -36,7 +32,7 @@ class Echos extends CI_Controller
       }
       /** Appelle la méthode add_echo de Echo_model
       en passant en paramètre le tableau $data **/
-      if( $this->echo_model->add_echo($data) ) {
+      if( $this->echo_model->add_echo($gkey, $content, $expires_at) === TRUE ) {
         // Si il réussit, la méthode add_echo retournera un booléen
         $this->load->helper('url');
         $cookieData = array(
