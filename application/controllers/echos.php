@@ -54,6 +54,9 @@ class Echos extends CI_Controller
 
         redirect("/$key");
       }
+      else{
+        echo 'ERREUR : Impossible d\'ajouter à la base de donnée';
+      }
     }
   }
 
