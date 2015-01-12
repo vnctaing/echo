@@ -4,7 +4,8 @@ class Echo_model extends CI_Model{
 
   //The parameter is passed from the function echos/create containing
   public function add_echo($data){
-      return $this->db->insert('echos', $data);
+      $this->db->set($data);
+      return $this->db->insert('echos');
   }
 
 
