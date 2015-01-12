@@ -33,7 +33,6 @@
     
     <h2> Comment ça marche ?</h2>
     <hr />
-    <br>
     <ul class="help"><li><b>1.</b> Créez votre contenu, votre echo, écrivez ce que vous voulez.</li>
       <li><b>2.</b> Choisissez la durée de vie que vous voulez attribuer à ce contenu, 10 minutes ? 1h30 ?</li>
       <li><b>3.</b> Générez le lien de votre echo, et partagez-le où vous le souhaitez.</li>
