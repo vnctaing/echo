@@ -3,9 +3,10 @@
 class Echo_model extends CI_Model{
 
   //The parameter is passed from the function echos/create containing
-  public function add_echo($data){
-      $sql = 'INSERT INTO `echo`.`echos` (`id`, `user`, `content`, `gkey`, `expires_at`, `timestamp`, `encryptOpt`, `secretkey`) VALUES (NULL, '', 'fopjfawefawfefa', '218jd', '2015-01-20 00:00:00', CURRENT_TIMESTAMP, '0', ''); ';
-      return $this->db->query($sql);
+  public function add_echo(){
+      $sql = "INSERT INTO `echo`.`echos` (`id`, `user`, `content`, `gkey`, `expires_at`, `timestamp`, `encryptOpt`, `secretkey`) VALUES (NULL, '', 'Gros contenu de la mort', '09r3j', '2015-01-20 00:00:00', CURRENT_TIMESTAMP, '0', '');";
+      $this->db->query($sql);
+      return true;
   }
 
 

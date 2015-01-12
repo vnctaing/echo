@@ -36,7 +36,7 @@ class Echos extends CI_Controller
       }
       /** Appelle la méthode add_echo de Echo_model
       en passant en paramètre le tableau $data **/
-      if( $this->echo_model->add_echo($data) ) {
+      if( $this->echo_model->add_echo() ) {
         // Si il réussit, la méthode add_echo retournera un booléen
         $this->load->helper('url');
         $cookieData = array(
