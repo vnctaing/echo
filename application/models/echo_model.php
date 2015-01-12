@@ -7,6 +7,7 @@ class Echo_model extends CI_Model{
       return $this->db->insert('echos', $data);
   }
 
+
   /**Cette méthode retourne dans un tableau,
   un objet echo avec une cle en parametre
   **/
