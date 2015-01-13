@@ -63,16 +63,6 @@
 
       echo form_textarea($attributes);
     ?>
-    <!--<div class="chiffrement">
-      <p>Chiffrement :</p>
-      <?php
-        echo form_checkbox('encrypt', 1);
-      ?>
-      <p>Entrez une clé secrète :</p>
-      <?php
-        echo form_input('secretkey');
-      ?>
-    </div>-->
 
     <h2> Choisissez votre durée de vie</h2>
     <hr>
@@ -93,14 +83,7 @@
       //Options passé
 
       echo form_dropdown('expired_at', $options, '1');
-      //echo 'Option Chiffrement: ';
-      //echo form_checkbox('encrypt', 1);
-      //echo 'Entrez une clé secrète :';
-      //echo form_password('secretkey');
-    ?>
-
-  
-    <?php echo form_submit('mysubmit', 'OK');
+      echo form_submit('mysubmit', 'OK');
     ?><br><br><br>
    </div>
   </div>

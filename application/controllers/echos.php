@@ -22,7 +22,7 @@ class Echos extends CI_Controller
       // Génere un unique id hashé à l'écho
       $key = substr( md5(uniqid()), 0, 7) ;
       $content = $this->input->post('content');
-      $secretkey = hash ( "sha256", $this->input->post('secretkey') );
+      //$secretkey = hash ( "sha256", $this->input->post('secretkey') );
       $data = array(
         'content' => $this->input->post('content'), //$_POST['content']
         'gkey' => $key,
@@ -40,7 +40,7 @@ class Echos extends CI_Controller
         // Si il réussit, la méthode add_echo retournera un booléen
         $this->load->helper('url');
         $cookieData = array(
-          'hasVotedFor' => array("key"), 
+          $key => 1, 
         );
         $this->session->set_userdata($cookieData);
         /** anchor(foo,bar) <=> <a href="foo">bar</a>, 
@@ -53,6 +53,9 @@ class Echos extends CI_Controller
         $this->session->set_flashdata('add_success', $message);
 
         redirect("/$key");
+      }
+      else{
+        echo 'ERREUR : Impossible d\'ajouter à la base de donnée';
       }
     }
   }
