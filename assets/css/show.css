@@ -1,8 +1,11 @@
+@font-face {
+  font-family: "gotham";
+  src: url(../../assets/fonts/Gotham-ExtraLight.otf) format("otf"); }
 body {
   background: #F0F0F0;
   font-weight: lighter;
   margin: -16px auto;
-  font-family: gotham; }
+  font-family: "gotham"; }
   body #navbar {
     background: #482F5D;
     font-family: "Arvo", serif;
@@ -115,7 +118,7 @@ body {
       font-size: 25px;
       border: none;
       font-weight: lighter;
-      font-family: gotham;
+      font-family: "gotham";
       text-align: center;
       padding: 10px 21%; }
   body .resonne:hover {

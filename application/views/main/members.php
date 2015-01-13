@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="../../assets/img/o-violet-icon.png" />
   <title>Nouveau membre</title>
   <?=css('member.css')?>
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>

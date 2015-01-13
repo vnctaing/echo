@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="../../assets/img/o-violet-icon.png" />
   <title>Inscription</title>
   <?=css('signup.css')?>
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
