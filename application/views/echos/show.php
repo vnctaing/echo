@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Echo</title>
+  <link rel="icon" type="image/png" href="../../assets/img/o-violet-icon.png" />
   <?=css('show.css')?>
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="../../assets/css/show-mobile.css">

@@ -1,9 +1,12 @@
+@font-face {
+  font-family: "gotham";
+  src: url(../../system/fonts/Gotham-ExtraLight.otf) format("otf"); }
 body {
   background: url(../img/bg-404.png) no-repeat fixed;
   background-size: cover;
   font-weight: lighter;
   margin: 0 auto;
-  font-family: gotham; }
+  font-family: "gotham"; }
   body #content {
     width: 600px;
     margin: 0 auto; }
@@ -23,7 +26,7 @@ body {
       font-family: "Arvo", serif;
       text-align: center; }
     body #content h2 {
-      font-family: gotham;
+      font-family: "gotham";
       font-size: 15px;
       font-weight: lighter; }
     body #content a {

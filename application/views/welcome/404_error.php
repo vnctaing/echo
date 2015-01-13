@@ -2,6 +2,7 @@
 <html lang="fr" class="no-js">
 <head>
   <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="../../assets/img/o-violet-icon.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Erreur 404</title>
   <meta name="description" content="">

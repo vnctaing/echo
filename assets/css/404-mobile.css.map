@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAOC,aAAQ;EACP,UAAU,EAAE,KAAK;EACjB,KAAK,EAAE,KAAK;EAEZ,kBAAI;IACH,OAAO,EAAE,IAAI",
+"mappings": ";EAKC,WAAW,EAAE,QAAQ;EACrB,GAAG,EAAE,2DAA2D;AAIhE,aAAQ;EACP,UAAU,EAAE,KAAK;EACjB,KAAK,EAAE,KAAK;EAEZ,kBAAI;IACH,OAAO,EAAE,IAAI",
 "sources": ["../sass/404-mobile.sass"],
 "names": [],
 "file": "404-mobile.css"
