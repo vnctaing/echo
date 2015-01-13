@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "gotham";
-  src: url(../../assets/fonts/Gotham-ExtraLight.otf) format("otf"); }
+  font-family: "Gotham";
+  src: url(../fonts/Gotham-ExtraLight.otf); }
 body {
   background: #F0F0F0;
   font-weight: lighter;
   margin: 0;
-  font-family: "gotham"; }
+  font-family: "Gotham"; }
   body #navbar {
     background: #482F5D;
     font-family: "Arvo", serif;
@@ -74,7 +74,7 @@ body {
       font-size: 40px;
       padding: 0 auto;
       text-align: center;
-      font-family: "gotham"; }
+      font-family: "Gotham"; }
       body #leftcontent h1 img {
         position: absolute;
         width: 55px; }
@@ -110,7 +110,7 @@ body {
       resize: none;
       background: #F0F0F0;
       font-size: 20px;
-      font-family: "gotham";
+      font-family: "Gotham";
       border: none;
       color: #482F5D;
       line-height: 1.5;
@@ -125,7 +125,7 @@ body {
       font-size: 30px;
       border: none;
       font-weight: lighter;
-      font-family: "gotham";
+      font-family: "Gotham";
       display: inline-block;
       vertical-align: top;
       margin-right: 6%;
@@ -138,7 +138,7 @@ body {
       border: 0;
       height: 45px;
       -webkit-appearance: none;
-      font-family: "gotham";
+      font-family: "Gotham";
       font-size: 20px;
       background: url(../../assets/img/fleche-select.png) no-repeat right #ddd; }
     body #rightcontent form a {
