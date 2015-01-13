@@ -1,6 +1,6 @@
 @font-face {
   font-family: "gotham";
-  src: url(../../assets/fonts/Gotham-ExtraLight.otf) format("otf"); }
+  src: url(../fonts/Gotham-ExtraLight.otf) format("otf"); }
 body {
   background: url(../img/bg-404.png) no-repeat fixed;
   background-size: cover;
