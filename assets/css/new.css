@@ -2,7 +2,7 @@
   font-family: "Gotham";
   src: url(../fonts/Gotham-ExtraLight.otf); }
 @font-face {
-  font-family: "Gotham Bold";
+  font-family: "GothamBold";
   src: url(../fonts/Gotham-Medium.otf); }
 body {
   background: #F0F0F0;
@@ -77,7 +77,7 @@ body {
       font-size: 40px;
       padding: 0 auto;
       text-align: center;
-      font-family: "Gotham bold"; }
+      font-family: "GothamBold"; }
       body #leftcontent h1 img {
         position: absolute;
         width: 55px; }
