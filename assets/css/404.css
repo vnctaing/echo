@@ -6,7 +6,7 @@ body {
   background-size: cover;
   font-weight: lighter;
   margin: 0 auto;
-  font-family: "gotham"; }
+  font-family: "Gotham", sans-serif; }
   body #content {
     width: 600px;
     margin: 0 auto; }
@@ -26,7 +26,7 @@ body {
       font-family: "Arvo", serif;
       text-align: center; }
     body #content h2 {
-      font-family: "gotham";
+      font-family: "Gotham", sans-serif;
       font-size: 15px;
       font-weight: lighter; }
     body #content a {

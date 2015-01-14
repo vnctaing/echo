@@ -53,7 +53,6 @@ body #rightcontent {
     resize: none;
     background: #F0F0F0;
     font-size: 20px;
-    font-family: "gotham";
     border: none;
     color: #482F5D;
     line-height: 1.5;
@@ -67,7 +66,6 @@ body #rightcontent {
     font-size: 30px;
     border: none;
     font-weight: lighter;
-    font-family: "gotham";
     display: inline-block;
     margin-right: 9%;
     float: right; }

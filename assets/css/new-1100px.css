@@ -22,7 +22,7 @@ body #rightcontent form input[type="submit"] {
   font-size: 30px;
   border: none;
   font-weight: lighter;
-  font-family: "gotham";
+  font-family: "gotham", sans-serif;
   display: inline-block;
   vertical-align: top;
   margin-right: 8.5%;
