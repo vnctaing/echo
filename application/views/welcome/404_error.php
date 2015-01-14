@@ -26,7 +26,7 @@
 
   <div id="content">
     <div class="ksk"><p>4<img src="../../assets/img/O-blanc.png" alt=""/>4<p></div>
-    <h1>Oh oh... Vous êtes perdu ?</h1>
+    <h1>Oh oh... Vous êtes arrivés trop tard !</h1>
     <h2>La page que vous recherchez n'existe pas.</h2>
     <a href="../../../index.php">
     <p class="back"><img id="plane" src="../../assets/img/Plane2.png"/>Retour à l'accueil</p>

@@ -5,7 +5,7 @@ body {
   background: #F0F0F0;
   font-weight: lighter;
   margin: -16px auto;
-  font-family: "Gotham"; }
+  font-family: "Gotham", sans-serif; }
   body #navbar {
     background: #482F5D;
     font-family: "Arvo", serif;
@@ -118,7 +118,7 @@ body {
       font-size: 25px;
       border: none;
       font-weight: lighter;
-      font-family: "Gotham";
+      font-family: "Gotham", sans-serif;
       text-align: center;
       padding: 10px 21%; }
   body .resonne:hover {
