@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Gotham";
-  src: url(../fonts/Gotham-ExtraLight.otf) format("otf"); }
+  src: url(../fonts/Gotham-ExtraLight.otf); }
 body {
   background: #F0F0F0;
   font-weight: lighter;
   margin: -16px auto;
-  font-family: "Gotham", sans-serif; }
+  font-family: "Gotham"; }
   body #navbar {
     background: #482F5D;
     font-family: "Arvo", serif;

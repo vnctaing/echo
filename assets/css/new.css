@@ -157,7 +157,7 @@ body {
   body footer {
     background: #191919;
     background-repeat: repeat-x;
-    height: 80px;
+    height: 50px;
     width: 100%;
     text-align: center;
     margin-bottom: 0px;
@@ -174,14 +174,14 @@ body {
         text-decoration: none;
         font-size: 13px; }
         body footer ul li img {
-          width: 50px;
-          margin: 15px 20px -22px 20px;
+          width: 37px;
+          margin: -24px 20px -22px 20px;
           display: block; }
         body footer ul li a {
           color: #F0F0F0; }
         body footer ul li p {
-          margin-top: -10px;
           display: block;
-          margin-right: 60px; }
+          margin-right: 60px;
+          margin-top: 20px; }
 
 /*# sourceMappingURL=new.css.map */
