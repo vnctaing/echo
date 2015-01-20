@@ -6,7 +6,6 @@
   <title>Inscription</title>
   <?=css('signup.css')?>
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" media="screen and (max-width: 830px)" href="../../assets/css/signup-mobile.css">
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
