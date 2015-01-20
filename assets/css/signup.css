@@ -79,4 +79,61 @@ body {
         display: block;
         margin: 30px auto; }
 
+@media all and (max-width: 830px) {
+  body {
+    margin: -7px auto; }
+    body #navbar {
+      padding-right: 0px; }
+      body #navbar img {
+        width: 160px;
+        display: block;
+        float: none;
+        margin: 7px auto;
+        padding-top: 7px; }
+        body #navbar img a {
+          display: none; }
+      body #navbar .hidden, body #navbar li {
+        display: none; }
+    body #cadre {
+      background: white;
+      box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
+      -moz-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
+      -webkit-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
+      width: 80%;
+      margin: 30px auto;
+      padding: 20px; }
+      body #cadre h1 {
+        font-size: 40px;
+        text-align: center;
+        font-family: "Arvo", serif;
+        color: #482F5D;
+        font-weight: lighter; }
+      body #cadre hr {
+        border: solid 2px #482F5D;
+        width: 60%; }
+      body #cadre .formulaire {
+        margin: 30px auto;
+        width: 60%; }
+        body #cadre .formulaire p {
+          color: #482F5D; }
+        body #cadre .formulaire input[type="text"], body #cadre .formulaire input[type="password"] {
+          background: #F0F0F0;
+          border: none;
+          padding: 10px;
+          width: 96%;
+          font-family: "gotham";
+          color: grey;
+          font-size: 14px;
+          margin-top: 5px; }
+        body #cadre .formulaire input[type="submit"] {
+          color: white;
+          background: #F4B532;
+          padding: 5px 19%;
+          font-size: 30px;
+          border: none;
+          font-weight: lighter;
+          font-family: "gotham";
+          display: block;
+          margin: 30px auto; } }
+
 /*# sourceMappingURL=signup.css.map */
