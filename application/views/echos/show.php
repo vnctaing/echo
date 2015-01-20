@@ -117,6 +117,9 @@
       }, 1000);
     </script>
     
+    <div id="come">
+      <p>À votre tour de partager du contenu éphémère :<?php echo anchor(base_url(), '<img src="../../assets/img/calltoaction.png" class="youcreate">'); ?></p>
+    </div>
 
   <footer>
     <ul>

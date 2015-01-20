@@ -52,8 +52,8 @@ body {
   body #share {
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 150px;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 50px; }
     body #share a {
       display: inline-block; }
     body #share #fb-root {
@@ -132,10 +132,21 @@ body {
     font-family: "Arvo", serif;
     font-weight: bold;
     font-size: 26px;
-    letter-spacing: -3px;
+    letter-spacing: -2px;
     display: block;
     text-align: center;
     margin-bottom: 30px; }
+  body #come {
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    font-family: "Arvo", serif;
+    margin-bottom: 100px;
+    text-align: center;
+    color: #482F5D;
+    font-size: 17px; }
+    body #come .youcreate {
+      width: 100%; }
   body footer {
     background: #191919;
     background-repeat: repeat-x;
