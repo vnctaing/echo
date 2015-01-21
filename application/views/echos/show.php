@@ -7,6 +7,10 @@
   <?=css('show.css')?>
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
   
+  <meta property="og:image" content="http://socialecho.fr/assets/img/o-violet-icon.png" />
+  <meta property="og:title" content="Echo : les paroles s'envolent, les écrits aussi." />
+  <meta property="og:description" content="Créez votre contenu éphémère, à partager où vous le souhaitez !" /> 
+
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -107,9 +111,7 @@
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
     <div class="fb-share-button" data-layout="button_count"></div>
-    <meta property="og:image" content="http://socialecho.fr/assets/img/o-violet-icon.png" />
-    <meta property="og:title" content="Echo : les paroles s'envolent, les écrits aussi." />
-    <meta property="og:description" content="Créez votre contenu éphémère, à partager où vous le souhaitez !" /> 
+    
 
     <form>
       <input class="share-url" onFocus="this.select()" name="share-url" value="<?php echo base_url($echo[0]->gkey); ?>">
