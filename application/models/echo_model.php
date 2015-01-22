@@ -4,11 +4,8 @@ class Echo_model extends CI_Model{
 
   //The parameter is passed from the function echos/create containing
   public function add_echo($data){
-    $this->db->set($data);
-    $this->db->insert('echos');
-    return true;
+    return $this->db->insert('echos', $data); 
   }
-
 
   /**Cette méthode retourne dans un tableau,
   un objet echo avec une cle en parametre
@@ -60,4 +57,26 @@ class Echo_model extends CI_Model{
       else{return false;}
 
   }
+  public function addResonneur($ip){
+    $this->db->set('ip_adress',$ip );
+    $this->db->insert('resonneurs');
+  }
+
+  public function addResonneurEcho($key,$ip){
+    $this->db->set('ip_adress',$ip );
+    $this->db->set('gkey',$key );
+    $this->db->insert('echos_resonneurs');
+  }
+
+
+  public function isIpUsed($key,$ip){
+    $query = $this->db
+      ->where('ip_adress', $ip)
+      ->where('gkey', $key)
+      ->get('echos_resonneurs')
+      ->result();
+      if($query){return true;}
+      else{return false;}
+  }
+
 }

@@ -18,9 +18,6 @@
 </script>
 </head>
 <body>
-
-
-
   <div id="navbar">
     <a href="#"><img class="menu" src="../../assets/img/home.png"></a>
     <a href="#"><img src="../../assets/img/echo.png"></a>
@@ -66,7 +63,6 @@
 
     
     <?php
-      
       $options = array(
         5 => '5 min',
         10 => '10 min',
