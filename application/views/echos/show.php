@@ -56,8 +56,6 @@
     <p><?php echo $echo[0]->content;?></p>
     <h3>Durée de vie : </h3>
     <div id="life"></div>
-
-
     <?php
 
       if( $this->uri->segment(3) )
@@ -78,7 +76,6 @@
 
         echo $this->session->flashdata('invalid_key');
     ?>  
-
   </div>
   <div class="resonne">
     <?php echo anchor(base_url("echos/update/".$echo[0]->gkey), 'Faire résonner');?>
