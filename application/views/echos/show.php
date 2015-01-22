@@ -7,7 +7,7 @@
   <?=css('show.css')?>
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
   
-  <meta property="og:image" content="http://socialecho.fr/assets/img/o-violet-icon.png" />
+  <meta property="og:image" content="../../assets/img/o-violet-icon.png" />
   <meta property="og:title" content="Echo : les paroles s'envolent, les écrits aussi." />
   <meta property="og:description" content="Créez votre contenu éphémère, à partager où vous le souhaitez !" /> 
 
