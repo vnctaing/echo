@@ -1,6 +1,6 @@
 <html lang="fr">
 <head>
-  <title>Bienvenu sur Echo !</title>
+  <title>Bienvenue sur Echo !</title>
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" href="../../assets/img/o-violet-icon.png" />
   <link rel="stylesheet" type="text/css" href="../../assets/css/new.css">
