@@ -11,6 +11,8 @@
   <meta property="og:title" content="Echo : les paroles s'envolent, les écrits aussi." />
   <meta property="og:description" content="Créez votre contenu éphémère, à partager où vous le souhaitez !" /> 
 
+  <meta name="viewport" content="width=320">
+  
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
