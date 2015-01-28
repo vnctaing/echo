@@ -300,8 +300,8 @@ body
 				//margin-left: 20px
 				//width: 50px
 
-			.aide
-				display: block
+			//.aide
+			//	display: block
 
 				li
 					font-family: 'Arvo',serif
@@ -414,12 +414,13 @@ body
 	body
 
 		#navbar
+			padding-right: 0
 			.menu
 				margin-left: 20px
 				width: 25px
 
-			.aide
-				display: block
+			//.aide
+			//	display: block
 
 				li
 					font-size: 25px
@@ -432,14 +433,18 @@ body
 				display: none
 
 			a img
-				margin: 8px 35%
+				float: none
+				margin: 0 auto
 				display: block
-				position: absolute
+				width: 165px 
+				position: relative
+				top: 7px
 
 		#allcontent
 			display: block
 			width: 95%
 			margin: 0 auto
+			position: relative
 
 		#leftcontent, #rightcontent
 
@@ -505,6 +510,70 @@ body
 					p
 						margin: 20px 10px 0 10px
 
+@media all and (max-width: 320px)
+
+	body
+
+		#rightcontent
+			
+			h2
+				padding-right: 31px
+				font-size: 18px
+				margin-top: 0
+
+			hr
+				border: solid 1px $violet
+				margin-bottom: 15px
+
+			.chiffrement
+				display: none
+
+			form
+				textarea
+					font-size: 17px
+					border: none
+					line-height: 1.5
+					height: 200px
+					width: 91%
+					padding: 20px
+
+				input[type="submit"]
+					font-size: 25px
+					margin-right: 9%
+					float: right
+					height: 37px
+
+				hr
+					border: solid 1px $violet
+					margin-bottom: 15px
+
+
+
+				select
+					border-radius: 0
+					width: 40%
+					padding: 5px 6%
+					height: 37px
+					-webkit-appearance: none
+					font-size: 20px
+					background: url(../../assets/img/fleche-select.png) no-repeat right #ddd
+					background-size: 37px
+				
+
+
+		footer
+			height: 115px
+			margin-top: 0
+			position: relative
+
+			ul
+
+				li:first-child
+					margin: 0 auto
+					padding-bottom: 30px
+
+					p
+						margin: 20px 10px 0 10px
 
 
 

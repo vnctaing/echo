@@ -211,18 +211,6 @@ body {
     width: 40%;
     padding: 5px 8%; } }
 @media all and (max-width: 830px) {
-  body #navbar .aide {
-    display: block; }
-    body #navbar .aide li {
-      font-family: "Arvo", serif;
-      font-size: 25px;
-      border: 2px white solid;
-      border-radius: 100px;
-      padding: 4px 13px;
-      margin-top: 13px; }
-    body #navbar .aide li:hover {
-      color: #F4B532;
-      border: 2px #F4B532 solid; }
   body #navbar .hidden, body #navbar li {
     display: none; }
   body #navbar a img {
@@ -292,27 +280,25 @@ body {
       body footer ul li img {
         margin: -30px 10px -22px 10px; } }
 @media all and (max-width: 500px) {
-  body #navbar .menu {
-    margin-left: 20px;
-    width: 25px; }
-  body #navbar .aide {
-    display: block; }
-    body #navbar .aide li {
-      font-size: 25px;
-      border: 2px white solid;
-      border-radius: 100px;
-      padding: 4px 13px;
-      margin-top: 13px; }
-  body #navbar .hidden, body #navbar li {
-    display: none; }
-  body #navbar a img {
-    margin: 8px 35%;
-    display: block;
-    position: absolute; }
+  body #navbar {
+    padding-right: 0; }
+    body #navbar .menu {
+      margin-left: 20px;
+      width: 25px; }
+    body #navbar .hidden, body #navbar li {
+      display: none; }
+    body #navbar a img {
+      float: none;
+      margin: 0 auto;
+      display: block;
+      width: 165px;
+      position: relative;
+      top: 7px; }
   body #allcontent {
     display: block;
     width: 95%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    position: relative; }
   body #leftcontent h2, body #rightcontent h2 {
     font-weight: normal;
     font-size: 25px;
@@ -359,5 +345,48 @@ body {
     height: 70px; }
     body footer ul li p {
       margin: 20px 10px 0 10px; } }
+@media all and (max-width: 320px) {
+  body #rightcontent h2 {
+    padding-right: 31px;
+    font-size: 18px;
+    margin-top: 0; }
+  body #rightcontent hr {
+    border: solid 1px #482F5D;
+    margin-bottom: 15px; }
+  body #rightcontent .chiffrement {
+    display: none; }
+  body #rightcontent form textarea {
+    font-size: 17px;
+    border: none;
+    line-height: 1.5;
+    height: 200px;
+    width: 91%;
+    padding: 20px; }
+  body #rightcontent form input[type="submit"] {
+    font-size: 25px;
+    margin-right: 9%;
+    float: right;
+    height: 37px; }
+  body #rightcontent form hr {
+    border: solid 1px #482F5D;
+    margin-bottom: 15px; }
+  body #rightcontent form select {
+    border-radius: 0;
+    width: 40%;
+    padding: 5px 6%;
+    height: 37px;
+    -webkit-appearance: none;
+    font-size: 20px;
+    background: url(../../assets/img/fleche-select.png) no-repeat right #ddd;
+    background-size: 37px; }
+  body footer {
+    height: 115px;
+    margin-top: 0;
+    position: relative; }
+    body footer ul li:first-child {
+      margin: 0 auto;
+      padding-bottom: 30px; }
+      body footer ul li:first-child p {
+        margin: 20px 10px 0 10px; } }
 
 /*# sourceMappingURL=new.css.map */
