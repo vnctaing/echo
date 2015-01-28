@@ -310,7 +310,9 @@ body {
       width: 165px;
       position: relative;
       top: 7px;
-      display: block; }
+      margin: 8px 35%;
+      display: block;
+      position: absolute; }
   body #allcontent {
     display: block;
     width: 95%;
@@ -363,16 +365,6 @@ body {
     body footer ul li p {
       margin: 20px 10px 0 10px; } }
 @media all and (max-width: 320px) {
-  body #navbar {
-    padding-right: 0; }
-    body #navbar a img {
-      float: none;
-      margin: 0 auto;
-      display: block;
-      width: 165px;
-      position: relative;
-      top: 7px;
-      display: block; }
   body #rightcontent h2 {
     padding-right: 31px;
     font-size: 18px;
