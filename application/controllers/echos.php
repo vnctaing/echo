@@ -99,7 +99,9 @@ class Echos extends CI_Controller
 
 //METHODE POUR RESONNER UN ECHO
   public function update($key){
-    if($this->session->userdata($key) == 1)
+  $this->load->model('echo_model');
+  $ip = $this->input->ip_address();
+    if($this->session->userdata($key) == 1 OR $this->echo_model->isIpUsed($key,$ip))
     {
       $message = "Il semblerait que vous ayiez déjà résonné cet echo";
       $this->session->set_flashdata('errorDoubleRez', $message);
@@ -107,7 +109,6 @@ class Echos extends CI_Controller
     }
     else
     {
-      $this->load->model('echo_model');
       // Le modele retourne un tableau d'objets
       $data['echo'] = $this->echo_model->getEcho($key);
       // On stock dans $oldExpirationDate , l'ancienne date d'expiration en time UNIX
@@ -123,7 +124,8 @@ class Echos extends CI_Controller
           $key => 1, 
         );
         $this->session->set_userdata($cookieData);
-
+        $this->echo_model->addResonneur($ip);
+        $this->echo_model->addResonneurEcho($key, $this->input->ip_address());
         /*
         array_push($cookieData['keyList'], $key);
         $this->session->set_userdata($cookieData);

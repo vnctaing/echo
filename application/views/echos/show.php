@@ -6,7 +6,12 @@
   <link rel="icon" type="image/png" href="../../assets/img/o-violet-icon.png" />
   <?=css('show.css')?>
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="../../assets/css/show-mobile.css">
+  
+  <meta property="og:image" content="../../assets/img/o-violet-icon.png" />
+  <meta property="og:title" content="Echo : les paroles s'envolent, les écrits aussi." />
+  <meta property="og:description" content="Créez votre contenu éphémère, à partager où vous le souhaitez !" /> 
+
+  <meta name="viewport" content="width=320">
   
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -18,8 +23,26 @@
   ga('send', 'pageview');
 
 </script>
+
 </head>
 <body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '903240606371281',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
   <div id="navbar">
   <?php echo anchor(base_url(), '<img src="../../assets/img/home.png" class="menu">'); ?>
   <?php echo anchor(base_url(), '<img src="../../assets/img/echo.png">'); ?>
@@ -35,8 +58,6 @@
     <p><?php echo $echo[0]->content;?></p>
     <h3>Durée de vie : </h3>
     <div id="life"></div>
-
-
     <?php
 
       if( $this->uri->segment(3) )
@@ -57,7 +78,6 @@
 
         echo $this->session->flashdata('invalid_key');
     ?>  
-
   </div>
   <div class="resonne">
     <?php echo anchor(base_url("echos/update/".$echo[0]->gkey), 'Faire résonner');?>
@@ -90,7 +110,7 @@
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
     <div class="fb-share-button" data-layout="button_count"></div>
-
+    
 
     <form>
       <input class="share-url" onFocus="this.select()" name="share-url" value="<?php echo base_url($echo[0]->gkey); ?>">
@@ -118,6 +138,9 @@
       }, 1000);
     </script>
     
+    <div id="come">
+      <p>À votre tour de partager du contenu éphémère :<?php echo anchor(base_url(), '<img src="../../assets/img/calltoaction.png" class="youcreate">'); ?></p>
+    </div>
 
   <footer>
     <ul>

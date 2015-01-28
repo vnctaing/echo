@@ -1,6 +1,6 @@
 @font-face {
   font-family: "gotham";
-  src: url(../fonts/Gotham-ExtraLight.otf) format("otf"); }
+  src: url(../fonts/Gotham-ExtraLight.otf); }
 body {
   background: #F0F0F0;
   font-weight: lighter;
@@ -78,5 +78,33 @@ body {
         font-family: "gotham";
         display: block;
         margin: 70px auto; }
+
+@media all and (max-width: 830px) {
+  body {
+    margin: -7px auto; }
+    body #navbar {
+      padding-right: 0px; }
+      body #navbar img {
+        width: 160px;
+        display: block;
+        float: none;
+        margin: 7px auto;
+        padding-top: 7px; }
+        body #navbar img a {
+          display: none; }
+      body #navbar .hidden, body #navbar li {
+        display: none; }
+    body #cadre {
+      width: 80%;
+      margin: 30px auto;
+      padding: 20px; }
+      body #cadre h1 {
+        font-size: 40px;
+        text-align: center;
+        font-family: "Arvo", serif;
+        color: #482F5D;
+        font-weight: lighter; }
+      body #cadre .formulaire {
+        margin: 30px auto; } }
 
 /*# sourceMappingURL=connect.css.map */

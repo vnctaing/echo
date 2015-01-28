@@ -11,7 +11,6 @@ $footer : #191919
 	font-family: "GothamBold"
 	src: url(../fonts/Gotham-Medium.otf)
 
-//492863
 body
 	background : $gris
 	font-weight : lighter
@@ -173,6 +172,7 @@ body
 				vertical-align: top
 				margin-right: 6%
 				float: right
+				-webkit-appearance: none
 
 			select
 				border-radius: 0
@@ -202,7 +202,7 @@ body
 	footer
 		background: $footer
 		background-repeat: repeat-x
-		height: 80px
+		height: 50px
 		width: 100%
 		text-align: center
 		margin-bottom: 0px
@@ -223,18 +223,357 @@ body
 				font-size: 13px
 
 				img
-					width: 50px
-					margin: 15px 20px -22px 20px
+					width: 37px
+					margin: -24px 20px -22px 20px
 					display: block
 
 				a
 					color: $gris
 
 				p
-					margin-top: -10px
 					display: block
 					margin-right: 60px
+					margin-top: 20px
+
+
+
+
+
+@media all and (max-width: 1100px)
 	
+	body
+
+		#leftcontent, #rightcontent
+
+			h2
+				font-size : 25px
+
+		#leftcontent
+
+			h1
+				font-size: 35px
+				margin-bottom: 40px
+
+				img
+					position: absolute
+					width: 35px
+
+				img:first-child
+					margin-left: -62px
+					margin-top: -10px
+
+
+				img:last-child
+					margin-left: 17px
+					margin-top: 15px
+		#rightcontent
+
+			form
+
+				input[type="submit"]
+					padding: 5px 15%
+					font-size: 30px
+					display: inline-block
+					vertical-align: top
+					margin-right: 8.5%
+					float: right
+
+				select
+					width: 40%
+					padding: 5px 8%
+
+
+
+
+
+
+
+@media all and (max-width: 830px)
+	body
+
+		#navbar
+			.menu
+
+				//float: left
+				//padding: 2px 0 0 15px
+				//display: inline-block
+				//margin-left: 20px
+				//width: 50px
+
+			//.aide
+			//	display: block
+
+				li
+					font-family: 'Arvo',serif
+					font-size: 25px
+					border: 2px white solid
+					border-radius: 100px
+					padding: 4px 13px
+					margin-top: 13px
+
+				li:hover
+					color: $jaune
+					border: 2px $jaune solid
+
+
+			.hidden, li
+				display: none
+
+			a img
+				margin: 8px 35%
+				display: block
+				position: absolute
+
+		#allcontent
+			margin-bottom: 100px
+		#leftcontent, #rightcontent
+
+			h2
+
+				font-family: 'Arvo', serif
+				color: $violet
+				font-weight: normal
+				font-size : 25px
+				margin: 15px 0
+
+			hr
+				border: solid 2px $violet
+				width: 91%
+				margin-left: 0
+
+		#leftcontent
+			display: none
+
+		#rightcontent
+			display: block
+			padding-top: 15px
+			padding-left: 5%
+			float: none
+			//border: 2px solid green
+			width: 94%
+			margin: 30px auto
+			vertical-align: top
+			padding-bottom: 1px
+
+			h2:last-child
+				padding-top: 20px
+
+			form
+				textarea
+					resize: none
+					background: $gris
+					font-size: 20px
+					font-family: "Gotham", sans-serif
+					border: none
+					color: $violet
+					line-height: 1.5
+					height: 200px
+					width: 91%
+					padding: 20px
+
+				input[type="submit"]
+					color: white
+					background: $jaune
+					padding: 5px 15%
+					font-size: 30px
+					border: none
+					font-weight: lighter
+					font-family: "Gotham", sans-serif
+					display: inline-block
+					margin-right: 8.5%
+					float: right
+
+
+				select
+					float: left
+					padding: 5px 8%
+					width: 39%
+					font-size: 18px
+
+		footer
+			margin-top: 50px
+
+			ul
+				padding-left: 0
+
+				li
+
+					p
+						width: 246px
+						margin-right: 10px
+						margin-top: 10px
+					img
+						margin: -30px 10px -22px 10px
+
+
+
+
+
+@media all and (max-width: 500px)
+
+	body
+
+		#navbar
+			padding-right: 0
+			.menu
+				margin-left: 20px
+				width: 25px
+
+			//.aide
+			//	display: block
+
+				li
+					font-size: 25px
+					border: 2px white solid
+					border-radius: 100px
+					padding: 4px 13px
+					margin-top: 13px
+
+			.hidden, li
+				display: none
+
+			a img
+				float: none
+				margin: 0 auto
+				display: block
+				width: 165px 
+				position: relative
+				top: 7px
+
+		#allcontent
+			display: block
+			width: 95%
+			margin: 0 auto
+			position: relative
+
+		#leftcontent, #rightcontent
+
+			h2
+				font-weight: normal
+				font-size : 25px
+				margin: 15px 0
+
+			hr
+				width: 90%
+				margin-left: 0
+
+		#leftcontent
+			display: none
+
+		#rightcontent
+			display: block
+			padding-top: 15px
+			padding-left: 5%
+			float: none
+			width: 94%
+			margin: 15px auto
+			vertical-align: top
+			padding-bottom: 1px
+
+			h2:last-child
+				padding-top: 20px
+
+			form
+				textarea
+					font-size: 20px
+					border: none
+					line-height: 1.5
+					height: 250px
+					width: 91%
+					padding: 20px
+
+				input[type="submit"]
+					color: white
+					background: $jaune
+					padding: 5px 15%
+					font-size: 30px
+					border: none
+					font-weight: lighter
+					display: inline-block
+					margin-right: 9%
+					float: right
+
+
+				select
+					float: left
+					padding: 5px 8%
+					width: 39%
+					font-size: 18px
+
+		footer
+			height: 70px
+
+			ul
+
+				li
+
+					p
+						margin: 20px 10px 0 10px
+
+@media all and (max-width: 320px)
+
+	body
+
+		#rightcontent
+			
+			h2
+				padding-right: 31px
+				font-size: 18px
+				margin-top: 0
+
+			hr
+				border: solid 1px $violet
+				margin-bottom: 15px
+
+			.chiffrement
+				display: none
+
+			form
+				textarea
+					font-size: 17px
+					border: none
+					line-height: 1.5
+					height: 200px
+					width: 91%
+					padding: 20px
+
+				input[type="submit"]
+					font-size: 25px
+					margin-right: 9%
+					float: right
+					height: 37px
+
+				hr
+					border: solid 1px $violet
+					margin-bottom: 15px
+
+
+
+				select
+					border-radius: 0
+					width: 40%
+					padding: 5px 6%
+					height: 37px
+					-webkit-appearance: none
+					font-size: 20px
+					background: url(../../assets/img/fleche-select.png) no-repeat right #ddd
+					background-size: 37px
+				
+
+
+		footer
+			height: 115px
+			margin-top: 0
+			position: relative
+
+			ul
+
+				li:first-child
+					margin: 0 auto
+					padding-bottom: 30px
+
+					p
+						margin: 20px 10px 0 10px
 
 
 

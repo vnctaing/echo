@@ -132,7 +132,8 @@ body {
       display: inline-block;
       vertical-align: top;
       margin-right: 6%;
-      float: right; }
+      float: right;
+      -webkit-appearance: none; }
     body #rightcontent form select {
       border-radius: 0;
       width: 40%;
@@ -157,7 +158,7 @@ body {
   body footer {
     background: #191919;
     background-repeat: repeat-x;
-    height: 80px;
+    height: 50px;
     width: 100%;
     text-align: center;
     margin-bottom: 0px;
@@ -174,14 +175,218 @@ body {
         text-decoration: none;
         font-size: 13px; }
         body footer ul li img {
-          width: 50px;
-          margin: 15px 20px -22px 20px;
+          width: 37px;
+          margin: -24px 20px -22px 20px;
           display: block; }
         body footer ul li a {
           color: #F0F0F0; }
         body footer ul li p {
-          margin-top: -10px;
           display: block;
-          margin-right: 60px; }
+          margin-right: 60px;
+          margin-top: 20px; }
+
+@media all and (max-width: 1100px) {
+  body #leftcontent h2, body #rightcontent h2 {
+    font-size: 25px; }
+  body #leftcontent h1 {
+    font-size: 35px;
+    margin-bottom: 40px; }
+    body #leftcontent h1 img {
+      position: absolute;
+      width: 35px; }
+    body #leftcontent h1 img:first-child {
+      margin-left: -62px;
+      margin-top: -10px; }
+    body #leftcontent h1 img:last-child {
+      margin-left: 17px;
+      margin-top: 15px; }
+  body #rightcontent form input[type="submit"] {
+    padding: 5px 15%;
+    font-size: 30px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 8.5%;
+    float: right; }
+  body #rightcontent form select {
+    width: 40%;
+    padding: 5px 8%; } }
+@media all and (max-width: 830px) {
+  body #navbar .hidden, body #navbar li {
+    display: none; }
+  body #navbar a img {
+    margin: 8px 35%;
+    display: block;
+    position: absolute; }
+  body #allcontent {
+    margin-bottom: 100px; }
+  body #leftcontent h2, body #rightcontent h2 {
+    font-family: "Arvo", serif;
+    color: #482F5D;
+    font-weight: normal;
+    font-size: 25px;
+    margin: 15px 0; }
+  body #leftcontent hr, body #rightcontent hr {
+    border: solid 2px #482F5D;
+    width: 91%;
+    margin-left: 0; }
+  body #leftcontent {
+    display: none; }
+  body #rightcontent {
+    display: block;
+    padding-top: 15px;
+    padding-left: 5%;
+    float: none;
+    width: 94%;
+    margin: 30px auto;
+    vertical-align: top;
+    padding-bottom: 1px; }
+    body #rightcontent h2:last-child {
+      padding-top: 20px; }
+    body #rightcontent form textarea {
+      resize: none;
+      background: #F0F0F0;
+      font-size: 20px;
+      font-family: "Gotham", sans-serif;
+      border: none;
+      color: #482F5D;
+      line-height: 1.5;
+      height: 200px;
+      width: 91%;
+      padding: 20px; }
+    body #rightcontent form input[type="submit"] {
+      color: white;
+      background: #F4B532;
+      padding: 5px 15%;
+      font-size: 30px;
+      border: none;
+      font-weight: lighter;
+      font-family: "Gotham", sans-serif;
+      display: inline-block;
+      margin-right: 8.5%;
+      float: right; }
+    body #rightcontent form select {
+      float: left;
+      padding: 5px 8%;
+      width: 39%;
+      font-size: 18px; }
+  body footer {
+    margin-top: 50px; }
+    body footer ul {
+      padding-left: 0; }
+      body footer ul li p {
+        width: 246px;
+        margin-right: 10px;
+        margin-top: 10px; }
+      body footer ul li img {
+        margin: -30px 10px -22px 10px; } }
+@media all and (max-width: 500px) {
+  body #navbar {
+    padding-right: 0; }
+    body #navbar .menu {
+      margin-left: 20px;
+      width: 25px; }
+    body #navbar .hidden, body #navbar li {
+      display: none; }
+    body #navbar a img {
+      float: none;
+      margin: 0 auto;
+      display: block;
+      width: 165px;
+      position: relative;
+      top: 7px; }
+  body #allcontent {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    position: relative; }
+  body #leftcontent h2, body #rightcontent h2 {
+    font-weight: normal;
+    font-size: 25px;
+    margin: 15px 0; }
+  body #leftcontent hr, body #rightcontent hr {
+    width: 90%;
+    margin-left: 0; }
+  body #leftcontent {
+    display: none; }
+  body #rightcontent {
+    display: block;
+    padding-top: 15px;
+    padding-left: 5%;
+    float: none;
+    width: 94%;
+    margin: 15px auto;
+    vertical-align: top;
+    padding-bottom: 1px; }
+    body #rightcontent h2:last-child {
+      padding-top: 20px; }
+    body #rightcontent form textarea {
+      font-size: 20px;
+      border: none;
+      line-height: 1.5;
+      height: 250px;
+      width: 91%;
+      padding: 20px; }
+    body #rightcontent form input[type="submit"] {
+      color: white;
+      background: #F4B532;
+      padding: 5px 15%;
+      font-size: 30px;
+      border: none;
+      font-weight: lighter;
+      display: inline-block;
+      margin-right: 9%;
+      float: right; }
+    body #rightcontent form select {
+      float: left;
+      padding: 5px 8%;
+      width: 39%;
+      font-size: 18px; }
+  body footer {
+    height: 70px; }
+    body footer ul li p {
+      margin: 20px 10px 0 10px; } }
+@media all and (max-width: 320px) {
+  body #rightcontent h2 {
+    padding-right: 31px;
+    font-size: 18px;
+    margin-top: 0; }
+  body #rightcontent hr {
+    border: solid 1px #482F5D;
+    margin-bottom: 15px; }
+  body #rightcontent .chiffrement {
+    display: none; }
+  body #rightcontent form textarea {
+    font-size: 17px;
+    border: none;
+    line-height: 1.5;
+    height: 200px;
+    width: 91%;
+    padding: 20px; }
+  body #rightcontent form input[type="submit"] {
+    font-size: 25px;
+    margin-right: 9%;
+    float: right;
+    height: 37px; }
+  body #rightcontent form hr {
+    border: solid 1px #482F5D;
+    margin-bottom: 15px; }
+  body #rightcontent form select {
+    border-radius: 0;
+    width: 40%;
+    padding: 5px 6%;
+    height: 37px;
+    -webkit-appearance: none;
+    font-size: 20px;
+    background: url(../../assets/img/fleche-select.png) no-repeat right #ddd;
+    background-size: 37px; }
+  body footer {
+    height: 115px;
+    margin-top: 0;
+    position: relative; }
+    body footer ul li:first-child {
+      margin: 0 auto;
+      padding-bottom: 30px; }
+      body footer ul li:first-child p {
+        margin: 20px 10px 0 10px; } }
 
 /*# sourceMappingURL=new.css.map */

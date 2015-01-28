@@ -1,12 +1,11 @@
 <html lang="fr">
 <head>
-  <title>Accueil</title>
+  <title>Bienvenue sur Echo !</title>
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" href="../../assets/img/o-violet-icon.png" />
-  <link rel="stylesheet" type="text/css" href="../../assets/css/new.css"> <!-- Pour tous -->
-  <link rel="stylesheet" media="screen and (max-width: 830px)" href="../../assets/css/new-830px.css" /> <!-- Pour mobiles (830px) -->
-  <link rel="stylesheet" media="screen and (max-width: 1100px)" href="../../assets/css/new-1100px.css" /> <!-- Pour les ecrans (1100px) -->
-  <link rel="stylesheet" media="screen and (max-width: 500px)" href="../../assets/css/new-mobile.css" /> <!-- Pour les ecrans (500px) -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/new.css">
+
+  <meta name="viewport" content="width=320">
 
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
   <script>
@@ -21,9 +20,6 @@
 </script>
 </head>
 <body>
-
-
-
   <div id="navbar">
     <a href="#"><img class="menu" src="../../assets/img/home.png"></a>
     <a href="#"><img src="../../assets/img/echo.png"></a>
@@ -69,7 +65,6 @@
 
     
     <?php
-      
       $options = array(
         5 => '5 min',
         10 => '10 min',

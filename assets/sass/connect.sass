@@ -4,7 +4,7 @@ $gris : #F0F0F0
 $violet : #482F5D
 @font-face 
   font-family: "gotham"
-  src: url(../fonts/Gotham-ExtraLight.otf) format("otf")
+  src: url(../fonts/Gotham-ExtraLight.otf) 
 
 body
   background: $gris
@@ -99,6 +99,42 @@ body
         font-family: "gotham"
         display: block
         margin: 70px auto
+
+@media all and (max-width: 830px)
+
+  body
+    margin: -7px auto
+
+    #navbar
+      padding-right: 0px
+
+      img
+        width: 160px
+        display: block
+        float: none
+        margin: 7px auto
+        padding-top: 7px
+        a
+          display: none
+
+      .hidden, li
+        display: none
+
+    #cadre
+      width: 80%
+      margin: 30px auto
+      padding: 20px
+
+      h1
+
+        font-size: 40px
+        text-align: center
+        font-family: 'Arvo', serif
+        color: $violet
+        font-weight: lighter
+
+      .formulaire
+        margin: 30px auto
 
 
 

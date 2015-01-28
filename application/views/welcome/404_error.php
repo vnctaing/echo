@@ -7,8 +7,6 @@
   <title>Erreur 404</title>
   <meta name="description" content="">
   <?=css('404.css')?>
-  <link rel="stylesheet" type="text/css" media="screen and (max-width: 1000px)" href="../../assets/css/404-1000px.css">
-  <link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="../../assets/css/404-mobile.css">
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

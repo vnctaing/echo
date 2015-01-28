@@ -1,6 +1,6 @@
 @font-face {
   font-family: "gotham";
-  src: url(../fonts/Gotham-ExtraLight.otf) format("otf"); }
+  src: url(../fonts/Gotham-ExtraLight.otf); }
 body {
   background: url(../img/bg-404.png) no-repeat fixed;
   background-size: cover;
@@ -49,5 +49,12 @@ body {
     body #content #plane {
       margin-right: 20px;
       width: 100px; }
+
+@media all and (max-width: 600px) {
+  body #content {
+    margin-top: 270px;
+    width: 289px; }
+    body #content .ksk {
+      display: none; } }
 
 /*# sourceMappingURL=404.css.map */
