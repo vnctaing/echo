@@ -68,7 +68,6 @@ class Echo_model extends CI_Model{
     $this->db->insert('echos_resonneurs');
   }
 
-
   public function isIpUsed($key,$ip){
     $query = $this->db
       ->where('ip_adress', $ip)

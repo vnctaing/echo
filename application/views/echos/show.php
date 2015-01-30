@@ -26,6 +26,7 @@
 
 </head>
 <body>
+      
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -68,7 +69,6 @@
         {
           $key = $this->uri->segment(1);
         }
-
       if($this->echo_model->isEncrypted($key)){
         echo form_open("echos/decrypt/$key");
         echo form_password('secretkey');
@@ -77,6 +77,7 @@
       }
 
         echo $this->session->flashdata('invalid_key');
+        echo $this->session->flashdata('plafondAtteint');
     ?>  
   </div>
   <div class="resonne">

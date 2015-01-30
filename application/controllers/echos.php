@@ -96,7 +96,6 @@ class Echos extends CI_Controller
     }
   }
 
-
 //METHODE POUR RESONNER UN ECHO
   public function update($key){
   $this->load->model('echo_model');
@@ -115,29 +114,33 @@ class Echos extends CI_Controller
       // Car c'est plus facile a manipuler pour rajouter du temps
       $oldExpirationDate = strtotime($data['echo'][0]->expires_at);
       // Rajoute 15 minutes a la durée de vie, convertit time UNIX => date
-      $newExpirationDate = date('Y-m-d H:i:s', $oldExpirationDate + 15*60);
-      $data = array(
-        'expires_at' => $newExpirationDate,
-      );
-      if($this->echo_model->updateLifetime($key,$data)){
-        $cookieData = array(
-          $key => 1, 
-        );
-        $this->session->set_userdata($cookieData);
-        $this->echo_model->addResonneur($ip);
-        $this->echo_model->addResonneurEcho($key, $this->input->ip_address());
-        /*
-        array_push($cookieData['keyList'], $key);
-        $this->session->set_userdata($cookieData);
-        */
-        $this->session->set_flashdata('echo_success', '+ 15 min');
+      $newExpirationDate = $oldExpirationDate + 15 * 60;
+      $plafond = $oldExpirationDate + 15 * 60 + 5 * 60 * 60;
+      if( $newExpirationDate < $plafond ){
+        $message = "La durée de vie d'un echo ne peut excéder 5 heures.";
+        $this->session->set_flashdata('plafondAtteint', $message);
         redirect("/$key");
-      }else{
-        
+      } 
+      else{
+        $newExpirationDate = date('Y-m-d H:i:s', $newExpirationDate);
+        $data = array(
+          'expires_at' => $newExpirationDate,
+        );
+        if($this->echo_model->updateLifetime($key,$data)){
+          $cookieData = array(
+            $key => 1, 
+          );
+          $this->session->set_userdata($cookieData);
+          $this->echo_model->addResonneur($ip);
+          $this->echo_model->addResonneurEcho($key, $this->input->ip_address());
+          $this->session->set_flashdata('echo_success', '+ 15 min');
+          redirect("/$key");
+        }else{
+          echo "Erreur dans le modèle.";
+        }
       }
     }
   }
-
 
 }
 
