@@ -44,7 +44,7 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
   <div id="navbar">
-  <?php echo anchor(base_url(), '<img src="../../assets/img/home.png" class="menu">'); ?>
+  <!--?php echo anchor(base_url(), '<img src="../../assets/img/home.png" class="menu">'); ?-->
   <?php echo anchor(base_url(), '<img src="../../assets/img/echo.png">'); ?>
     <ul class="hidden">
 

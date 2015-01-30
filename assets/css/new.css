@@ -1,39 +1,419 @@
-/*
-Error: The line was indented 3 levels deeper than the previous line.
-        on line 304 of assets/sass/new.sass
+@font-face {
+  font-family: "Gotham";
+  src: url(../fonts/Gotham-ExtraLight.otf); }
+@font-face {
+  font-family: "GothamBold";
+  src: url(../fonts/Gotham-Medium.otf); }
+body {
+  background: #F0F0F0;
+  font-weight: lighter;
+  margin: 0;
+  font-family: "Gotham"; }
+  body #navbar {
+    background: #482F5D;
+    font-family: "Arvo", serif;
+    color: white;
+    vertical-align: top;
+    height: 70px;
+    padding-right: 10%; }
+    body #navbar .menu {
+      float: left;
+      padding: 28px;
+      display: none;
+      width: 200px; }
+    body #navbar img {
+      float: left;
+      width: 160px;
+      margin: 7px 12%; }
+    body #navbar .aide {
+      display: none; }
+    body #navbar a {
+      text-decoration: none;
+      color: #F0F0F0;
+      font-size: 20px;
+      font-weight: normal;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    body #navbar ul li {
+      display: inline-block;
+      text-decoration: none;
+      padding: 20px 40px;
+      float: right; }
+    body #navbar a:hover {
+      color: #F4B532;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+  body #allcontent {
+    display: block;
+    width: 77%;
+    margin: 0 auto;
+    max-height: 800px;
+    margin-bottom: 700px; }
+  body #leftcontent, body #rightcontent {
+    display: inline-block;
+    vertical-align: top;
+    margin: 30px auto; }
+    body #leftcontent h2, body #rightcontent h2 {
+      font-family: "Arvo", serif;
+      color: #482F5D;
+      font-weight: normal;
+      font-size: 33px;
+      margin: 20px 0; }
+    body #leftcontent hr, body #rightcontent hr {
+      border: solid 2px #482F5D;
+      width: 93.5%;
+      margin-left: 0;
+      margin-bottom: 30px; }
+  body #leftcontent {
+    width: 45%;
+    vertical-align: top;
+    float: left;
+    margin-bottom: 0; }
+    body #leftcontent h1 {
+      font-size: 40px;
+      padding: 0 auto;
+      text-align: center;
+      font-family: "GothamBold", sans-serif; }
+      body #leftcontent h1 img {
+        position: absolute;
+        width: 55px; }
+      body #leftcontent h1 img:first-child {
+        margin-left: -80px;
+        margin-top: -20px; }
+      body #leftcontent h1 img:last-child {
+        margin-left: 30px; }
+    body #leftcontent .help {
+      width: 94%;
+      text-align: justify;
+      padding-left: 0;
+      margin-top: 0; }
+      body #leftcontent .help li {
+        list-style-type: none;
+        margin-bottom: 17px; }
+  body #rightcontent {
+    background-color: white;
+    float: right;
+    width: 45%;
+    vertical-align: top;
+    margin-bottom: 0;
+    margin-left: 5%;
+    padding-left: 30px;
+    box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1); }
+    body #rightcontent h2 {
+      padding-right: 31px; }
+    body #rightcontent .chiffrement {
+      display: none; }
+    body #rightcontent form textarea {
+      resize: none;
+      background: #F0F0F0;
+      font-size: 20px;
+      font-family: "Gotham", sans-serif;
+      border: none;
+      color: #482F5D;
+      line-height: 1.5;
+      height: 200px;
+      width: 94%;
+      padding: 20px;
+      margin-bottom: 10px; }
+    body #rightcontent form input[type="submit"] {
+      color: white;
+      background: #F4B532;
+      padding: 5px 17%;
+      font-size: 30px;
+      border: none;
+      font-weight: lighter;
+      font-family: "Gotham", sans-serif;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 6%;
+      float: right;
+      -webkit-appearance: none; }
+    body #rightcontent form select {
+      border-radius: 0;
+      width: 40%;
+      padding: 5px 10%;
+      line-height: 1;
+      border: 0;
+      height: 45px;
+      -webkit-appearance: none;
+      font-family: "Gotham", sans-serif;
+      font-size: 20px;
+      background: url(../../assets/img/fleche-select.png) no-repeat right #ddd; }
+    body #rightcontent form a {
+      color: #482F5D;
+      text-decoration: none;
+      width: 90%;
+      display: block;
+      background: #F0F0F0;
+      padding: 10px;
+      margin-bottom: 10px; }
+    body #rightcontent form input:focus {
+      outline: none; }
+  body footer {
+    background: #191919;
+    background-repeat: repeat-x;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0px;
+    position: fixed;
+    bottom: 0px;
+    opacity: 0.9; }
+    body footer ul {
+      display: inline-block;
+      color: white;
+      margin-bottom: -10px;
+      margin-top: 0; }
+      body footer ul li {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 13px; }
+        body footer ul li img {
+          width: 37px;
+          margin: -24px 20px -22px 20px;
+          display: block; }
+        body footer ul li a {
+          color: #F0F0F0; }
+        body footer ul li p {
+          display: block;
+          margin-right: 60px;
+          margin-top: 20px; }
 
-299: 				//display: inline-block
-300: 				//margin-left: 20px
-301: 				//width: 50px
-302: 
-303: <<<<<<< HEAD
-304: 			//.aide
-305: 			//	display: block
-306: 
-307: =======
-308: >>>>>>> master
-309: 				li
+@media all and (max-width: 1100px) {
+  body #leftcontent h2, body #rightcontent h2 {
+    font-size: 25px; }
+  body #leftcontent h1 {
+    font-size: 35px;
+    margin-bottom: 40px; }
+    body #leftcontent h1 img {
+      position: absolute;
+      width: 35px; }
+    body #leftcontent h1 img:first-child {
+      margin-left: -62px;
+      margin-top: -10px; }
+    body #leftcontent h1 img:last-child {
+      margin-left: 17px;
+      margin-top: 15px; }
+  body #rightcontent form input[type="submit"] {
+    padding: 5px 15%;
+    font-size: 30px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 8.5%;
+    float: right; }
+  body #rightcontent form select {
+    width: 40%;
+    padding: 5px 8%; } }
+@media all and (max-width: 830px) {
+  body #navbar .menu li {
+    font-family: "Arvo", serif;
+    font-size: 25px;
+    border: 2px white solid;
+    border-radius: 100px;
+    padding: 4px 13px;
+    margin-top: 13px; }
+  body #navbar .menu li:hover {
+    color: #F4B532;
+    border: 2px #F4B532 solid; }
+  body #navbar .hidden, body #navbar li {
+    display: none; }
+  body #navbar a img {
+    margin: 8px 35%;
+    display: block;
+    position: absolute; }
+  body #allcontent {
+    margin-bottom: 100px; }
+  body #leftcontent h2, body #rightcontent h2 {
+    font-family: "Arvo", serif;
+    color: #482F5D;
+    font-weight: normal;
+    font-size: 25px;
+    margin: 15px 0; }
+  body #leftcontent hr, body #rightcontent hr {
+    border: solid 2px #482F5D;
+    width: 91%;
+    margin-left: 0; }
+  body #leftcontent {
+    display: none; }
+  body #rightcontent {
+    display: block;
+    padding-top: 15px;
+    padding-left: 5%;
+    float: none;
+    width: 94%;
+    margin: 30px auto;
+    vertical-align: top;
+    padding-bottom: 1px; }
+    body #rightcontent h2:last-child {
+      padding-top: 20px; }
+    body #rightcontent form textarea {
+      resize: none;
+      background: #F0F0F0;
+      font-size: 20px;
+      font-family: "Gotham", sans-serif;
+      border: none;
+      color: #482F5D;
+      line-height: 1.5;
+      height: 200px;
+      width: 91%;
+      padding: 20px; }
+    body #rightcontent form input[type="submit"] {
+      color: white;
+      background: #F4B532;
+      padding: 5px 15%;
+      font-size: 30px;
+      border: none;
+      font-weight: lighter;
+      font-family: "Gotham", sans-serif;
+      display: inline-block;
+      margin-right: 8.5%;
+      float: right; }
+    body #rightcontent form select {
+      float: left;
+      padding: 5px 8%;
+      width: 39%;
+      font-size: 18px; }
+  body footer {
+    margin-top: 50px; }
+    body footer ul {
+      padding-left: 0; }
+      body footer ul li p {
+        width: 246px;
+        margin-right: 10px;
+        margin-top: 10px; }
+      body footer ul li img {
+        margin: -30px 10px -22px 10px; } }
+@media all and (max-width: 500px) {
+  body #navbar {
+    padding-right: 0; }
+    body #navbar .menu {
+      margin-left: 20px;
+      width: 25px; }
+      body #navbar .menu li {
+        font-size: 25px;
+        border: 2px white solid;
+        border-radius: 100px;
+        padding: 4px 13px;
+        margin-top: 13px; }
+    body #navbar .hidden, body #navbar li {
+      display: none; }
+    body #navbar a img {
+      float: none;
+      margin: 0 auto;
+      display: block;
+      width: 165px;
+      position: relative;
+      top: 7px;
+      display: block; }
+  body #allcontent {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    position: relative; }
+  body #leftcontent h2, body #rightcontent h2 {
+    font-weight: normal;
+    font-size: 25px;
+    margin: 15px 0; }
+  body #leftcontent hr, body #rightcontent hr {
+    width: 90%;
+    margin-left: 0; }
+  body #leftcontent {
+    display: none; }
+  body #rightcontent {
+    display: block;
+    padding-top: 15px;
+    padding-left: 5%;
+    float: none;
+    width: 94%;
+    margin: 15px auto;
+    vertical-align: top;
+    padding-bottom: 1px; }
+    body #rightcontent h2:last-child {
+      padding-top: 20px; }
+    body #rightcontent form textarea {
+      font-size: 20px;
+      border: none;
+      line-height: 1.5;
+      height: 250px;
+      width: 91%;
+      padding: 20px; }
+    body #rightcontent form input[type="submit"] {
+      color: white;
+      background: #F4B532;
+      padding: 5px 15%;
+      font-size: 30px;
+      border: none;
+      font-weight: lighter;
+      display: inline-block;
+      margin-right: 9%;
+      float: right; }
+    body #rightcontent form select {
+      float: left;
+      padding: 5px 8%;
+      width: 39%;
+      font-size: 18px; }
+  body footer {
+    height: 70px; }
+    body footer ul li p {
+      margin: 20px 10px 0 10px; } }
+@media all and (max-width: 320px) {
+  body #navbar {
+    padding-right: 0; }
+    body #navbar a img {
+      float: none;
+      margin: 0 auto;
+      display: block;
+      width: 165px;
+      position: relative;
+      top: 7px;
+      display: block; }
+  body #rightcontent h2 {
+    padding-right: 31px;
+    font-size: 18px;
+    margin-top: 0; }
+  body #rightcontent hr {
+    border: solid 1px #482F5D;
+    margin-bottom: 15px; }
+  body #rightcontent .chiffrement {
+    display: none; }
+  body #rightcontent form textarea {
+    font-size: 17px;
+    border: none;
+    line-height: 1.5;
+    height: 200px;
+    width: 91%;
+    padding: 20px; }
+  body #rightcontent form input[type="submit"] {
+    font-size: 25px;
+    margin-right: 9%;
+    float: right;
+    height: 37px; }
+  body #rightcontent form hr {
+    border: solid 1px #482F5D;
+    margin-bottom: 15px; }
+  body #rightcontent form select {
+    border-radius: 0;
+    width: 40%;
+    padding: 5px 6%;
+    height: 37px;
+    -webkit-appearance: none;
+    font-size: 20px;
+    background: url(../../assets/img/fleche-select.png) no-repeat right #ddd;
+    background-size: 37px; }
+  body footer {
+    height: 115px;
+    margin-top: 0;
+    position: relative; }
+    body footer ul li:first-child {
+      margin: 0 auto;
+      padding-bottom: 30px; }
+      body footer ul li:first-child p {
+        margin: 20px 10px 0 10px; } }
 
-Backtrace:
-assets/sass/new.sass:304
-/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/engine.rb:509:in `tree'
-/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/engine.rb:396:in `_to_tree'
-/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/engine.rb:368:in `_render_with_sourcemap'
-/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/engine.rb:285:in `render_with_sourcemap'
-/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:329:in `block in watch'
-/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-/Users/emmagrisot/.rvm/gems/ruby-2.0.0-p353/gems/sass-3.4.3/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: The line was indented 3 levels deeper than the previous line.\A         on line 304 of assets/sass/new.sass\A \A 299: 				//display: inline-block\A 300: 				//margin-left: 20px\A 301: 				//width: 50px\A 302: \A 303: <<<<<<< HEAD\A 304: 			//.aide\A 305: 			//	display: block\A 306: \A 307: =======\A 308: >>>>>>> master\A 309: 				li"; }
+/*# sourceMappingURL=new.css.map */

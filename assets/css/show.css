@@ -218,5 +218,102 @@ body {
           margin-top: 10px; }
         body footer ul li img {
           margin: -30px 10px -22px 10px; } }
+@media all and (max-width: 320px) {
+  body #navbar {
+    paddind-right: 0;
+    margin-bottom: 30px; }
+  body h2 {
+    font-family: "Arvo", serif;
+    margin: 0 auto;
+    font-size: 25px;
+    width: 100%;
+    color: #482F5D;
+    text-align: center; }
+  body #share {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px; }
+    body #share a {
+      display: inline-block; }
+    body #share #fb-root {
+      display: inline-block; }
+    body #share .fb-share-button {
+      display: inline-block;
+      top: -5px; }
+    body #share form {
+      display: inline-block;
+      margin-left: 0;
+      position: relative;
+      top: -5px;
+      margin-top: 10px; }
+    body #share .share-url {
+      display: inline-block;
+      width: auto;
+      top: -5px; }
+  body .contenu {
+    width: 85%;
+    margin: 30px auto 0px;
+    background: white;
+    padding: 40px 10px;
+    min-height: 150px;
+    padding-bottom: 20px; }
+    body .contenu p {
+      margin: 0 auto;
+      font-size: 20px;
+      text-align: center;
+      vertical-align: center;
+      line-height: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    body .contenu h3 {
+      margin-top: 55px;
+      font-size: 15px; }
+    body .contenu #life {
+      font-size: 20px; }
+  body .resonne {
+    margin: 0 auto;
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 20px; }
+    body .resonne a {
+      text-decoration: none;
+      color: white;
+      margin: 0 auto;
+      font-size: 22px;
+      border: none;
+      font-weight: lighter;
+      font-family: "Gotham", sans-serif;
+      text-align: center;
+      padding: 10px 21%; }
+  body .ajout {
+    color: #482F5D;
+    font-family: "Arvo", serif;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: -2px;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px; }
+  body #come {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    font-family: "Arvo", serif;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #482F5D;
+    font-size: 12px; }
+    body #come .youcreate {
+      width: 100%; }
+  body footer {
+    height: 115px;
+    margin-top: 0;
+    position: relative; }
+    body footer ul li:first-child {
+      margin: 0 auto;
+      padding-bottom: 30px; }
+      body footer ul li:first-child p {
+        margin: 20px 10px 0 10px; } }
 
 /*# sourceMappingURL=show.css.map */
