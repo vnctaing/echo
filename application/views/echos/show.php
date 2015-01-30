@@ -57,6 +57,12 @@
 
   <div class="contenu">
     <p><?php echo $echo[0]->content;?></p>
+    <h3>Date de création :</h3>
+    <p><?php 
+      echo "Le " . date("d/m/Y", strtotime($echo[0]->timestamp)) . " à " . 
+        date("h:i:s", strtotime($echo[0]->timestamp)); 
+
+    ?></p>
     <h3>Durée de vie : </h3>
     <div id="life"></div>
     <?php
@@ -76,8 +82,8 @@
         echo form_close();
       }
 
-        echo $this->session->flashdata('invalid_key');
-        echo $this->session->flashdata('plafondAtteint');
+      echo $this->session->flashdata('invalid_key');
+      echo $this->session->flashdata('plafondAtteint');
     ?>  
   </div>
   <div class="resonne">
