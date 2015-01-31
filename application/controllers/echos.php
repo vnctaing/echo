@@ -11,14 +11,15 @@ class Echos extends CI_Controller
 
   // Methode qui permet de créer un echo
   public function create(){
-    $this->load->view('echos/new');
+    $this->load->model('echo_model');
+    $numberEcho = $this->echo_model->getNumberEcho()->row_array();
+    $this->load->view('echos/new',$numberEcho);
     $this->load->library(array('form_validation', 'encrypt'));
     $this->form_validation->set_rules('content', 'Contenu', 'trim|required|xss_clean');
     
 
     if($this->form_validation->run()){
       // Charge /model/echo_model.php
-      $this->load->model('echo_model');
       // Génere un unique id hashé à l'écho
       $key = substr( md5(uniqid()), 0, 7) ;
       $content = $this->input->post('content');

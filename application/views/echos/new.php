@@ -37,7 +37,8 @@
   <div id="allcontent">
   <div id="leftcontent">
     <h1><img src="../../assets/img/quotes1.png"> Les paroles <br>s'envolent, les <br>écrits aussi. <img src="../../assets/img/quotes2.png"></h1>
-    
+    <h2>Nombre d'echos crées : </h2>
+    <?php echo $AUTO_INCREMENT?>
     <h2> Comment ça marche ?</h2>
     <hr />
     <ul class="help"><li><b>1.</b> Créez votre contenu, votre echo, écrivez ce que vous voulez.</li>

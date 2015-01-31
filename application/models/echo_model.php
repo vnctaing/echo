@@ -78,4 +78,11 @@ class Echo_model extends CI_Model{
       else{return false;}
   }
 
+  public function getNumberEcho(){
+    $sql ="SELECT AUTO_INCREMENT
+FROM information_schema.tables
+WHERE table_name = 'echos'
+AND table_schema = DATABASE() ;";
+    return $this->db->query($sql);
+  }
 }
