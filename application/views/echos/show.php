@@ -61,7 +61,7 @@
     <p><?php 
       echo "Le " . date("d/m/Y", strtotime($echo[0]->timestamp)) . " à " . 
         date("H\hi", strtotime($echo[0]->timestamp)); 
-
+      ?>
     <h3>Durée de vie : </h3>
     <div id="life"></div>
 
