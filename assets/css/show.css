@@ -88,11 +88,15 @@ body {
       line-height: 30px;
       overflow: hidden;
       text-overflow: ellipsis; }
+    body .contenu .create {
+      font-size: 15px;
+      margin-top: 20px;
+      font-weight: bolder; }
     body .contenu h3 {
       font-family: Arvo, "serif";
       letter-spacing: -1px;
       text-align: center;
-      margin-top: 55px;
+      margin-top: 45px;
       font-size: 15px; }
     body .contenu #life {
       text-align: center;

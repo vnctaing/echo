@@ -52,7 +52,7 @@ body {
     width: 77%;
     margin: 0 auto;
     max-height: 800px;
-    margin-bottom: 700px; }
+    margin-bottom: 600px; }
   body #leftcontent, body #rightcontent {
     display: inline-block;
     vertical-align: top;
@@ -155,6 +155,15 @@ body {
       margin-bottom: 10px; }
     body #rightcontent form input:focus {
       outline: none; }
+  body #compteur {
+    width: 300px;
+    text-align: center;
+    margin: 0 auto; }
+    body #compteur p {
+      display: inline-block;
+      font-size: 18px;
+      font-family: "Arvo", serif;
+      padding-bottom: 100px; }
   body footer {
     background: #191919;
     background-repeat: repeat-x;
@@ -211,22 +220,17 @@ body {
     width: 40%;
     padding: 5px 8%; } }
 @media all and (max-width: 830px) {
-  body #navbar .menu li {
-    font-family: "Arvo", serif;
-    font-size: 25px;
-    border: 2px white solid;
-    border-radius: 100px;
-    padding: 4px 13px;
-    margin-top: 13px; }
-  body #navbar .menu li:hover {
-    color: #F4B532;
-    border: 2px #F4B532 solid; }
-  body #navbar .hidden, body #navbar li {
-    display: none; }
-  body #navbar a img {
-    margin: 8px 35%;
-    display: block;
-    position: absolute; }
+  body #navbar {
+    padding-right: 0; }
+    body #navbar .hidden, body #navbar li {
+      display: none; }
+    body #navbar a img {
+      margin: 0 auto;
+      display: block;
+      position: relative;
+      width: 160px;
+      float: none;
+      padding-top: 7px; }
   body #allcontent {
     margin-bottom: 100px; }
   body #leftcontent h2, body #rightcontent h2 {
@@ -253,25 +257,13 @@ body {
     body #rightcontent h2:last-child {
       padding-top: 20px; }
     body #rightcontent form textarea {
-      resize: none;
-      background: #F0F0F0;
       font-size: 20px;
-      font-family: "Gotham", sans-serif;
-      border: none;
-      color: #482F5D;
-      line-height: 1.5;
       height: 200px;
       width: 91%;
       padding: 20px; }
     body #rightcontent form input[type="submit"] {
-      color: white;
-      background: #F4B532;
       padding: 5px 15%;
       font-size: 30px;
-      border: none;
-      font-weight: lighter;
-      font-family: "Gotham", sans-serif;
-      display: inline-block;
       margin-right: 8.5%;
       float: right; }
     body #rightcontent form select {
@@ -290,29 +282,6 @@ body {
       body footer ul li img {
         margin: -30px 10px -22px 10px; } }
 @media all and (max-width: 500px) {
-  body #navbar {
-    padding-right: 0; }
-    body #navbar .menu {
-      margin-left: 20px;
-      width: 25px; }
-      body #navbar .menu li {
-        font-size: 25px;
-        border: 2px white solid;
-        border-radius: 100px;
-        padding: 4px 13px;
-        margin-top: 13px; }
-    body #navbar .hidden, body #navbar li {
-      display: none; }
-    body #navbar a img {
-      float: none;
-      margin: 0 auto;
-      display: block;
-      width: 165px;
-      position: relative;
-      top: 7px;
-      margin: 8px 35%;
-      display: block;
-      position: absolute; }
   body #allcontent {
     display: block;
     width: 95%;
@@ -346,13 +315,8 @@ body {
       width: 91%;
       padding: 20px; }
     body #rightcontent form input[type="submit"] {
-      color: white;
-      background: #F4B532;
       padding: 5px 15%;
       font-size: 30px;
-      border: none;
-      font-weight: lighter;
-      display: inline-block;
       margin-right: 9%;
       float: right; }
     body #rightcontent form select {
@@ -398,6 +362,8 @@ body {
     font-size: 20px;
     background: url(../../assets/img/fleche-select.png) no-repeat right #ddd;
     background-size: 37px; }
+  body #compteur p {
+    padding-bottom: 30px; }
   body footer {
     height: 115px;
     margin-top: 0;
