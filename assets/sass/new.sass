@@ -304,34 +304,20 @@ body
 	body
 
 		#navbar
-			.menu
-
-				//float: left
-				//padding: 2px 0 0 15px
-				//display: inline-block
-				//margin-left: 20px
-				//width: 50px
-
-				li
-					font-family: 'Arvo',serif
-					font-size: 25px
-					border: 2px white solid
-					border-radius: 100px
-					padding: 4px 13px
-					margin-top: 13px
-
-				li:hover
-					color: $jaune
-					border: 2px $jaune solid
-
+			padding-right: 0
 
 			.hidden, li
 				display: none
 
 			a img
-				margin: 8px 35%
+				margin: 0 auto
 				display: block
-				position: absolute
+				position: relative
+				width: 160px
+				float: none
+				padding-top: 7px
+
+
 
 		#allcontent
 			margin-bottom: 100px
@@ -369,26 +355,14 @@ body
 
 			form
 				textarea
-					resize: none
-					background: $gris
 					font-size: 20px
-					font-family: "Gotham", sans-serif
-					border: none
-					color: $violet
-					line-height: 1.5
 					height: 200px
 					width: 91%
 					padding: 20px
 
 				input[type="submit"]
-					color: white
-					background: $jaune
 					padding: 5px 15%
 					font-size: 30px
-					border: none
-					font-weight: lighter
-					font-family: "Gotham", sans-serif
-					display: inline-block
 					margin-right: 8.5%
 					float: right
 
@@ -423,32 +397,11 @@ body
 	body
 
 		#navbar
-			padding-right: 0
+
 			.menu
-				margin-left: 20px
-				width: 25px
-
-				li
-					font-size: 25px
-					border: 2px white solid
-					border-radius: 100px
-					padding: 4px 13px
-					margin-top: 13px
-
-			.hidden, li
-				display: none
 
 			a img
-				float: none
-				margin: 0 auto
-				display: block
-				width: 165px 
-				position: relative
-				top: 7px
-				margin: 8px 35%
-				display: block
-				position: absolute
-
+				
 		#allcontent
 			display: block
 			width: 95%
@@ -492,13 +445,8 @@ body
 					padding: 20px
 
 				input[type="submit"]
-					color: white
-					background: $jaune
 					padding: 5px 15%
 					font-size: 30px
-					border: none
-					font-weight: lighter
-					display: inline-block
 					margin-right: 9%
 					float: right
 
@@ -522,6 +470,10 @@ body
 @media all and (max-width: 320px)
 
 	body
+	
+		#navbar
+
+			a img
 
 		#rightcontent
 			
@@ -568,7 +520,10 @@ body
 					background: url(../../assets/img/fleche-select.png) no-repeat right #ddd
 					background-size: 37px
 				
+		#compteur
 
+			p
+				padding-bottom: 30px
 
 		footer
 			height: 115px
