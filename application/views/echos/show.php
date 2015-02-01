@@ -60,7 +60,7 @@
     <h3>Date de création :</h3>
     <p><?php 
       echo "Le " . date("d/m/Y", strtotime($echo[0]->timestamp)) . " à " . 
-        date("h:i:s", strtotime($echo[0]->timestamp)); 
+        date("H:i", strtotime($echo[0]->timestamp)); 
 
     ?></p>
     <h3>Durée de vie : </h3>
