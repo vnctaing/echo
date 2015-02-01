@@ -117,7 +117,7 @@ class Echos extends CI_Controller
       // Rajoute 15 minutes a la durée de vie, convertit time UNIX => date
       $newExpirationDate = $oldExpirationDate + 15 * 60;
       $plafond = $oldExpirationDate + 5 * 60 * 60;
-      if( ( $plafond - time() ) > (5 * 60 * 60) ){
+      if( ( $newExpirationDate - time() ) > $plafond ){
         $message = "La durée de vie d'un echo ne peut excéder 5 heures.";
         $this->session->set_flashdata('plafondAtteint', $message);
         redirect("/$key");

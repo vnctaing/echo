@@ -60,7 +60,7 @@
     <h3>Date de création :</h3>
     <p><?php 
       echo "Le " . date("d/m/Y", strtotime($echo[0]->timestamp)) . " à " . 
-        date("h:i:s", strtotime($echo[0]->timestamp)); 
+        date("h:i", strtotime($echo[0]->timestamp)); 
 
     ?></p>
     <h3>Durée de vie : </h3>
@@ -81,7 +81,14 @@
         echo form_submit('mysubmit', 'Ok');
         echo form_close();
       }
-
+      $data['echo'] = $this->echo_model->getEcho($key);
+      // On stock dans $oldExpirationDate , l'ancienne date d'expiration en time UNIX
+      // Car c'est plus facile a manipuler pour rajouter du temps
+      $oldExpirationDate = strtotime($data['echo'][0]->expires_at);
+      // Rajoute 15 minutes a la durée de vie, convertit time UNIX => date
+      $newExpirationDate = $oldExpirationDate + 15 * 60;
+      $plafond = $oldExpirationDate + 5 * 60 * 60;
+      echo $plafond - time();
       echo $this->session->flashdata('invalid_key');
       echo $this->session->flashdata('plafondAtteint');
     ?>  
