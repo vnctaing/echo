@@ -4,6 +4,11 @@
 
 class Main extends CI_Controller {
 	// La methode index est appele par default
+	public function __construct(){      
+	    parent::__construct();
+	    $this->load->view('partials/navbar');
+  	}
+
 	public function index()
 	{
 		$this->login();
@@ -25,7 +30,10 @@ class Main extends CI_Controller {
 	//Restricted page, reserved for registered users
 	public function members(){
 		if ($this->session->userdata('is_logged_in')){
-			$this->load->view('main/members');
+			$this->load->model('echo_model');
+			$user = $this->session->userdata('user');
+			$data['echos'] = $this->echo_model->getUserEcho($user);
+			$this->load->view('main/members',$data);
 		}
 		else{
 			$this->restricted();
@@ -74,12 +82,17 @@ class Main extends CI_Controller {
 		$this->form_validation->set_rules('email', 'Email', 'required|trim|xss_clean|callback_validate_credentials');
 		$this->form_validation->set_rules('password', 'Password', 'required|md5|trim');
 		if ($this->form_validation->run()){
+			$this->load->model('model_users');
+			$email = $this->input->post('email');
+			$user = $this->model_users->getUserFromEmail($email);
+			$user = $user[0]->name;
 			$data = array(
-				'email' => $this->input->post('email'),
-				'is_logged_in' => 1
+				'email' => $email,
+				'is_logged_in' => 1,
+				'user' => $user
 				);
 			$this->session->set_userdata($data);
-			redirect('main/members');
+			$this->members('main/members',$data);
 		}
 		else{
 			$this->load->view('main/login');

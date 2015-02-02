@@ -18,16 +18,28 @@
 </script>
 </head>
 <body>
-	<div id="navbar">
-    <?php echo anchor(base_url(), '<img src="../../assets/img/echo.png">'); ?>
-    <ul class="hidden">
-      <li><?php echo anchor('/', 'Accueil'); ?></li>
-    </ul>
-  	</div>
-  	<h1>Bienvenue chez vous !</h1>
-  	<div class="deconnexion">
-  		<a href='<?php echo base_url()."main/logout";?>'>Déconnexion</a>
-	</div>
+  	<h1>Bienvenue <?php echo $this->session->userdata('name') ?></h1>
+<table>
+  <tr>
+    <td>Contenu</td>
+    <td>Lien</td>
+    <td>Expire le</td>
+  </tr>
+  <?php  
+  for ($i=0; $i < sizeof($echos); $i++) { 
+    echo '<tr>';
+      echo "<td>" . $echos[$i]->content . "</td>";
+      echo "<td>" . anchor(base_url($echos[$i]->gkey), '/'. $echos[$i]->gkey) . "</td>";
+      echo "<td>" . $echos[$i]->expires_at . "</td>";
+    echo "</tr>";
+  }
 
+  ?>
+</table>
+   <pre>  
+  <?php echo print_r($this->session->all_userdata()); 
+  print_r($echos);
+  ?>
+  </pre>
 </body>
 </html>

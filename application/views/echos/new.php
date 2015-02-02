@@ -20,20 +20,6 @@
 </script>
 </head>
 <body>
-  <div id="navbar">
-    <a href="#"><img class="menu" src="../../assets/img/home.png"></a>
-    <a href="#"><img src="../../assets/img/echo.png"></a>
-    <ul class="hidden">
-      <!--<li><?php echo anchor('main/login', 'Connexion'); ?></li>
-      <li><?php echo anchor('main/signup', 'Inscription'); ?></li>-->
-    </ul>
-
-
-    <a href="#"><ul class="aide">
-      <li>?</li>
-    </ul></a>
-    
-  </div>
   <div id="allcontent">
   <div id="leftcontent">
     <h1><img src="../../assets/img/quotes1.png"> Les paroles <br>s'envolent, les <br>écrits aussi. <img src="../../assets/img/quotes2.png"></h1>
@@ -76,10 +62,13 @@
         120 =>  '2h'
         );
       //Options passé
-
+      echo 'Option Chiffrement: ';
+      echo form_checkbox('encrypt', 1);
+      echo 'Entrez une clé secrète :';
+      echo form_password('secretkey');
       echo form_dropdown('expired_at', $options, '1');
       echo form_submit('mysubmit', 'OK');
-    ?><br><br><br>
+    ?>
    </div>
   </div>
     

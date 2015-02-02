@@ -18,14 +18,6 @@
 </script>
 </head>
 <body>
-
- <div id="navbar">
-    <?php echo anchor(base_url(), '<img src="../../assets/img/echo.png">'); ?>
-    <ul class="hidden">
-      <li><?php echo anchor('main/signup', 'Inscription'); ?></li>
-      <li><?php echo anchor('/', 'Accueil'); ?></li>
-    </ul>
-  </div>
   <div id="cadre">
     <h1>Connectez-vous</h1>
     <hr>

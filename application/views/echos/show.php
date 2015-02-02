@@ -44,15 +44,7 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-  <div id="navbar">
-  <!--?php echo anchor(base_url(), '<img src="../../assets/img/home.png" class="menu">'); ?-->
-  <?php echo anchor(base_url(), '<img src="../../assets/img/echo.png">'); ?>
-    <ul class="hidden">
 
-      <!--<li><?php echo anchor('main/signup', 'Inscription'); ?></li>
-      <li><?php echo anchor('main/login', 'Connexion'); ?></li>-->
-    </ul>
-  </div>
   <?php echo $this->session->flashdata('add_success'); ?>
 
   <div class="contenu">
@@ -60,7 +52,7 @@
     <h3>Date de création :</h3>
     <p><?php 
       echo "Le " . date("d/m/Y", strtotime($echo[0]->timestamp)) . " à " . 
-        date("H\hi", strtotime($echo[0]->timestamp)); 
+        date("H\hi", strtotime($echo[0]->timestamp)); ?>
 
     <h3>Durée de vie : </h3>
     <div id="life"></div>
@@ -68,6 +60,7 @@
     <p class="create"><?php 
       echo "Créé le " . date("d.m.Y", strtotime($echo[0]->timestamp)) . " à " . 
         date("h:i", strtotime($echo[0]->timestamp)); 
+    
     ?></p>
     <?php
 
