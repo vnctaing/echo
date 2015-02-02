@@ -43,6 +43,7 @@ class Main extends CI_Controller {
 	public function restricted(){
 		$this->load->view('main/restricted');
 	}
+
 /*
 | -------------------------------------------------------------------
 | LOGIN / SIGNUP
@@ -69,6 +70,13 @@ class Main extends CI_Controller {
 	public function logout(){
 		$this->session->sess_destroy();
 		redirect('main/login');
+	}
+
+	public function delete(){
+		$this->load->model('model_users');
+		$user = $this->session->userdata('user');
+		$this->model_users->deleteUser($user);
+		$this->logout();
 	}
 /*
 | -------------------------------------------------------------------

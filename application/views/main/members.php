@@ -33,7 +33,7 @@
       echo "<td>" . $echos[$i]->expires_at . "</td>";
     echo "</tr>";
   }
-
+  echo anchor(base_url('main/delete/'. $this->session->userdata('user')), 'Supprimer son compte');
   ?>
 </table>
    <pre>  
