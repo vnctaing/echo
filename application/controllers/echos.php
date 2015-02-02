@@ -78,7 +78,8 @@ class Echos extends CI_Controller
       $this->load->model('echo_model');
       $this->load->library('encrypt');
         //Stocke dans un tableau, l'echo retrouvé.
-      if($data['echo'] = $this->echo_model->getEcho($key)){        
+      if($data['echo'] = $this->echo_model->getEcho($key)){  
+        $this->load->view('partials/navbar');      
         redirect("/$key", $data);
       }
       else{

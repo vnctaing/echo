@@ -26,59 +26,67 @@
 
 </head>
 <body>
-      
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '903240606371281',
-      xfbml      : true,
-      version    : 'v2.2'
-    });
-  };
+  <div id="navbar">
+  <?php echo anchor(base_url(), '<img src="../../assets/img/echo.png">'); ?>
+    <ul class="hidden">
+      <?php  
+        if($this->session->userdata('is_logged_in')){
+          echo "<li>" . anchor(base_url('main/logout'), 'Déconnexion') . "</li>";
+          $name = $this->session->userdata('user');
+          echo "<li>Hello, " . anchor(base_url('main/members'), $name) . "</li>";
+        }
+        else{ 
+          echo "<li>" . anchor('main/signup', 'Inscription') . "</li>";
+          echo "<li>" . anchor('main/login', 'Connexion') . "</li>";
+      }?>
+    </ul>
+  </div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '903240606371281',
+        xfbml      : true,
+        version    : 'v2.2'
+      });
+    };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
   <?php echo $this->session->flashdata('add_success'); ?>
-
   <div class="contenu">
-    <p><?php echo $echo[0]->content;?></p>
-    <h3>Date de création :</h3>
-    <p><?php 
-      echo "Le " . date("d/m/Y", strtotime($echo[0]->timestamp)) . " à " . 
-        date("H\hi", strtotime($echo[0]->timestamp)); ?>
-
-    <h3>Durée de vie : </h3>
-    <div id="life"></div>
-
-    <p class="create"><?php 
-      echo "Créé le " . date("d.m.Y", strtotime($echo[0]->timestamp)) . " à " . 
-        date("h:i", strtotime($echo[0]->timestamp)); 
-    
-    ?></p>
     <?php
-
-      if( $this->uri->segment(3) )
-      {
-          $key = $this->uri->segment(3);
-        } 
-        else if ( $this->uri->segment(1))
-        {
+      if( $this->uri->segment(3) ){
+        $key = $this->uri->segment(3);
+        } else if ( $this->uri->segment(1) ){
           $key = $this->uri->segment(1);
         }
+
+     if($this->echo_model->isEncrypted($key)){
+      echo '<h1>TOP SECRET ! Cet echo est crypté ! </h1>';
+      } ?>
+    <p><?php echo $echo[0]->content;?></p>
+    <h3>Durée de vie : </h3>
+    <div id="life"></div>
+    <p class="create">
+      <?php 
+        echo "Créé le " . date("d.m.Y", strtotime($echo[0]->timestamp)) . " à " . date("h\hi", strtotime($echo[0]->timestamp)); 
+      ?>
+    </p>
+    <?php
+
       if($this->echo_model->isEncrypted($key)){
+        echo '<label> Entrez la clé : </label>';
         echo form_open("echos/decrypt/$key");
         echo form_password('secretkey');
         echo form_submit('mysubmit', 'Ok');
         echo form_close();
       }
-
       echo $this->session->flashdata('invalid_key');
       echo $this->session->flashdata('plafondAtteint');
     ?>  
@@ -89,22 +97,17 @@
      window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
     </script>
   </div>
-
-
   <div class="ajout">
     <?php echo $this->session->flashdata('echo_success'); 
       echo $this->session->flashdata('errorDoubleRez');
     ?>
   </div>
-
-
   <div id="share">
     <a class="twitter-share-button"
       href="https://twitter.com/share"
       data-via="LeProjetEcho">
     Tweet
     </a>
-
     <div id="fb-root"></div>
       <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -114,17 +117,12 @@
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
     <div class="fb-share-button" data-layout="button_count"></div>
-    
-
     <form>
       <input class="share-url" onFocus="this.select()" name="share-url" value="<?php echo base_url($echo[0]->gkey); ?>">
     </form>
-
   </div>
-  
-
-
     <script>
+    window.onload = function(){
       setInterval(function(){
       var expDate = "<?php echo strtotime($echo[0]->expires_at);?>" ; 
       var today= new Date().getTime() / 1000; // UNIX en seconde
@@ -140,12 +138,11 @@
       }
 
       }, 1000);
-    </script>
-    
+     } 
+    </script>  
     <div id="come">
       <p>À votre tour de partager du contenu éphémère :<?php echo anchor(base_url(), '<img src="../../assets/img/calltoaction.png" class="youcreate">'); ?></p>
     </div>
-
   <footer>
     <ul>
       <li><p>En utilisant ce service, vous acceptez <?php echo anchor('welcome/cgu', 'les Conditions Générales d\'Utilisation'); ?></p></li>
