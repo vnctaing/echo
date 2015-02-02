@@ -18,7 +18,7 @@
 </script>
 </head>
 <body>
-  	<h1>Bienvenue <?php echo $this->session->userdata('name') ?></h1>
+  	<h1>Bienvenue, <?php echo $this->session->userdata('user') ?>.</h1>
 <table>
   <tr>
     <td>Contenu</td>
