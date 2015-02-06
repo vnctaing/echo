@@ -61,7 +61,7 @@ body {
       text-overflow: ellipsis; }
     body .contenu #crypt {
       margin: 0 auto;
-      width: 231px;
+      width: 250px;
       text-align: center; }
       body .contenu #crypt label {
         display: inline-block; }

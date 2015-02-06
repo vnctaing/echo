@@ -121,6 +121,8 @@ body {
       width: 94%;
       padding: 20px;
       margin-bottom: 10px; }
+    body #rightcontent form input:focus {
+      outline: none; }
     body #rightcontent form input[type="submit"] {
       color: white;
       background: #F4B532;
@@ -145,16 +147,17 @@ body {
       font-family: "Gotham", sans-serif;
       font-size: 20px;
       background: url(../../assets/img/fleche-select.png) no-repeat right #ddd; }
-    body #rightcontent form a {
-      color: #482F5D;
-      text-decoration: none;
-      width: 90%;
-      display: block;
-      background: #F0F0F0;
-      padding: 10px;
-      margin-bottom: 10px; }
-    body #rightcontent form input:focus {
-      outline: none; }
+    body #rightcontent #crypt {
+      width: 93.5%;
+      text-align: center;
+      line-height: 35px; }
+      body #rightcontent #crypt input[type="password"] {
+        border: none;
+        background: #F0F0F0;
+        padding: 10px 15px; }
+      body #rightcontent #crypt .key {
+        width: 20px;
+        vertical-align: middle; }
   body #compteur {
     width: 300px;
     text-align: center;

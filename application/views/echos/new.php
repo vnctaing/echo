@@ -46,10 +46,6 @@
       echo form_textarea($attributes);
     ?>
 
-    <h2> Choisissez votre durée de vie</h2>
-    <hr>
-
-    
     <?php
       $options = array(
         5 => '5 min',
@@ -61,13 +57,19 @@
         90 =>  '1h30',
         120 =>  '2h'
         );
+      echo '<div id="crypt">';
       //Options passé
-      echo 'Option Chiffrement: ';
+      echo 'Crypte ton echo : ';
       echo form_checkbox('encrypt', 1);
-      echo 'Entrez une clé secrète :';
+      echo '<br><img class="key" src="../../assets/img/key.png"> Clé secrète : ';
       echo form_password('secretkey');
+      echo '</div>';
+      echo '<h2> Choisissez votre durée de vie</h2>
+      <hr>';
+      
       echo form_dropdown('expired_at', $options, '1');
       echo form_submit('mysubmit', 'OK');
+      
     ?>
    </div>
   </div>
