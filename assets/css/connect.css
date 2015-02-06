@@ -4,39 +4,8 @@
 body {
   background: #F0F0F0;
   font-weight: lighter;
-  margin: -16px auto;
+  margin: 0 auto;
   font-family: "gotham"; }
-  body #navbar {
-    background: #482F5D;
-    font-family: "Arvo", serif;
-    color: white;
-    vertical-align: top;
-    height: 70px;
-    padding-right: 10%; }
-    body #navbar img {
-      float: left;
-      width: 160px;
-      margin: 7px 12%; }
-    body #navbar a {
-      text-decoration: none;
-      color: #F0F0F0;
-      font-size: 20px;
-      font-weight: normal;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
-    body #navbar ul li {
-      display: inline-block;
-      text-decoration: none;
-      padding: 20px 40px;
-      float: right; }
-    body #navbar a:hover {
-      color: #F4B532;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
   body #cadre {
     background: white;
     box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
@@ -82,18 +51,6 @@ body {
 @media all and (max-width: 830px) {
   body {
     margin: -7px auto; }
-    body #navbar {
-      padding-right: 0px; }
-      body #navbar img {
-        width: 160px;
-        display: block;
-        float: none;
-        margin: 7px auto;
-        padding-top: 7px; }
-        body #navbar img a {
-          display: none; }
-      body #navbar .hidden, body #navbar li {
-        display: none; }
     body #cadre {
       width: 80%;
       margin: 30px auto;

@@ -5,6 +5,7 @@
   <link rel="icon" type="image/png" href="../../assets/img/o-violet-icon.png" />
   <title>Nouveau membre</title>
   <?=css('member.css')?>
+  <?=css('navbar.css')?>
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -18,24 +19,24 @@
 </script>
 </head>
 <body>
-  	<h1>Bienvenue, <?php echo $this->session->userdata('user') ?>.</h1>
-<table>
-  <tr>
-    <td>Contenu</td>
-    <td>Lien</td>
-    <td>Expire le</td>
-  </tr>
-  <?php  
-  for ($i=0; $i < sizeof($echos); $i++) { 
-    echo '<tr>';
-      echo "<td>" . $echos[$i]->content . "</td>";
-      echo "<td>" . anchor(base_url($echos[$i]->gkey), '/'. $echos[$i]->gkey) . "</td>";
-      echo "<td>" . $echos[$i]->expires_at . "</td>";
-    echo "</tr>";
-  }
-  echo anchor(base_url('main/delete/'. $this->session->userdata('user')), 'Supprimer son compte');
-  ?>
-</table>
+  <h1>Bienvenue, <?php echo $this->session->userdata('user') ?>.</h1>
+  <table>
+    <tr>
+      <td>Contenu</td>
+      <td>Lien</td>
+      <td>Expire le</td>
+    </tr>
+    <?php  
+    for ($i=0; $i < sizeof($echos); $i++) { 
+      echo '<tr>';
+        echo "<td>" . $echos[$i]->content . "</td>";
+        echo "<td>" . anchor(base_url($echos[$i]->gkey), '/'. $echos[$i]->gkey) . "</td>";
+        echo "<td>" . $echos[$i]->expires_at . "</td>";
+      echo "</tr>";
+    }
+    echo anchor(base_url('main/delete/'. $this->session->userdata('user')), 'Supprimer son compte');
+    ?>
+  </table>
    <pre>  
   <?php echo print_r($this->session->all_userdata()); 
   print_r($echos);

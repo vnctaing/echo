@@ -4,44 +4,8 @@
 body {
   background: #F0F0F0;
   font-weight: lighter;
-  margin: -16px auto;
+  margin: 0 auto;
   font-family: "Gotham"; }
-  body #navbar {
-    background: #482F5D;
-    font-family: "Arvo", serif;
-    color: white;
-    vertical-align: top;
-    height: 70px;
-    padding-right: 10%;
-    margin-bottom: 60px; }
-    body #navbar .menu {
-      float: left;
-      padding: 28px;
-      display: none; }
-    body #navbar img {
-      float: left;
-      width: 160px;
-      margin: 7px 12%; }
-    body #navbar a {
-      text-decoration: none;
-      color: #F0F0F0;
-      font-size: 20px;
-      font-weight: normal;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
-    body #navbar ul li {
-      display: inline-block;
-      text-decoration: none;
-      padding: 20px 40px;
-      float: right; }
-    body #navbar a:hover {
-      color: #F4B532;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
   body h2 {
     font-family: "Arvo", serif;
     margin: 40px auto;
@@ -59,8 +23,7 @@ body {
     body #share #fb-root {
       display: inline-block; }
     body #share .fb-share-button {
-      display: inline-block;
-      top: -5px; }
+      display: inline-block; }
     body #share form {
       display: inline-block;
       margin-left: 35px;
@@ -68,8 +31,7 @@ body {
       top: -5px; }
     body #share .share-url {
       display: inline-block;
-      width: auto;
-      top: -5px; }
+      width: auto; }
   body .contenu {
     width: 40%;
     margin: 50px auto 0px;
@@ -80,6 +42,15 @@ body {
     padding: 40px 10%;
     min-height: 150px;
     padding-bottom: 20px; }
+    body .contenu img {
+      margin: 0 auto;
+      display: block;
+      width: 80px; }
+    body .contenu h1 {
+      font-size: 20px;
+      font-family: "Arvo", serif;
+      color: #F4B532;
+      text-align: center; }
     body .contenu p {
       margin: 0 auto;
       font-size: 20px;
@@ -88,9 +59,30 @@ body {
       line-height: 30px;
       overflow: hidden;
       text-overflow: ellipsis; }
+    body .contenu #crypt {
+      margin: 0 auto;
+      width: 231px;
+      text-align: center; }
+      body .contenu #crypt label {
+        display: inline-block; }
+        body .contenu #crypt label img {
+          width: 30px;
+          padding-right: 10px; }
+      body .contenu #crypt form {
+        display: inline-block;
+        vertical-align: top; }
+        body .contenu #crypt form input[type="password"] {
+          border: none;
+          background: #F0F0F0;
+          padding: 10px 15px; }
+        body .contenu #crypt form input[type="submit"] {
+          border: none;
+          padding: 10px 15px;
+          background: #482F5D;
+          color: #F0F0F0; }
     body .contenu .create {
       font-size: 15px;
-      margin-top: 20px;
+      margin-bottom: 20px;
       font-weight: bolder; }
     body .contenu h3 {
       font-family: Arvo, "serif";
@@ -181,28 +173,18 @@ body {
           margin-right: 60px;
           margin-top: 20px; }
 
+@media all and (max-width: 830px) {
+  body {
+    padding-right: 0;
+    margin-top: -7px; }
+    body .contenu {
+      margin: 0 auto;
+      margin-top: 30px; } }
 @media all and (max-width: 800px) {
   body {
-    margin: 0 auto;
     padding-right: 0; }
-    body #navbar {
-      padding-right: 0px; }
-      body #navbar .menu {
-        float: left;
-        padding: 8px 0 0 15px;
-        display: inline-block;
-        margin-left: 20px;
-        width: 50px;
-        position: absolute; }
-      body #navbar a img {
-        float: none;
-        width: 160px;
-        margin: 0 auto;
-        display: block;
-        padding-top: 7px; }
     body .contenu {
       width: 75%;
-      margin: 0px auto;
       padding: 40px; }
     body .resonne {
       width: 75%;
@@ -223,9 +205,6 @@ body {
         body footer ul li img {
           margin: -30px 10px -22px 10px; } }
 @media all and (max-width: 320px) {
-  body #navbar {
-    paddind-right: 0;
-    margin-bottom: 30px; }
   body h2 {
     font-family: "Arvo", serif;
     margin: 0 auto;
@@ -257,7 +236,6 @@ body {
       top: -5px; }
   body .contenu {
     width: 85%;
-    margin: 30px auto 0px;
     background: white;
     padding: 40px 10px;
     min-height: 150px;

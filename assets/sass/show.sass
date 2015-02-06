@@ -11,53 +11,8 @@ $footer : #191919
 body
 	background : $gris
 	font-weight : lighter
-	margin: -16px auto 
+	margin: 0 auto 
 	font-family: "Gotham"
-
-	#navbar
-		background : $violet
-		font-family: 'Arvo', serif
-		color: white
-		vertical-align: top
-		height: 70px
-		padding-right: 10%
-		margin-bottom: 60px
-
-		.menu 
-			float: left
-			padding: 28px
-			display: none
-
-		img
-			float: left
-			width: 160px
-			margin: 7px 12%
-
-		a
-			text-decoration: none
-			color: $gris
-			font-size: 20px
-			font-weight: normal
-			-webkit-transition: all 0.3s ease
-			-moz-transition: all 0.3s ease
-			-o-transition: all 0.3s ease
-			transition: all 0.3s ease
-
-		ul
-
-			li
-				display: inline-block
-				text-decoration: none
-				padding: 20px 40px
-				float: right
-
-		a:hover
-			color: $jaune
-			-webkit-transition: all 0.3s ease
-			-moz-transition: all 0.3s ease
-			-o-transition: all 0.3s ease
-			transition: all 0.3s ease
-
 
 	h2
 		font-family: 'Arvo', serif
@@ -79,7 +34,6 @@ body
 			display: inline-block
 		.fb-share-button
 			display: inline-block
-			top: -5px
 		form
 			display: inline-block
 			margin-left: 35px
@@ -89,7 +43,6 @@ body
 		.share-url
 			display: inline-block
 			width: auto
-			top: -5px
 
 
 	.contenu
@@ -102,7 +55,17 @@ body
 		padding: 40px 10%
 		min-height: 150px
 		padding-bottom: 20px
-
+		
+		img
+			margin: 0 auto
+			display: block
+			width: 80px
+		
+		h1
+			font-size: 20px
+			font-family: 'Arvo', serif
+			color: $jaune
+			text-align: center
 		p
 			margin: 0 auto
 			font-size: 20px
@@ -112,9 +75,37 @@ body
 			overflow: hidden
 			text-overflow: ellipsis
 
+		#crypt
+			margin: 0 auto
+			width: 231px
+			text-align: center
+
+			label
+				display: inline-block
+
+				img
+					width: 30px
+					padding-right: 10px 
+			form
+				display: inline-block
+				vertical-align: top
+				
+				input[type="password"]
+					border: none
+					background: $gris
+					padding: 10px 15px
+
+				input[type="submit"]
+					border: none
+					padding: 10px 15px
+					background: $violet
+					color: $gris
+
+
+
 		.create
 			font-size: 15px
-			margin-top: 20px
+			margin-bottom: 20px
 			font-weight: bolder
 
 		h3
@@ -221,38 +212,22 @@ body
 					margin-right: 60px
 					margin-top: 20px
 
+@media all and (max-width: 830px)
+	body
+		padding-right: 0
+		margin-top: -7px
 
+		.contenu
+			margin: 0 auto
+			margin-top: 30px
 
 @media all and (max-width: 800px)
 
 	body
-		margin: 0 auto
 		padding-right: 0
-
-		#navbar
-			padding-right: 0px
-
-			.menu 
-				float: left
-				padding: 8px 0 0 15px
-				display: inline-block
-				margin-left: 20px
-				width: 50px
-				position: absolute
-
-			.hidden, li
-				//display: none
-
-			a img
-				float: none
-				width: 160px
-				margin: 0 auto
-				display: block
-				padding-top: 7px
 
 		.contenu
 			width: 75% 
-			margin: 0px auto
 			padding: 40px
 
 		.resonne
@@ -286,21 +261,7 @@ body
 @media all and (max-width: 320px)
 	
 
-
 	body
-
-		#navbar
-			paddind-right: 0
-			margin-bottom: 30px
-
-			img
-
-			a
-
-			ul
-				li
-
-			a:hover
 
 		h2
 			font-family: 'Arvo', serif
@@ -338,7 +299,6 @@ body
 
 		.contenu
 			width: 85%
-			margin: 30px auto 0px
 			background: white
 			padding: 40px 10px
 			min-height: 150px

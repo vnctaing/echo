@@ -4,40 +4,8 @@
 body {
   background: #F0F0F0;
   font-weight: lighter;
-  margin: -16px auto;
+  margin: 0 auto;
   font-family: "gotham"; }
-  body #navbar {
-    background: #482F5D;
-    font-family: "Arvo", serif;
-    color: white;
-    vertical-align: top;
-    height: 70px;
-    padding-right: 10%;
-    margin-top: 10px; }
-    body #navbar img {
-      float: left;
-      width: 160px;
-      margin: 7px 12%; }
-    body #navbar a {
-      text-decoration: none;
-      color: #F0F0F0;
-      font-size: 20px;
-      font-weight: normal;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
-    body #navbar ul li {
-      display: inline-block;
-      text-decoration: none;
-      padding: 20px 40px;
-      float: right; }
-    body #navbar a:hover {
-      color: #F4B532;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
   body h1 {
     font-family: "Arvo", serif;
     color: #482F5D;
@@ -62,27 +30,14 @@ body {
       font-family: "gotham";
       text-align: center;
       padding: 10px 30px; }
+  body table {
+    border: 1px solid red;
+    width: 90%;
+    margin: 0 auto; }
 
 @media all and (max-width: 800px) {
   body {
-    margin: 0 auto;
     padding-right: 0; }
-    body #navbar {
-      padding-right: 0px; }
-      body #navbar .menu {
-        float: left;
-        padding: 21px;
-        display: inline-block;
-        margin-left: 20px;
-        width: 25px; }
-      body #navbar .hidden, body #navbar li {
-        display: none; }
-      body #navbar a img {
-        float: none;
-        width: 160px;
-        margin: 0 auto;
-        display: block;
-        padding-top: 7px; }
     body h1 {
       font-family: "Arvo", serif;
       color: #482F5D;
