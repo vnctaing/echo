@@ -9,8 +9,9 @@ body {
   body h1 {
     font-family: "Arvo", serif;
     color: #482F5D;
-    font-size: 40px;
-    width: 451px;
+    font-size: 250%;
+    width: 80%;
+    text-align: center;
     margin: 30px auto; }
   body .deconnexion {
     margin: 0 auto;
@@ -31,17 +32,22 @@ body {
       text-align: center;
       padding: 10px 30px; }
   body table {
-    border: 1px solid red;
     width: 90%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1);
+    padding: 10px; }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 830px) {
   body {
-    padding-right: 0; }
+    padding-right: 0;
+    margin-top: -7px; }
     body h1 {
       font-family: "Arvo", serif;
       color: #482F5D;
-      font-size: 30px;
+      font-size: 27px;
       width: 343px;
       margin: 30px auto; } }
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" href="../../assets/img/o-violet-icon.png" />
-  <title>Nouveau membre</title>
+  <title>Espace membre</title>
   <?=css('member.css')?>
   <?=css('navbar.css')?>
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
@@ -20,6 +20,7 @@
 </head>
 <body>
   <h1>Bienvenue, <?php echo $this->session->userdata('user') ?>.</h1>
+  
   <table>
     <tr>
       <td>Contenu</td>
