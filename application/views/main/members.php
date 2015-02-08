@@ -24,6 +24,7 @@
     <td>Contenu</td>
     <td>Lien</td>
     <td>Expire le</td>
+    <td> </td>
   </tr>
   <?php  
   for ($i=0; $i < sizeof($echos); $i++) { 
@@ -31,6 +32,7 @@
       echo "<td>" . $echos[$i]->content . "</td>";
       echo "<td>" . anchor(base_url($echos[$i]->gkey), '/'. $echos[$i]->gkey) . "</td>";
       echo "<td>" . $echos[$i]->expires_at . "</td>";
+      echo "<td>" . anchor(base_url('echos/delete/'.$echos[$i]->gkey), 'X' );
     echo "</tr>";
   }
   echo anchor(base_url('main/delete/'. $this->session->userdata('user')), 'Supprimer son compte');

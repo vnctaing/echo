@@ -151,5 +151,11 @@ class Echos extends CI_Controller
     }
   }
 
+  public function delete($key){
+    $this->load->model('echo_model');
+    $this->echo_model->delete_echo($key);
+    redirect('main/members');
+  }
+
 }
 

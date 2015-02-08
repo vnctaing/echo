@@ -7,6 +7,11 @@ class Echo_model extends CI_Model{
     return $this->db->insert('echos', $data); 
   }
 
+  public function delete_echo($key){
+    return $this->db->where('gkey',$key)
+                    ->delete('echos');
+  }
+
   /**Cette méthode retourne dans un tableau,
   un objet echo avec une cle en parametre
   **/
