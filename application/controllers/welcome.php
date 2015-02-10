@@ -19,11 +19,11 @@ class Welcome extends CI_Controller {
 	 */
 	public function __construct(){      
 	    parent::__construct();
-	    $this->load->view('partials/navbar');
   	}
 
 	public function index()
 	{
+		$this->load->view('partials/navbar');
 		$this->load->view('welcome_message');
 	}
 
@@ -39,6 +39,7 @@ class Welcome extends CI_Controller {
 	}
 
 	public function cgu(){
+		$this->load->view('partials/navbar');
 		$this->load->view('welcome/CGU');
 	}
 }

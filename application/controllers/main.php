@@ -56,10 +56,8 @@ class Main extends CI_Controller {
 		//Si la clef rentrer dans l'url est valide alors, il peut se connecter
 		if($this->model_users->is_key_valid($key)){
 			if($this->model_users->activate_user($key)){
-				$data = array(
-					'is_logged_in'=> 1 );
-				$this->session->set_userdata($data);
-				redirect('main/members');
+				$this->session->set_flashdata('confirmSignup', 'Votre compte a été activé, veuillez vous connecter.');
+				redirect('main/login');
 			}
 			else{
 				echo 'Clef inexistante';

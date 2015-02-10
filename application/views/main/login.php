@@ -19,6 +19,7 @@
 </head>
 <body>
   <div id="cadre">
+    <p><?php echo $this->session->flashdata('confirmSignup'); ?></p>
     <h1>Connectez-vous</h1>
     <hr>
 
