@@ -2,6 +2,7 @@ $violetclair: #b68dc0
 $jaune : #F4B532
 $gris : #F0F0F0
 $violet : #482F5D
+$footer : #191919
 @font-face 
 	font-family: "gotham"
 	src: url(../fonts/Gotham-ExtraLight.otf)
@@ -20,26 +21,6 @@ body
 		text-align: center
 		margin: 30px auto
 
-	.deconnexion
-		margin: 0 auto
-		padding: 10px
-		text-align: center
-		margin-bottom: 40px
-		-webkit-transition: all 0.3s ease
-		-moz-transition: all 0.3s ease
-		-o-transition: all 0.3s ease
-		transition: all 0.3s ease
-
-
-		a
-			text-decoration: none
-			color: white
-			background: $violet
-			font-size: 17px
-			font-weight: lighter
-			font-family: "gotham"
-			text-align: center
-			padding: 10px 30px
 
 	table
 		width: 90%
@@ -49,7 +30,102 @@ body
 		-moz-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1)
 		-webkit-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1)
 		padding: 10px
+		
+		tr:first-child
+			color: $violet
+			font-family: 'Arvo', serif
 
+		tr
+			margin-bottom: 40px
+
+		td
+			max-width: 600px
+			padding-right: 20px
+			padding-bottom: 15px
+
+	#profil
+		width: 220px
+		margin: 0 auto
+		text-align: center
+		margin-top: 100px
+
+
+		a:first-child
+			text-decoration: none
+			background: $violet
+			color: $gris
+			padding: 10px 20px
+			display: block
+			white-space: normal
+			margin: 10px auto
+			-webkit-transition: all 0.3s ease
+			-moz-transition: all 0.3s ease
+			-o-transition: all 0.3s ease
+			transition: all 0.3s ease
+
+		a:first-child:hover
+			background: $jaune
+			-webkit-transition: all 0.3s ease
+			-moz-transition: all 0.3s ease
+			-o-transition: all 0.3s ease
+			transition: all 0.3s ease
+
+		a:last-child
+			text-decoration: none
+			color: white
+			padding: 5px 10px
+			background: darken($gris, 10%)
+			display: block
+			font-size: 12px
+			width: 150px
+			margin: 0 auto
+			-webkit-transition: all 0.3s ease
+			-moz-transition: all 0.3s ease
+			-o-transition: all 0.3s ease
+			transition: all 0.3s ease
+
+		a:last-child:hover
+			background: darken($gris, 20%)
+			-webkit-transition: all 0.3s ease
+			-moz-transition: all 0.3s ease
+			-o-transition: all 0.3s ease
+			transition: all 0.3s ease
+
+	footer
+		background: $footer
+		background-repeat: repeat-x
+		height: 50px
+		width: 100%
+		text-align: center
+		margin-bottom: 0px
+		position: fixed
+		bottom: 0px
+		opacity: 0.9
+
+
+		ul
+			display: inline-block
+			color: white
+			margin-bottom: -10px
+			margin-top: 0
+
+			li
+				display: inline-block
+				text-decoration: none 
+				font-size: 13px
+
+				img
+					width: 37px
+					margin: -24px 20px -22px 20px
+					display: block
+
+				a
+					color: $gris
+
+				p
+					display: block
+					margin-right: 60px
+					margin-top: 20px
 
 
 
@@ -66,5 +142,63 @@ body
 			font-size: 27px
 			width: 343px
 			margin: 30px auto
+
+		footer
+			margin-top: 50px
+
+			ul
+				padding-left: 0
+
+				li
+
+					p
+						width: 246px
+						margin-right: 10px
+						margin-top: 10px
+					img
+						margin: -30px 10px -22px 10px
+
+@media all and (max-width: 500px)
+
+
+	body
+
+		table
+			font-size: 14px
+
+		footer
+			height: 70px
+
+			ul
+				li
+					p
+						margin: 20px 10px 0 10px
+
+
+@media all and (max-width: 320px)
+
+	body
+
+		h1
+			font-size: 20px
+
+		footer
+			height: 115px
+			margin-top: 0
+			position: relative
+
+			ul
+
+				li:first-child
+					margin: 0 auto
+					padding-bottom: 30px
+
+					p
+						margin: 20px 10px 0 10px
+
+
+
+
+
 
 
