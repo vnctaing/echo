@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" href="../../assets/img/o-violet-icon.png" />
-  <title>Nouveau membre</title>
+  <title>Espace membre</title>
+  
+  <meta name="viewport" content="width=320">
   <?=css('member.css')?>
+  <?=css('navbar.css')?>
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -23,8 +26,8 @@
   <tr>
     <td>Contenu</td>
     <td>Lien</td>
-    <td>Expire le</td>
-    <td> </td>
+    <td>Expiration</td>
+    <td></td>
   </tr>
   <?php  
   for ($i=0; $i < sizeof($echos); $i++) { 
@@ -32,16 +35,27 @@
       echo "<td>" . $echos[$i]->content . "</td>";
       echo "<td>" . anchor(base_url($echos[$i]->gkey), '/'. $echos[$i]->gkey) . "</td>";
       echo "<td>" . $echos[$i]->expires_at . "</td>";
-      echo "<td>" . anchor(base_url('echos/delete/'.$echos[$i]->gkey), 'X' );
+      echo "<td>" . anchor(base_url('echos/delete/'.$echos[$i]->gkey), '✕' );
     echo "</tr>";
   }
-  echo anchor(base_url('main/delete/'. $this->session->userdata('user')), 'Supprimer son compte');
-  ?>
-</table>
+    echo '</table>';
+    echo '<div id="profil">';
+    echo anchor(base_url('main/logout'), 'Déconnexion');
+    echo anchor(base_url('main/delete/'. $this->session->userdata('user')), 'Supprimer son compte');
+    echo '</div>';
+    ?>
+  
    <pre>  
   <?php echo print_r($this->session->all_userdata()); 
   print_r($echos);
   ?>
   </pre>
+  <footer>
+    <ul>
+      <li><p>En utilisant ce service, vous acceptez <?php echo anchor('welcome/cgu', 'les Conditions Générales d\'Utilisation'); ?></p></li>
+      <li><a href="https://www.facebook.com/pages/Echo/662945737093488" target="blank"><img src="../../assets/img/fb.png"></a></li>
+      <li><a href="https://twitter.com/LeProjetEcho" target="blank"><img src="../../assets/img/twitter.png" ></a></li>
+    </ul>
+  </footer>
 </body>
 </html>

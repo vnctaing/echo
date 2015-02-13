@@ -66,7 +66,6 @@ body
 
 	#allcontent
 		display: block
-		//border: pink 3px solid
 		width: 77%
 		margin: 0 auto
 		max-height: 800px
@@ -91,7 +90,6 @@ body
 			margin-bottom: 30px
 	
 	#leftcontent
-		//border: 2px solid red
 		width: 45%
 		vertical-align: top
 		float: left
@@ -114,7 +112,6 @@ body
 
 			img:last-child
 				margin-left: 30px
-				//margin-top: -20px
 
 		.help
 			width: 94%
@@ -129,7 +126,6 @@ body
 	#rightcontent
 		background-color: white
 		float: right
-		// border: 2px solid green
 		width: 45%
 		vertical-align: top
 		margin-bottom: 0
@@ -147,6 +143,7 @@ body
 		
 
 		form
+
 			textarea
 				resize: none
 				background: $gris
@@ -159,6 +156,9 @@ body
 				width: 94%
 				padding: 20px
 				margin-bottom: 10px
+
+			input:focus
+				outline: none
 
 			input[type="submit"]
 				color: white
@@ -182,22 +182,26 @@ body
 				border: 0
 				height: 45px
 				-webkit-appearance: none
+				-moz-appearance: none
 				font-family: "Gotham", sans-serif
 				font-size: 20px
 				background: url(../../assets/img/fleche-select.png) no-repeat right #ddd
 
+		#crypt
+			width: 93.5%
+			text-align: center
+			line-height: 35px
 
-			a
-				color: $violet
-				text-decoration: none
-				width: 90%
-				display: block
+			input[type="password"]
+				border: none
 				background: $gris
-				padding: 10px
-				margin-bottom: 10px
-		
-			input:focus
-				outline: none
+				padding: 10px 15px
+
+			.key
+				width: 20px
+				vertical-align: middle
+
+
 
 	#compteur
 		width: 300px
@@ -348,7 +352,7 @@ body
 			width: 94%
 			margin: 30px auto
 			vertical-align: top
-			padding-bottom: 1px
+			padding-bottom: 75px
 
 			h2:last-child
 				padding-top: 20px
@@ -395,12 +399,6 @@ body
 @media all and (max-width: 500px)
 
 	body
-
-		#navbar
-
-			.menu
-
-			a img
 				
 		#allcontent
 			display: block
@@ -430,7 +428,6 @@ body
 			width: 94%
 			margin: 15px auto
 			vertical-align: top
-			padding-bottom: 1px
 
 			h2:last-child
 				padding-top: 20px
@@ -470,10 +467,6 @@ body
 @media all and (max-width: 320px)
 
 	body
-	
-		#navbar
-
-			a img
 
 		#rightcontent
 			
