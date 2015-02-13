@@ -1,0 +1,80 @@
+$violetclair: #b68dc0
+$jaune : #F4B532
+$gris : #F0F0F0
+$violet : #482F5D
+$footer : #191919
+@font-face 
+	font-family: "Gotham"
+	src: url(../fonts/Gotham-ExtraLight.otf)
+
+@font-face 
+	font-family: "GothamBold"
+	src: url(../fonts/Gotham-Medium.otf)
+
+body
+
+	#navbar
+		background : $violet
+		font-family: 'Arvo', serif
+		color: white
+		vertical-align: top
+		height: 70px
+
+		.menu 
+			float: left
+			padding: 28px
+			display: none
+			width: 200px
+		
+		.hidden
+			padding-right: 150px
+
+		img
+			float: left
+			width: 160px
+			margin: 7px 0 7px 12%
+
+		a
+			text-decoration: none
+			color: $gris
+			font-size: 20px
+			font-weight: normal
+			-webkit-transition: all 0.3s ease
+			-moz-transition: all 0.3s ease
+			-o-transition: all 0.3s ease
+			transition: all 0.3s ease
+
+		ul
+
+			li
+				display: inline-block
+				text-decoration: none
+				padding: 20px 40px
+				float: right
+
+		a:hover
+			color: $jaune
+			-webkit-transition: all 0.3s ease
+			-moz-transition: all 0.3s ease
+			-o-transition: all 0.3s ease
+			transition: all 0.3s ease
+
+
+
+@media all and (max-width: 830px)
+	body
+
+		#navbar
+			margin-top: 7px
+			
+			.hidden, li
+				display: none
+
+			a img
+				margin: 0 auto
+				display: block
+				position: relative
+				width: 160px
+				float: none
+				padding-top: 7px
+

@@ -9,44 +9,6 @@ body {
   font-weight: lighter;
   margin: 0;
   font-family: "Gotham"; }
-  body #navbar {
-    background: #482F5D;
-    font-family: "Arvo", serif;
-    color: white;
-    vertical-align: top;
-    height: 70px;
-    padding-right: 10%; }
-    body #navbar .menu {
-      float: left;
-      padding: 28px;
-      display: none;
-      width: 200px; }
-    body #navbar img {
-      float: left;
-      width: 160px;
-      margin: 7px 12%; }
-    body #navbar .aide {
-      display: none; }
-    body #navbar a {
-      text-decoration: none;
-      color: #F0F0F0;
-      font-size: 20px;
-      font-weight: normal;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
-    body #navbar ul li {
-      display: inline-block;
-      text-decoration: none;
-      padding: 20px 40px;
-      float: right; }
-    body #navbar a:hover {
-      color: #F4B532;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
   body #allcontent {
     display: block;
     width: 77%;
@@ -121,6 +83,8 @@ body {
       width: 94%;
       padding: 20px;
       margin-bottom: 10px; }
+    body #rightcontent form input:focus {
+      outline: none; }
     body #rightcontent form input[type="submit"] {
       color: white;
       background: #F4B532;
@@ -142,19 +106,21 @@ body {
       border: 0;
       height: 45px;
       -webkit-appearance: none;
+      -moz-appearance: none;
       font-family: "Gotham", sans-serif;
       font-size: 20px;
       background: url(../../assets/img/fleche-select.png) no-repeat right #ddd; }
-    body #rightcontent form a {
-      color: #482F5D;
-      text-decoration: none;
-      width: 90%;
-      display: block;
-      background: #F0F0F0;
-      padding: 10px;
-      margin-bottom: 10px; }
-    body #rightcontent form input:focus {
-      outline: none; }
+    body #rightcontent #crypt {
+      width: 93.5%;
+      text-align: center;
+      line-height: 35px; }
+      body #rightcontent #crypt input[type="password"] {
+        border: none;
+        background: #F0F0F0;
+        padding: 10px 15px; }
+      body #rightcontent #crypt .key {
+        width: 20px;
+        vertical-align: middle; }
   body #compteur {
     width: 300px;
     text-align: center;
@@ -220,17 +186,6 @@ body {
     width: 40%;
     padding: 5px 8%; } }
 @media all and (max-width: 830px) {
-  body #navbar {
-    padding-right: 0; }
-    body #navbar .hidden, body #navbar li {
-      display: none; }
-    body #navbar a img {
-      margin: 0 auto;
-      display: block;
-      position: relative;
-      width: 160px;
-      float: none;
-      padding-top: 7px; }
   body #allcontent {
     margin-bottom: 100px; }
   body #leftcontent h2, body #rightcontent h2 {
@@ -253,7 +208,7 @@ body {
     width: 94%;
     margin: 30px auto;
     vertical-align: top;
-    padding-bottom: 1px; }
+    padding-bottom: 75px; }
     body #rightcontent h2:last-child {
       padding-top: 20px; }
     body #rightcontent form textarea {
@@ -303,8 +258,7 @@ body {
     float: none;
     width: 94%;
     margin: 15px auto;
-    vertical-align: top;
-    padding-bottom: 1px; }
+    vertical-align: top; }
     body #rightcontent h2:last-child {
       padding-top: 20px; }
     body #rightcontent form textarea {

@@ -5,6 +5,7 @@
   <title>Echo</title>
   <link rel="icon" type="image/png" href="../../assets/img/o-violet-icon.png" />
   <?=css('show.css')?>
+  <?=css('navbar.css')?>
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
   
   <meta property="og:image" content="../../assets/img/o-violet-icon.png" />
@@ -53,7 +54,7 @@
         }
 
      if($this->echo_model->isEncrypted($key)){
-      echo '<h1>TOP SECRET ! Cet echo est crypté ! </h1>';
+      echo '<img src="../../assets/img/lock.png"/><h1>TOP SECRET ! Cet echo est crypté ! </h1>';
       } ?>
     <p><?php echo $echo[0]->content;?></p>
     <h3>Durée de vie : </h3>
@@ -63,18 +64,20 @@
         echo "Créé le " . date("d.m.Y", strtotime($echo[0]->timestamp)) . " à " . date("h\hi", strtotime($echo[0]->timestamp)); 
       ?>
     </p>
-    <?php
+      <div id="crypt">
+      <?php
 
-      if($this->echo_model->isEncrypted($key)){
-        echo '<label> Entrez la clé : </label>';
-        echo form_open("echos/decrypt/$key");
-        echo form_password('secretkey');
-        echo form_submit('mysubmit', 'Ok');
-        echo form_close();
-      }
-      echo $this->session->flashdata('invalid_key');
-      echo $this->session->flashdata('plafondAtteint');
-    ?>  
+        if($this->echo_model->isEncrypted($key)){
+          echo '<label> <img src="../../assets/img/key.png" /></label>';
+          echo form_open("echos/decrypt/$key");
+          echo form_password('secretkey');
+          echo form_submit('mysubmit', '✓');
+          echo form_close();
+        }
+        echo $this->session->flashdata('invalid_key');
+        echo $this->session->flashdata('plafondAtteint');
+      ?>  
+    </div>
   </div>
   <div class="resonne">
     <?php echo anchor(base_url("echos/update/".$echo[0]->gkey), 'Faire résonner');?>

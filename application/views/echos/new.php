@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" href="../../assets/img/o-violet-icon.png" />
   <link rel="stylesheet" type="text/css" href="../../assets/css/new.css">
-
+  <?=css('navbar.css')?>
   <meta name="viewport" content="width=320">
 
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
@@ -46,10 +46,6 @@
       echo form_textarea($attributes);
     ?>
 
-    <h2> Choisissez votre durée de vie</h2>
-    <hr>
-
-    
     <?php
       $options = array(
         5 => '5 min',
@@ -61,13 +57,19 @@
         90 =>  '1h30',
         120 =>  '2h'
         );
+      echo '<div id="crypt">';
       //Options passé
-      echo 'Option Chiffrement: ';
+      echo 'Crypte ton echo : ';
       echo form_checkbox('encrypt', 1);
-      echo 'Entrez une clé secrète :';
+      echo '<br><img class="key" src="../../assets/img/key.png"> Clé secrète : ';
       echo form_password('secretkey');
+      echo '</div>';
+      echo '<h2> Choisissez votre durée de vie</h2>
+      <hr>';
+      
       echo form_dropdown('expired_at', $options, '1');
       echo form_submit('mysubmit', 'OK');
+      
     ?>
    </div>
   </div>
