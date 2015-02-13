@@ -9,44 +9,6 @@ body {
   font-weight: lighter;
   margin: 0;
   font-family: "Gotham"; }
-  body #navbar {
-    background: #482F5D;
-    font-family: "Arvo", serif;
-    color: white;
-    vertical-align: top;
-    height: 70px;
-    padding-right: 10%; }
-    body #navbar .menu {
-      float: left;
-      padding: 28px;
-      display: none;
-      width: 200px; }
-    body #navbar img {
-      float: left;
-      width: 160px;
-      margin: 7px 12%; }
-    body #navbar .aide {
-      display: none; }
-    body #navbar a {
-      text-decoration: none;
-      color: #F0F0F0;
-      font-size: 20px;
-      font-weight: normal;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
-    body #navbar ul li {
-      display: inline-block;
-      text-decoration: none;
-      padding: 20px 40px;
-      float: right; }
-    body #navbar a:hover {
-      color: #F4B532;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
   body #allcontent {
     display: block;
     width: 77%;
@@ -224,17 +186,6 @@ body {
     width: 40%;
     padding: 5px 8%; } }
 @media all and (max-width: 830px) {
-  body #navbar {
-    padding-right: 0; }
-    body #navbar .hidden, body #navbar li {
-      display: none; }
-    body #navbar a img {
-      margin: 0 auto;
-      display: block;
-      position: relative;
-      width: 160px;
-      float: none;
-      padding-top: 7px; }
   body #allcontent {
     margin-bottom: 100px; }
   body #leftcontent h2, body #rightcontent h2 {
