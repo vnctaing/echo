@@ -34,7 +34,7 @@
         echo "<td>" . $echos[$i]->content . "</td>";
         echo "<td>" . anchor(base_url($echos[$i]->gkey), '/'. $echos[$i]->gkey) . "</td>";
         echo "<td>" . $echos[$i]->expires_at . "</td>";
-        echo "<td>" . anchor(base_url('echos/delete/'.$echos[$i]->gkey), '<button>Supprimer</button>' );
+        echo "<td>" . anchor(base_url('echos/delete/'.$echos[$i]->gkey), 'X' );
       echo "</tr>";
     }
     ?>
@@ -43,11 +43,6 @@
     <button>Supprimer son compte</button>
   </div>
 
-
-  <pre>  
-    <?php echo print_r($this->session->all_userdata()); 
-    print_r($echos);?>
-  </pre>
 
     <script>
     var delAccount = document.getElementById('delAccount');
