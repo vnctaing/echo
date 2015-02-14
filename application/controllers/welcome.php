@@ -31,6 +31,7 @@ class Welcome extends CI_Controller {
 		$this->load->model('echo_model');
 		$key = $this->uri->segment(1);
 		if ( $data['echo'] = $this->echo_model->getEcho($key)){
+			$this->load->view('partials/navbar');
 			$this->load->view('echos/show', $data);
 		}
 		else{
