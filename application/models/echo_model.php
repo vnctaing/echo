@@ -7,6 +7,11 @@ class Echo_model extends CI_Model{
     return $this->db->insert('echos', $data); 
   }
 
+  public function delete_echo($key){
+    return $this->db->where('gkey',$key)
+                    ->delete('echos');
+  }
+
   /**Cette méthode retourne dans un tableau,
   un objet echo avec une cle en parametre
   **/
@@ -80,9 +85,20 @@ class Echo_model extends CI_Model{
 
   public function getNumberEcho(){
     $sql ="SELECT AUTO_INCREMENT
-FROM information_schema.tables
-WHERE table_name = 'echos'
-AND table_schema = DATABASE() ;";
+    FROM information_schema.tables
+    WHERE table_name = 'echos'
+    AND table_schema = DATABASE() ;";
     return $this->db->query($sql);
   }
+
+
+  public function getUserEcho($user){
+    $query = $this->db
+    -> where('user', $user)
+    -> get('echos')
+    -> result();
+    return $query;
+  }
+
+
 }

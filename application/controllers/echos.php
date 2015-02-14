@@ -5,6 +5,12 @@
 */
 class Echos extends CI_Controller
 {
+
+  public function __construct(){      
+    parent::__construct();
+    $this->load->view('partials/navbar');
+  }
+
   public function index(){
     $this->create();
   }
@@ -23,11 +29,12 @@ class Echos extends CI_Controller
       // Génere un unique id hashé à l'écho
       $key = substr( md5(uniqid()), 0, 7) ;
       $content = $this->input->post('content');
-      //$secretkey = hash ( "sha256", $this->input->post('secretkey') );
+      $secretkey = hash ( "sha256", $this->input->post('secretkey') );
       $data = array(
         'content' => $this->input->post('content'), //$_POST['content']
         'gkey' => $key,
-        'expires_at' => date('Y-m-d H:i:s', time() + $this->input->post('expired_at') * 60)
+        'expires_at' => date('Y-m-d H:i:s', time() + $this->input->post('expired_at') * 60),
+        'user' => $this->session->userdata('user')
         );
       if($this->input->post('encrypt') ){
         $this->load->library('encrypt');
@@ -47,9 +54,9 @@ class Echos extends CI_Controller
         /** anchor(foo,bar) <=> <a href="foo">bar</a>, 
         base_url("/echos/read/$key") <=> www.localhost.com/echos/read/$key
         **/
+        //$echo_url = <a href="http://site.com/echos/read/$key">http://site.com/echos/read/$key</a>"
         $echo_url = anchor(base_url("/$key") , base_url("/$key"));
         $message = '<h2>Félicitation ! <br>Votre echo est créé</h2>';
-        //$echo_url = <a href="http://site.com/echos/read/$key">http://site.com/echos/read/$key</a>"
         //Prépare la flash notice, qui apparait dans la vue echos/new
         $this->session->set_flashdata('add_success', $message);
 
@@ -71,7 +78,8 @@ class Echos extends CI_Controller
       $this->load->model('echo_model');
       $this->load->library('encrypt');
         //Stocke dans un tableau, l'echo retrouvé.
-      if($data['echo'] = $this->echo_model->getEcho($key)){        
+      if($data['echo'] = $this->echo_model->getEcho($key)){  
+        $this->load->view('partials/navbar');      
         redirect("/$key", $data);
       }
       else{
@@ -141,6 +149,12 @@ class Echos extends CI_Controller
         }
       }
     }
+  }
+
+  public function delete($key){
+    $this->load->model('echo_model');
+    $this->echo_model->delete_echo($key);
+    redirect('main/members');
   }
 
 }

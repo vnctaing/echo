@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" href="../../assets/img/o-violet-icon.png" />
   <title>Inscription</title>
+  
+  <meta name="viewport" content="width=320">
   <?=css('signup.css')?>
+  <?=css('navbar.css')?>
   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -18,14 +21,6 @@
 </script>
 </head>
 <body>
-
- <div id="navbar">
-    <?php echo anchor(base_url(), '<img src="../../assets/img/echo.png">'); ?>
-    <ul class="hidden">
-      <li><?php echo anchor('main/login', 'Connexion'); ?></li>
-      <li><?php echo anchor('/', 'Accueil'); ?></li>
-    </ul>
-  </div>
   <div id="cadre">
     <h1>Rejoignez-nous !</h1>
     <hr>

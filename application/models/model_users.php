@@ -34,4 +34,20 @@ class Model_users extends CI_Model
       return false;
     }
   }
+
+  public function getUserFromEmail($email){
+    $query = $this->db
+      -> select('name')
+      -> where('email', $email)
+      -> get('users')
+      -> result();
+    return $query;
+  }
+  
+  public function deleteUser($user){
+    $query = $this->db
+      ->where('name',$user)
+      ->delete('users');
+    return $query;
+  }
 }
