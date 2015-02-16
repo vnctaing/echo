@@ -7,6 +7,7 @@
         $name = $this->session->userdata('user');
         echo "<li>" . anchor(base_url('main/members'), $name) . "</li>";
         echo "<li>" . anchor(base_url(), 'Accueil') . "</li>";
+        echo "<li>" . anchor(base_url('main/logout'), 'Déconnexion') . "</li>";
       }
       else{ 
         echo "<li>" . anchor('main/signup', 'Inscription') . "</li>";
