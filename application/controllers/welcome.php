@@ -43,6 +43,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('partials/navbar');
 		$this->load->view('welcome/CGU');
 	}
+
 }
 
 /* End of file welcome.php */

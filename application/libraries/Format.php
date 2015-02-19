@@ -131,15 +131,7 @@ class Format {
 			{
 				$attributes = $value;
 				if (is_object($attributes)) $attributes = get_object_vars($attributes);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-				
->>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
-=======
-				
->>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
 				foreach ($attributes as $attributeName => $attributeValue)
 				{
 					$structure->addAttribute($attributeName, $attributeValue);
@@ -221,15 +213,8 @@ class Format {
                 throw new Exception('Format class does not support multi-dimensional arrays');
             } else {
                 $row    = str_replace('"', '""', $row); // Escape dbl quotes per RFC 4180
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                 $output .= '"'.implode('","', $row).'"'.PHP_EOL;
-=======
-                $output .= '"'.implode('","', $row).'"'.PHP_EOL;                
->>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
-=======
-                $output .= '"'.implode('","', $row).'"'.PHP_EOL;                
->>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
             }
 
 		}
@@ -244,27 +229,12 @@ class Format {
 		if ($callback === '')
 		{
             return json_encode($this->_data);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            /* Had to take out this code, it doesn't work on Objects.
-            $str = $this->_data;
-            array_walk_recursive($str, function(&$item, $key)
-            {
-                if(!mb_detect_encoding($item, 'utf-8', true))
-=======
-=======
->>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
             
             /* Had to take out this code, it doesn't work on Objects.
             $str = $this->_data;
             array_walk_recursive($str, function(&$item, $key) 
             {
                 if(!mb_detect_encoding($item, 'utf-8', true)) 
-<<<<<<< HEAD
->>>>>>> 7b5d3275552b843613fdf592b293a57403a06825
-=======
->>>>>>> c388c88f6f4d19e8fea55dd1a21aa65d366ae675
                 {
                     $item = utf8_encode($item);
                 }
