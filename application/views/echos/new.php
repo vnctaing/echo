@@ -33,7 +33,7 @@
       </li>
       <li>
         <?=img('ephemere.png')?>
-        <p>Ce message a une durée de vie limité</p>
+        <p>Ce message a une durée de vie limitée</p>
       </li>
       <li>
         <?=img('resonner.png')?>
@@ -41,7 +41,7 @@
       </li>
       <li>
         <?=img('autodetruit.png')?>
-        <p>A la fin, le message est détruit de notre base de donnée</p>
+        <p>À la fin, le message est détruit de notre base de donnée</p>
       </li>
     </ul>
   </div>

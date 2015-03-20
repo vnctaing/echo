@@ -43,6 +43,8 @@ body {
         float: left; }
       body #leftcontent ul li p {
         padding-top: 30px; }
+        body #leftcontent ul li p span {
+          font-family: "GothamBold"; }
   body #rightcontent {
     background-color: white;
     float: right;
