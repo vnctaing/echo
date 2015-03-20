@@ -22,15 +22,27 @@
 <body>
   <div id="allcontent">
   <div id="leftcontent">
-    <h1><img src="../../assets/img/quotes1.png"> Les paroles <br>s'envolent, les <br>écrits aussi. <img src="../../assets/img/quotes2.png"></h1>
-   
-    <h2> Comment ça marche ?</h2>
-    <hr />
-    <ul class="help"><li><b>1.</b> Créez votre contenu, votre echo, écrivez ce que vous voulez.</li>
-      <li><b>2.</b> Choisissez la durée de vie que vous voulez attribuer à ce contenu, 10 minutes ? 1h30 ?</li>
-      <li><b>3.</b> Générez le lien de votre echo, et partagez-le où vous le souhaitez.</li>
-      <li><b>4.</b> La durée de vie de votre echo augmentera si les visiteurs aiment le contenu et le font résonner.</li>
-      <li><b>5.</b> À la fin de sa durée de vie, votre echo disparaîtra.</li>
+    <ul>
+      <li>
+        <?=img('ecrire.png')?>
+        <p>Écrivez un message, avec ou sans clé secrète</p>
+      </li>
+      <li>
+        <?=img('envoyer.png')?>
+        <p>Partagez-le à vos amis</p>
+      </li>
+      <li>
+        <?=img('ephemere.png')?>
+        <p>Ce message a une durée de vie limité</p>
+      </li>
+      <li>
+        <?=img('resonner.png')?>
+        <p>Les autres influencent cette durée de vie</p>
+      </li>
+      <li>
+        <?=img('autodetruit.png')?>
+        <p>A la fin, le message est détruit de notre base de donnée</p>
+      </li>
     </ul>
   </div>
   <div id="rightcontent">

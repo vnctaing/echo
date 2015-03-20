@@ -35,27 +35,14 @@ body {
     vertical-align: top;
     float: left;
     margin-bottom: 0; }
-    body #leftcontent h1 {
-      font-size: 40px;
-      padding: 0 auto;
-      text-align: center;
-      font-family: "GothamBold", sans-serif; }
-      body #leftcontent h1 img {
-        position: absolute;
-        width: 55px; }
-      body #leftcontent h1 img:first-child {
-        margin-left: -80px;
-        margin-top: -20px; }
-      body #leftcontent h1 img:last-child {
-        margin-left: 30px; }
-    body #leftcontent .help {
-      width: 94%;
-      text-align: justify;
-      padding-left: 0;
-      margin-top: 0; }
-      body #leftcontent .help li {
-        list-style-type: none;
-        margin-bottom: 17px; }
+    body #leftcontent ul li {
+      list-style-type: none;
+      padding-bottom: 30px; }
+      body #leftcontent ul li img {
+        width: 100px;
+        float: left; }
+      body #leftcontent ul li p {
+        padding-top: 30px; }
   body #rightcontent {
     background-color: white;
     float: right;
