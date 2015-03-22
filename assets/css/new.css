@@ -35,16 +35,43 @@ body {
     vertical-align: top;
     float: left;
     margin-bottom: 0; }
-    body #leftcontent ul li {
-      list-style-type: none;
-      padding-bottom: 30px; }
-      body #leftcontent ul li img {
-        width: 100px;
-        float: left; }
-      body #leftcontent ul li p {
-        padding-top: 30px; }
-        body #leftcontent ul li p span {
-          font-family: "GothamBold"; }
+    body #leftcontent h1 {
+      font-family: "Arvo", serif;
+      color: #482F5D;
+      width: 440px;
+      text-align: center;
+      font-weight: bold;
+      margin: 20px auto;
+      font-size: 40px;
+      margin-bottom: 50px; }
+    body #leftcontent ul {
+      padding-left: 0; }
+      body #leftcontent ul li {
+        list-style-type: none;
+        padding-bottom: 30px;
+        width: 140px;
+        text-align: center;
+        display: inline-block;
+        padding-right: 23px; }
+        body #leftcontent ul li img {
+          width: 100px;
+          float: left;
+          padding-left: 21px;
+          padding-bottom: 10px; }
+      body #leftcontent ul li:nth-child(4) {
+        margin-left: 50px;
+        margin-right: 10px;
+        width: 170px; }
+        body #leftcontent ul li:nth-child(4) img {
+          padding-left: 35px; }
+      body #leftcontent ul li:nth-child(5) {
+        width: 170px; }
+        body #leftcontent ul li:nth-child(5) img {
+          padding-left: 35px; }
+        body #leftcontent ul li:nth-child(5) p {
+          padding-top: 30px; }
+          body #leftcontent ul li:nth-child(5) p span {
+            font-family: "GothamBold"; }
   body #rightcontent {
     background-color: white;
     float: right;
@@ -175,56 +202,58 @@ body {
     width: 40%;
     padding: 5px 8%; } }
 @media all and (max-width: 830px) {
-  body #allcontent {
-    margin-bottom: 100px; }
-  body #leftcontent h2, body #rightcontent h2 {
-    font-family: "Arvo", serif;
-    color: #482F5D;
-    font-weight: normal;
-    font-size: 25px;
-    margin: 15px 0; }
-  body #leftcontent hr, body #rightcontent hr {
-    border: solid 2px #482F5D;
-    width: 91%;
-    margin-left: 0; }
-  body #leftcontent {
-    display: none; }
-  body #rightcontent {
-    display: block;
-    padding-top: 15px;
-    padding-left: 5%;
-    float: none;
-    width: 94%;
-    margin: 30px auto;
-    vertical-align: top;
-    padding-bottom: 75px; }
-    body #rightcontent h2:last-child {
-      padding-top: 20px; }
-    body #rightcontent form textarea {
-      font-size: 20px;
-      height: 200px;
+  body {
+    margin-top: -7px; }
+    body #allcontent {
+      margin-bottom: 100px; }
+    body #leftcontent h2, body #rightcontent h2 {
+      font-family: "Arvo", serif;
+      color: #482F5D;
+      font-weight: normal;
+      font-size: 25px;
+      margin: 15px 0; }
+    body #leftcontent hr, body #rightcontent hr {
+      border: solid 2px #482F5D;
       width: 91%;
-      padding: 20px; }
-    body #rightcontent form input[type="submit"] {
-      padding: 5px 15%;
-      font-size: 30px;
-      margin-right: 8.5%;
-      float: right; }
-    body #rightcontent form select {
-      float: left;
-      padding: 5px 8%;
-      width: 39%;
-      font-size: 18px; }
-  body footer {
-    margin-top: 50px; }
-    body footer ul {
-      padding-left: 0; }
-      body footer ul li p {
-        width: 246px;
-        margin-right: 10px;
-        margin-top: 10px; }
-      body footer ul li img {
-        margin: -30px 10px -22px 10px; } }
+      margin-left: 0; }
+    body #leftcontent {
+      display: none; }
+    body #rightcontent {
+      display: block;
+      padding-top: 15px;
+      padding-left: 5%;
+      float: none;
+      width: 94%;
+      margin: 30px auto;
+      vertical-align: top;
+      padding-bottom: 75px; }
+      body #rightcontent h2:last-child {
+        padding-top: 20px; }
+      body #rightcontent form textarea {
+        font-size: 20px;
+        height: 200px;
+        width: 91%;
+        padding: 20px; }
+      body #rightcontent form input[type="submit"] {
+        padding: 5px 15%;
+        font-size: 30px;
+        margin-right: 8.5%;
+        float: right; }
+      body #rightcontent form select {
+        float: left;
+        padding: 5px 8%;
+        width: 39%;
+        font-size: 18px; }
+    body footer {
+      margin-top: 50px; }
+      body footer ul {
+        padding-left: 0; }
+        body footer ul li p {
+          width: 246px;
+          margin-right: 10px;
+          margin-top: 10px; }
+        body footer ul li img {
+          margin: -30px 10px -22px 10px; } }
 @media all and (max-width: 500px) {
   body #allcontent {
     display: block;

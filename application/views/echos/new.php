@@ -22,26 +22,27 @@
 <body>
   <div id="allcontent">
   <div id="leftcontent">
+    <h1>Les paroles s'envolent, les écrits aussi !</h1>
     <ul>
       <li>
-        <?=img('ecrire.png')?>
-        <p>Écrivez un message, avec ou sans clé secrète</p>
+        <?=img('ecrire1.png')?>
+        <p>Écrivez votre echo.</p>
       </li>
       <li>
-        <?=img('envoyer.png')?>
-        <p>Partagez-le à vos amis</p>
+        <?=img('ephemere1.png')?>
+        <p>Choisissez sa durée de vie.</p>
       </li>
       <li>
-        <?=img('ephemere.png')?>
-        <p>Ce message a une durée de vie limitée</p>
+        <?=img('envoyer1.png')?>
+        <p>Partagez-le où vous voulez.</p>
       </li>
       <li>
-        <?=img('resonner.png')?>
-        <p>Les autres influencent cette durée de vie</p>
+        <?=img('resonner1.png')?>
+        <p>Résonnez un echo pour augmenter sa durée de vie.</p>
       </li>
       <li>
-        <?=img('autodetruit.png')?>
-        <p>À la fin, le message est détruit de notre base de donnée</p>
+        <?=img('autodetruit1.png')?>
+        <p>Lorsque le temps est écoulé, le message s'auto-détruit.</p>
       </li>
     </ul>
   </div>
