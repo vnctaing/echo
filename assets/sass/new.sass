@@ -19,7 +19,7 @@ body
 
 	#allcontent
 		display: block
-		width: 77%
+		max-width: 88%
 		margin: 0 auto
 		max-height: 800px
 		margin-bottom: 600px
@@ -43,10 +43,12 @@ body
 			margin-bottom: 30px
 	
 	#leftcontent
-		width: 45%
+		width: 500px
 		vertical-align: top
 		float: left
+		position: absolute
 		margin-bottom: 0
+		margin-left: 4%
 
 		h1
 			font-family: 'Arvo', serif
@@ -101,7 +103,6 @@ body
 		width: 45%
 		vertical-align: top
 		margin-bottom: 0
-		margin-left: 5%
 		padding-left: 30px
 		box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1)
 		-moz-box-shadow: 0px 0px 8px 1px rgba(119, 119, 119, 0.1)
@@ -237,23 +238,45 @@ body
 				font-size : 25px
 
 		#leftcontent
+			margin-left: 0
+			width: 360px
 
 			h1
-				font-size: 35px
-				margin-bottom: 40px
+				font-size: 25px
+				width: 330px
 
-				img
-					position: absolute
-					width: 35px
+			ul
 
-				img:first-child
-					margin-left: -62px
-					margin-top: -10px
+				li
+					padding-bottom: 30px
+					width: 140px
+					padding-right: 15px
 
+			
+					img
+						width: 100px
+						float: left
+						padding-left: 21px
+						padding-bottom: 10px
 
-				img:last-child
-					margin-left: 17px
-					margin-top: 15px
+				li:nth-child(4)
+					margin-left: 0px
+					margin-right: 0px
+					width: 140px
+					vertical-align: top
+
+					img 
+						padding-left: 21px
+
+				li:nth-child(5)
+					width: 170px
+					margin-left: 50px
+
+					img 
+						padding-left: 35px
+					
+
+				
 		#rightcontent
 
 			form
@@ -271,6 +294,17 @@ body
 					padding: 5px 8%
 
 
+		#compteur
+			text-align: center
+			margin-left: 57%
+			position: relative
+
+			p
+				display: inline-block
+				font-size: 18px
+				font-family: 'Arvo', serif
+				padding-bottom: 100px
+
 
 
 
@@ -282,7 +316,7 @@ body
 		margin-top: -7px
 
 		#allcontent
-			margin-bottom: 100px
+			margin-bottom: 50px
 		#leftcontent, #rightcontent
 
 			h2
@@ -349,6 +383,16 @@ body
 						margin-top: 10px
 					img
 						margin: -30px 10px -22px 10px
+
+		#compteur
+			text-align: center
+			margin: 0 auto
+
+			p
+				display: inline-block
+				font-size: 18px
+				font-family: 'Arvo', serif
+				padding-bottom: 100px
 
 
 
